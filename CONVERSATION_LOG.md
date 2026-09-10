@@ -115,3 +115,11 @@ Haris asked to remove Facebook — removed the Facebook placeholder link from ev
 Also added small icons to the footer's Email/WhatsApp/LinkedIn links (previously plain text) for visual consistency with the Contact page's icon-chip cards, per Haris's "add the icon as well" follow-up.
 
 **Still open:** WhatsApp country-code confirmation, domain purchase, hosting.
+
+## 2026-09-10 (later still) — Fixed subpage header alignment bug
+
+Haris shared a screenshot of the Services page asking how to make it better. Diagnosed a real layout bug: on every subpage (About/Services/Samples/Contact), `.container` and `.page-hero__inner` were combined on the same div, so `.page-hero__inner`'s 680px max-width silently overrode `.container`'s 1200px one — the hero text block ended up centered as a narrow floating box instead of starting flush at the same left edge as the content sections below it (visible as a big dead gap to the left of "Services & pricing" while "Available data fields" below it started further left).
+
+Fixed by separating them into nested divs (`.container` > `.page-hero__inner`) across all 4 subpages, so hero headings now align with the page content below. Also added an eyebrow label (e.g. "SERVICES", "CONTACT") above each page-hero heading for consistency with the section headers below, and adjusted the entrance-animation delays since the eyebrow is now a new first child.
+
+**Still open:** WhatsApp country-code confirmation, domain purchase, hosting.

@@ -863,7 +863,8 @@ tr:last-child td {
   .hero__inner > *:nth-child(4) { animation-delay: 330ms; }
 
   .page-hero__inner > *:nth-child(1) { animation-delay: 60ms; }
-  .page-hero__inner > *:nth-child(2) { animation-delay: 160ms; }
+  .page-hero__inner > *:nth-child(2) { animation-delay: 150ms; }
+  .page-hero__inner > *:nth-child(3) { animation-delay: 240ms; }
 
   .reveal {
     opacity: 0;
