@@ -154,3 +154,13 @@ Verified all 5 pages render correctly in dark mode with no console errors — su
 ## 2026-09-11 (later) — WhatsApp country code confirmed
 
 Haris confirmed the WhatsApp number is correctly +92 (Pakistan), as assumed. No code changes needed.
+
+## 2026-09-11 (later still) — Footer simplified, free-trial repositioned, flow review
+
+**Footer simplified on non-Contact pages:** Haris asked to show the Contact/Elsewhere footer columns only on the Contact page. Added a `.footer__grid--simple` modifier (brand + Explore only, 2-column layout) used on Home/About/Services/Samples; `contact.html`'s footer is untouched (still shows Contact + Elsewhere).
+
+**Free Trial form moved to the end of the homepage**, right before the footer, per Haris's request — it followed the "Get a Quote" CTA banner rather than sitting right after the hero.
+
+**Page-flow review** (Haris asked me to think through the section order like a "pro programmer" building for an easy first-time-visitor experience): confirmed the resulting order is a sound funnel — Hero → Stats → Sources/Tools → Data preview card → Process → Value props → "Get a Quote" CTA (mid/late-funnel ask for ready buyers) → Free Trial form (final low-friction fallback) → Footer. Found and fixed one redundancy: the free-trial checklist's "Delivered within 1–2 days" nearly duplicated the stat row's "1–2 Day Turnaround" — reworded to "Sent straight to your inbox — no back-and-forth" so it adds new information instead of repeating.
+
+**Still open:** Formspree endpoint (blocking), placeholder domain across SEO tags/sitemap/robots.txt, domain purchase, hosting.
