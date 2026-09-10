@@ -137,3 +137,17 @@ Haris went through several reference themes in quick succession:
 Verified all 5 pages render correctly in dark mode with no console errors — subpage alignment fix and icon-chip work from earlier held up correctly under the new palette.
 
 **Still open:** WhatsApp country-code confirmation, domain purchase, hosting. Note the two earlier mockups (dark-cinematic and Glide) remain in `design-mockup/` as historical artifacts, not reflecting the live site.
+
+## 2026-09-11 — Expanded sources, free-trial lead capture, SEO
+
+**Expanded data sources:** Haris asked to add Apollo.io, Sales Navigator, ZoomInfo, Clay, Lead411, UpLead, Seamless.AI, RocketReach and Hunter.io alongside the existing Google Maps/LinkedIn/Facebook/Company Sites. Updated the homepage "Sources & Tools I Use" logo strip (now 13 items), the About page's sources section (converted from the 4-icon grid to the same text logo-strip pattern — cleaner at this count and avoids fabricating tool logos), the hero paragraph, the About intro paragraph, and the homepage stat row ("3 Verified Sources" → "13+ Verified Sources").
+
+**Free-trial lead capture:** Added a "Get 100 Free Verified Contacts" section on the homepage (`#free-trial`) — a form (name, email, company, target) that becomes the site's primary conversion path. The hero's primary button and every page's nav CTA now point here ("Get Free Trial" / "Get 100 Free Contacts") instead of the general Contact page. Asked Haris how the form should actually reach him since this is a static site with no backend — he chose **Formspree**. Built the form with a placeholder endpoint (`action="https://formspree.io/f/YOUR_FORM_ID"`) — **this needs Haris to create a free Formspree.io account and swap in the real endpoint, or submissions go nowhere.**
+
+**SEO:** Added per-page unique `<title>`/meta description, canonical links, Open Graph + Twitter Card tags, a `ProfessionalService` JSON-LD block on the homepage, plus `robots.txt` and `sitemap.xml`. All of these (canonical/OG URLs, sitemap, robots.txt) use a **placeholder domain** (`https://leadscoutdata.com`) since no domain is purchased yet — must be updated once one is.
+
+**Still open:**
+- Swap in the real Formspree endpoint (blocking — form doesn't work without it)
+- Update placeholder domain across canonical/OG tags, sitemap.xml, robots.txt once purchased
+- WhatsApp country-code confirmation
+- Domain purchase, hosting

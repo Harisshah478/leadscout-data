@@ -447,6 +447,79 @@ a:hover {
   font-size: 14px;
 }
 
+/* Free trial */
+
+.trial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 24px 64px oklch(20% 0.02 260 / 0.08);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.trial-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trial-card__info h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.trial-card__info p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.trial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trial-form input,
+.trial-form textarea {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--text);
+  font-size: 14.5px;
+  font-family: 'Work Sans', sans-serif;
+  transition: border-color 150ms ease;
+}
+
+.trial-form input::placeholder,
+.trial-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.trial-form input:focus,
+.trial-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.trial-form .btn {
+  margin-top: 4px;
+  width: 100%;
+}
+
+.trial-form__note {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 /* Dashboard card */
 
 .dashboard-card {
@@ -1246,6 +1319,11 @@ tr:last-child td {
 /* Responsive */
 
 @media (max-width: 900px) {
+  .trial-card {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+
   .fields-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
