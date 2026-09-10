@@ -28,7 +28,7 @@ Recommended picks: `leadscoutdata.com` or `datapinpoint.io`. (Availability not v
 **Design mockup:** Published as a Claude Artifact (design canvas) — single-page landing layout: nav, hero, 12-field data showcase, sample data table (marked illustrative, not real contacts), 3-step process, value props, CTA banner, footer with placeholder contact info.
 Link: https://claude.ai/code/artifact/45e00122-0740-44b3-b36b-5da1806f3498
 
-**GitHub:** Connected — logged in as `Harisshah478` via `gh auth login` (HTTPS, scopes: gist, read:org, repo, workflow).
+**GitHub:** Connected — logged in as `Harisshah478` via `gh auth login` (HTTPS, scopes: gist, read:org, repo, workflow). Repo created at https://github.com/Harisshah478/leadscout-data — started private, then switched to **public** on Haris's request (this also unlocks free GitHub Pages hosting, which needs a public repo on the free plan).
 
 **Build:** Converted the approved mockup into a real static site — `index.html` + `css/styles.css` — same content, fonts (Sora + Work Sans), and blue palette, responsive down to mobile.
 
