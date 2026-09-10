@@ -149,5 +149,8 @@ Verified all 5 pages render correctly in dark mode with no console errors — su
 **Still open:**
 - Swap in the real Formspree endpoint (blocking — form doesn't work without it)
 - Update placeholder domain across canonical/OG tags, sitemap.xml, robots.txt once purchased
-- WhatsApp country-code confirmation
 - Domain purchase, hosting
+
+## 2026-09-11 (later) — WhatsApp country code confirmed
+
+Haris confirmed the WhatsApp number is correctly +92 (Pakistan), as assumed. No code changes needed.
