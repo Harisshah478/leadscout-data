@@ -87,5 +87,13 @@ Applied across all 5 pages' footers and the Contact page's contact cards.
 
 **Still open:**
 - Confirm the WhatsApp number's country code (assumed +92 Pakistan)
-- Real email and Facebook URL still placeholders
+- Real Facebook URL still a placeholder
 - Domain purchase and hosting — still deferred until Haris finalizes everything
+
+## 2026-09-10 (later still) — Real email added, local preview shown
+
+Haris asked to see the site — pointed him to opening `index.html` directly and to a local Python server (`http://localhost:8000`) as a quick way to click through pages before hosting is set up.
+
+Real email provided: **harisshah478@gmail.com**. Replaced `[YOUR EMAIL]` / `you@yourdomain.com` placeholders with it across all 5 pages' footers and the Contact page's email card.
+
+**Still open:** Facebook URL placeholder, WhatsApp country-code confirmation, domain purchase, hosting.
