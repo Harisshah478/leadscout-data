@@ -170,3 +170,13 @@ Haris confirmed the WhatsApp number is correctly +92 (Pakistan), as assumed. No 
 Haris shared a screenshot of a real Excel export (Curoflow spreadsheet — real names, emails, phone numbers of hospital/healthcare executives) and asked to use it "as sample." **Did not reproduce the real people's data** — publishing real individuals' names/emails/phones on a public site is a privacy problem even framed as an example, and it may also be confidential client data. Instead, added a third table to the Samples page using the same richer *column structure* (First Name, Last Name, Title, Company, Seniority, Department, # Employees, Industry, Email Status, Phone, LinkedIn) with entirely fictional people/companies in the same industry (hospital & healthcare C-suite) — titled "full enterprise export (Apollo/ZoomInfo-style, extra fields)". This also shows off fields (Seniority, Department, Email Status, Employee Count) not yet listed on the Services page — worth adding there too if Haris wants the offering description to match.
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting. Minor inconsistency noticed but not changed: the Samples page's "Request a Free Sample" CTA still points to `contact.html` rather than the new `#free-trial` instant form — worth aligning if Haris wants one consistent trial funnel.
+
+## 2026-09-11 (later still) — Added the two follow-ups from the sample-table pass
+
+Haris said to go ahead with both suggestions from the previous turn:
+- Added the four new fields (Seniority, Department, Email Status, # Employees) to the Services page's field breakdown, grouped sensibly next to related fields (Seniority/Department after Job Title, Email Status after Phone, # Employees after Company Reg. Number). Bumped the homepage stat "12+ Data Fields" to "16+" to match.
+- Pointed the Samples page's "Request a Free Sample" CTA to `index.html#free-trial` instead of `contact.html`, so every "free sample" promise on the site now leads to the same instant-form funnel. Checked the other `contact.html` links (nav Contact, "Get a Quote", "Get in Touch") — those are intentionally the separate general/custom-quote path and were left alone.
+
+Verified all field rows and the updated link via page-text extraction (a couple of screenshots came back blank — confirmed via DOM text and a follow-up screenshot that this was browser-tool flakiness, not a real rendering bug).
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
