@@ -98,6 +98,16 @@ Real email provided: **harisshah478@gmail.com**. Replaced `[YOUR EMAIL]` / `you@
 
 **Still open:** WhatsApp country-code confirmation, domain purchase, hosting.
 
+## 2026-09-10 (later still) — Modern scroll/entrance animations
+
+Haris said the animations felt too simple and asked for something more modern, referencing current themes. Searched current (2026) design-trend guidance before implementing — consensus: purposeful, minimal scroll-triggered reveals and micro-interactions outperform flashy/decorative motion, and everything should respect `prefers-reduced-motion`. See [SaaSFrame 2026 landing page trends](https://www.saasframe.io/blog/10-saas-landing-page-trends-for-2026-with-real-examples) and [webpeak.org CSS/JS animation trends](https://webpeak.org/blog/css-js-animation-trends).
+
+Implemented (`js/animations.js`, shared across all 5 pages, plain vanilla JS/CSS — no external animation library, keeps the site fully static and dependency-free):
+- Staggered fade-up scroll-reveal (IntersectionObserver) for every card grid (data fields, value props, process steps, delivery formats, contact cards, field-row lists) and section headers — progressive enhancement, content is visible by default if JS doesn't run.
+- Hero and page-hero entrance animation (staggered fade+slide-up on load).
+- Animated underline on nav links (expands on hover/active).
+- All motion wrapped in `@media (prefers-reduced-motion: no-preference)` so it fully disables for users who've asked for reduced motion, per accessibility best practice.
+
 ## 2026-09-10 (later still) — Facebook link removed, footer icons added
 
 Haris asked to remove Facebook — removed the Facebook placeholder link from every page's footer "Elsewhere" column and dropped the Facebook card from the Contact page's card grid (now 3 cards: Email, WhatsApp, LinkedIn — grid adjusted to 3 columns on desktop so it doesn't leave an orphaned card). Left every other Facebook mention alone, since those describe Facebook as a **data source** ("Facebook Page" field, "pulled from Google Maps, LinkedIn, Facebook...") — core to the service description, not the removed personal social link.
