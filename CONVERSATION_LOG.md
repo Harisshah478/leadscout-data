@@ -96,4 +96,12 @@ Haris asked to see the site — pointed him to opening `index.html` directly and
 
 Real email provided: **harisshah478@gmail.com**. Replaced `[YOUR EMAIL]` / `you@yourdomain.com` placeholders with it across all 5 pages' footers and the Contact page's email card.
 
-**Still open:** Facebook URL placeholder, WhatsApp country-code confirmation, domain purchase, hosting.
+**Still open:** WhatsApp country-code confirmation, domain purchase, hosting.
+
+## 2026-09-10 (later still) — Facebook link removed, footer icons added
+
+Haris asked to remove Facebook — removed the Facebook placeholder link from every page's footer "Elsewhere" column and dropped the Facebook card from the Contact page's card grid (now 3 cards: Email, WhatsApp, LinkedIn — grid adjusted to 3 columns on desktop so it doesn't leave an orphaned card). Left every other Facebook mention alone, since those describe Facebook as a **data source** ("Facebook Page" field, "pulled from Google Maps, LinkedIn, Facebook...") — core to the service description, not the removed personal social link.
+
+Also added small icons to the footer's Email/WhatsApp/LinkedIn links (previously plain text) for visual consistency with the Contact page's icon-chip cards, per Haris's "add the icon as well" follow-up.
+
+**Still open:** WhatsApp country-code confirmation, domain purchase, hosting.
