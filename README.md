@@ -5,10 +5,14 @@ A static landing page for a personal data-extraction / lead-sourcing service. Pu
 ## Structure
 
 ```
-index.html          Main landing page
-css/styles.css       All styling
-design-mockup/       Editable design canvas (source mockup, published as a Claude Artifact)
-CONVERSATION_LOG.md  Running log of decisions made while building this site
+index.html           Home
+about.html            About
+services.html         Services & pricing
+portfolio.html        Samples (illustrative example datasets)
+contact.html          Contact
+css/styles.css        All styling (shared across every page)
+design-mockup/        Editable design canvas (source mockup, published as a Claude Artifact)
+CONVERSATION_LOG.md   Running log of decisions made while building this site
 ```
 
 ## Running locally
@@ -16,14 +20,14 @@ CONVERSATION_LOG.md  Running log of decisions made while building this site
 This is a plain static site — no build step. Just open `index.html` in a browser, or serve it:
 
 ```bash
-npx serve .
+python -m http.server 8000
 ```
 
 ## Status
 
 - [x] Domain name ideas drafted
 - [x] Landing page design mockup drafted (Claude Design canvas)
-- [x] Static HTML/CSS site built from the mockup
+- [x] Multi-page static site built (Home, About, Services, Samples, Contact)
+- [ ] Real contact details (email/phone/WhatsApp/LinkedIn/Facebook) filled in — currently placeholders across the footer and `contact.html`
 - [ ] Domain purchased
-- [ ] Real contact details (email/phone/LinkedIn/Facebook) filled in — currently placeholders in `index.html`
-- [ ] Hosting connected (Cloudflare Pages / Netlify / GitHub Pages) and domain pointed at it
+- [ ] Hosting connected (deliberately last — decide once the site content is finalized)

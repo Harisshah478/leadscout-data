@@ -35,9 +35,26 @@ Link: https://claude.ai/code/artifact/45e00122-0740-44b3-b36b-5da1806f3498
 **Working agreement:** All future work stays in this same folder (`Desktop/Haris Website`), everything gets pushed to GitHub, and this log gets updated as we go so context carries across sessions.
 
 **Still open / placeholders in the site to fill in:**
-- Real contact email (`[YOUR EMAIL]` in `index.html` footer)
-- Real phone/WhatsApp (`[YOUR WHATSAPP / PHONE]`)
-- Real LinkedIn and Facebook links
+- Real contact email (`[YOUR EMAIL]`), phone/WhatsApp, LinkedIn and Facebook links — currently placeholders in the footer (all pages) and on `contact.html`
 - Domain purchase (not yet bought)
-- Hosting provider (not yet chosen — static site works with GitHub Pages, Cloudflare Pages, or Netlify, all free)
-- Pricing details, if Haris wants a fixed pricing section instead of "contact for quote"
+- Hosting provider (deliberately on hold — Haris wants the whole site finished first, hosting decided at the end)
+
+## 2026-09-10 (later) — Repo made public, multi-page site built
+
+**GitHub repo visibility:** Started private, then Haris asked to make it **public** (`Harisshah478/leadscout-data`). Public also unlocks free GitHub Pages hosting later, if wanted.
+
+**Working agreement reconfirmed:** Everything created gets pushed to GitHub, all work stays in this same folder (`Desktop/Haris Website`), and this log gets updated as we go so the conversation/decisions aren't lost between sessions.
+
+**Site expanded from a single landing page to a multi-page site**, per Haris's choice — build the whole site first, hosting comes last, once everything is finalized:
+- `index.html` — Home (hero, fields teaser, process, value props, CTA)
+- `about.html` — About (bio, sources used, why work with him)
+- `services.html` — Services & pricing (full field breakdown with descriptions, delivery formats, process). Pricing kept as "contact for a quote" (Haris's choice) rather than fixed packages.
+- `portfolio.html` — Samples (two illustrative sample tables: a Google Maps–style local-business example, and a LinkedIn/company-site B2B contact example — both explicitly labeled as illustrative, not real contacts)
+- `contact.html` — Contact (email/WhatsApp/LinkedIn/Facebook cards, still placeholders — Haris said he'd provide real ones but hasn't yet)
+
+All five pages share the same nav/footer and `css/styles.css`. Verified locally (Python static server + browser) that every page loads, internal nav links work, and desktop layout renders correctly.
+
+**Still open:**
+- Real contact details (email/phone/WhatsApp/LinkedIn/Facebook) — Haris said he'd send these, not yet received
+- Domain purchase
+- Hosting — explicitly deferred until the site is fully finalized

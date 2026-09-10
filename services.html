@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LeadScout Data — Business & Contact Data Extraction</title>
-<meta name="description" content="Verified business and contact data extracted from Google Maps, LinkedIn, Facebook and company sites — delivered as clean, ready-to-use datasets.">
+<title>Services & Pricing — LeadScout Data</title>
+<meta name="description" content="Every data field LeadScout Data can extract, how the process works, and the formats it's delivered in.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +20,9 @@
         <span>LeadScout <span class="brand__sub">Data</span></span>
       </a>
       <nav class="nav__links">
-        <a href="index.html" class="is-active">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="is-active">Services</a>
         <a href="portfolio.html">Samples</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -32,87 +32,141 @@
 
   <main>
 
-    <section class="hero">
-      <div class="container hero__inner">
-        <span class="pill">Data extraction &amp; lead sourcing</span>
-        <h1>Business data, extracted and delivered.</h1>
-        <p class="lead">I pull verified names, titles, phone numbers, companies and locations from Google Maps, LinkedIn and Facebook — so your outreach starts with real leads, not guesswork.</p>
-        <div class="hero__actions">
-          <a href="contact.html" class="btn btn--primary">Request a Free Sample</a>
-          <a href="services.html" class="btn btn--ghost">See what's included</a>
-        </div>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <h1>Services &amp; pricing</h1>
+        <p>Every dataset is built to order — pick the fields you need, tell me the scope, and I'll extract and verify it. Pricing depends on volume and fields, so every job is quoted individually rather than sold off a fixed price list.</p>
       </div>
     </section>
 
     <section id="fields" class="section">
       <div class="container">
         <div class="section__head">
-          <h2>What's in every dataset</h2>
-          <p>Every record is built field by field from public sources. Pick the fields you need, or take the full set. <a href="services.html">See full field breakdown &amp; delivery formats →</a></p>
+          <h2>Available data fields</h2>
+          <p>Take the full set, or tell me which fields matter for your outreach.</p>
         </div>
 
-        <div class="fields-grid">
+        <div class="field-rows">
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
-            <div class="field-card__label">Full Name</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Full Name</div>
+              <div class="field-row__desc">The decision-maker or listed contact person's full name.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="11" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
-            <div class="field-card__label">Job Title</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Job Title</div>
+              <div class="field-row__desc">Their role, so your outreach speaks to the right person.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2 2C10.5 19 5 13.5 5 6a2 2 0 0 1 1-2z"/></svg>
-            <div class="field-card__label">Phone Number</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Phone Number</div>
+              <div class="field-row__desc">Direct or listed business number, where publicly available.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="10" height="18"/><rect x="14" y="8" width="6" height="13"/><path d="M7 7h1M7 11h1M7 15h1M10 7h1M10 11h1M10 15h1"/></svg>
-            <div class="field-card__label">Company Name</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Company Name</div>
+              <div class="field-row__desc">Legal or trading name of the business.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V10l5 3v8H3z"/><path d="M6 21v-4M10 21v-4M14 21v-4"/></svg>
-            <div class="field-card__label">Industry</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Industry</div>
+              <div class="field-row__desc">Sector or category, useful for segmenting your list.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><path d="M9 3 7 21M17 3l-2 18M4 9h16M3 15h16"/></svg>
-            <div class="field-card__label">Keyword / Niche</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Keyword / Niche</div>
+              <div class="field-row__desc">The search term or niche a record was found under.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><circle cx="12" cy="10" r="2.2"/><path d="M8 17c0-1.8 1.8-3 4-3s4 1.2 4 3"/></svg>
-            <div class="field-card__label">Company Reg. Number</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Company Reg. Number</div>
+              <div class="field-row__desc">Official registration/business number, where publicly listed.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            <div class="field-card__label">Country &amp; City</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Country &amp; City</div>
+              <div class="field-row__desc">Location data for geo-targeted outreach.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><path d="M9 15l6-6"/><path d="M10 6h-.5A4.5 4.5 0 0 0 5 10.5v0A4.5 4.5 0 0 0 9.5 15H10"/><path d="M14 18h.5A4.5 4.5 0 0 0 19 13.5v0A4.5 4.5 0 0 0 14.5 9H14"/></svg>
-            <div class="field-card__label">Person LinkedIn URL</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Person LinkedIn URL</div>
+              <div class="field-row__desc">Direct link to their LinkedIn profile.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg>
-            <div class="field-card__label">Company Website</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Company Website</div>
+              <div class="field-row__desc">Official site for the business.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 10.8l7.4-4.1M8.3 13.2l7.4 4.1"/></svg>
-            <div class="field-card__label">Facebook Page</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Facebook Page</div>
+              <div class="field-row__desc">The business's Facebook presence, if listed.</div>
+            </div>
           </div>
 
-          <div class="field-card">
+          <div class="field-row">
             <svg class="icon" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
-            <div class="field-card__label">Google Maps Listing</div>
+            <div class="field-row__text">
+              <div class="field-row__label">Google Maps Listing</div>
+              <div class="field-row__desc">Address, category and listing data pulled directly from Maps.</div>
+            </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Delivery formats</h2>
+        </div>
+
+        <div class="formats">
+          <div class="format-card">
+            <div class="format-card__label">CSV</div>
+            <p>Plain, portable — drops straight into any CRM or outreach tool.</p>
+          </div>
+          <div class="format-card">
+            <div class="format-card__label">Excel</div>
+            <p>Formatted workbook if you want to filter and work the list directly.</p>
+          </div>
+          <div class="format-card">
+            <div class="format-card__label">Google Sheets</div>
+            <p>Shared live, so you can start working the list the moment it's ready.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -138,29 +192,6 @@
             <div class="step__num">03</div>
             <h3>You get clean data</h3>
             <p>Delivered as CSV, Excel or Google Sheets — ready to load straight into your outreach tool.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="value-props">
-          <div class="value-prop">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-            <span>Verified &amp; deduplicated</span>
-          </div>
-          <div class="value-prop">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h13"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="15" cy="18" r="2"/></svg>
-            <span>Custom filters</span>
-          </div>
-          <div class="value-prop">
-            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-            <span>Fast turnaround</span>
-          </div>
-          <div class="value-prop">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6M9 9h2"/></svg>
-            <span>Ready-to-use format</span>
           </div>
         </div>
       </div>

@@ -410,7 +410,7 @@ tr:last-child td {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 0.8fr 0.9fr 0.9fr;
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -459,6 +459,217 @@ tr:last-child td {
   color: var(--text-muted);
 }
 
+/* Page hero (subpages) */
+
+.page-hero {
+  display: flex;
+  justify-content: center;
+  padding: 72px 24px 56px;
+  background:
+    radial-gradient(circle at 18% 0%, oklch(90% 0.05 255 / 0.5), transparent 55%);
+}
+
+.page-hero__inner {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-hero h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.page-hero p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Nav active state */
+
+.nav__links a.is-active {
+  color: var(--accent);
+}
+
+/* Prose (About page) */
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 680px;
+}
+
+.prose p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.checklist .icon {
+  margin-top: 2px;
+}
+
+/* Services list (field rows with description) */
+
+.field-rows {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.field-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.field-row:last-child {
+  border-bottom: none;
+}
+
+.field-row__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-row__label {
+  font-weight: 600;
+  font-size: 15.5px;
+}
+
+.field-row__desc {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.formats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.format-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.format-card__label {
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+}
+
+.format-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Contact page */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.contact-card__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-tint);
+  flex-shrink: 0;
+}
+
+.contact-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-card__label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.contact-card__value {
+  font-weight: 600;
+  font-size: 15.5px;
+  color: var(--text);
+}
+
+.contact-card:hover .contact-card__value {
+  color: var(--accent);
+}
+
+.contact-note {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* Table variants */
+
+.table-card + .table-card {
+  margin-top: 28px;
+}
+
+.table-card__title {
+  padding: 18px 24px 0;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -476,7 +687,7 @@ tr:last-child td {
   }
 
   .footer__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .footer__brand {
@@ -486,6 +697,14 @@ tr:last-child td {
 
   .hero h1 {
     font-size: 40px;
+  }
+
+  .formats {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -520,5 +739,14 @@ tr:last-child td {
 
   .cta h2 {
     font-size: 26px;
+  }
+
+  .page-hero h1 {
+    font-size: 30px;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 10px;
   }
 }
