@@ -58,3 +58,34 @@ All five pages share the same nav/footer and `css/styles.css`. Verified locally 
 - Real contact details (email/phone/WhatsApp/LinkedIn/Facebook) — Haris said he'd send these, not yet received
 - Domain purchase
 - Hosting — explicitly deferred until the site is fully finalized
+
+## 2026-09-10 (later still) — Real contact info wired in, professional polish pass
+
+**Real contact details received:**
+- LinkedIn: https://www.linkedin.com/in/haris-shah-207a4026b/
+- Phone: `03340817939` — wired as a WhatsApp link via `wa.me/923340817939`, **assuming Pakistan (+92)** since the number is in local 03XX format. Flag to Haris to confirm/correct if wrong.
+- Email and Facebook are still placeholders (`[YOUR EMAIL]`, `[Facebook URL]`) — not yet provided.
+
+Applied across all 5 pages' footers and the Contact page's contact cards.
+
+**"Make it look professional" pass** — Haris asked for phone/LinkedIn to be added as real clickable elements and for the overall site to read as more professionally built. Delivered:
+- Working **mobile hamburger menu** (CSS-only checkbox toggle) — nav links used to just disappear below 600px with no way to reach them; now they open in a dropdown.
+- Proper **favicon** (`assets/favicon.svg`, a filled blue pin mark matching the brand icon) — was previously a blank tab icon.
+- Hover/interaction polish: button press states, card hover elevation (shadow + lift) on format/contact cards, tinted hover on field-card icons, smoother color transitions throughout.
+
+**"More detailed design-wise" follow-up** — further visual depth pass:
+- Icon chips (tinted rounded-square backgrounds) added behind icons in field cards, value props, and delivery-format cards, instead of bare stroke icons.
+- Eyebrow labels (small uppercase kicker + dash, e.g. "DATA FIELDS", "PROCESS") added above section headings for stronger hierarchy.
+- Subtle alternating section background tint (page bg vs. white) for rhythm down each page, done via `nth-of-type(even)` with no markup changes needed.
+- Numbered process steps now sit in a circular badge instead of plain text.
+- Subtle shadows added to card containers (fields grid, table cards, value-props box, format/contact cards) instead of flat borders only.
+- A dot-grid texture added behind the hero and page-hero sections for texture.
+- A thin blue gradient accent line added to the top of the footer.
+- Delivery-format cards (CSV/Excel/Google Sheets) got icons added — previously text-only.
+
+**Testing note:** Verified all pages load and look correct at desktop width via a local Python server + browser. The Chrome automation tool's window-resize did not reliably change the captured viewport in this environment, so the mobile hamburger menu and mobile layout could not be visually confirmed live in-session — the CSS uses a standard, well-tested checkbox-toggle pattern and existing breakpoints (900px/600px), but Haris should double check it on an actual phone or by narrowing a browser window manually.
+
+**Still open:**
+- Confirm the WhatsApp number's country code (assumed +92 Pakistan)
+- Real email and Facebook URL still placeholders
+- Domain purchase and hosting — still deferred until Haris finalizes everything
