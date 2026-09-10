@@ -214,3 +214,27 @@ Haris asked to remove the name "Haris" from the site. Removed it from the two pl
 Left the email address (harisshah478@gmail.com) and its mailto/JSON-LD references untouched — asked Haris directly since removing "haris" there would mean removing the actual functional email text, and he confirmed to leave it as-is.
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-11 (later still) — New Industries page
+
+Haris asked to "add a category page." Clarified scope first: one "Industries" hub page listing niches served (vs. separate landing pages per industry, vs. just reviving the old homepage industry pills). Haris chose the single hub page.
+
+Built `industries.html` — page-hero, an 8-card grid (Real Estate, Healthcare, E-commerce & Retail, B2B Services & Agencies, Logistics & Supply Chain, Legal Services, Finance & Insurance, SaaS & Technology) reusing the existing `.formats`/`.format-card` styling, a CTA linking to the free-trial form, and the standard simplified footer. Added "Industries" to the nav and footer Explore column on every existing page (index/about/services/portfolio/contact) — hit and fixed a script bug that briefly duplicated the nav link on 4 of the 5 pages before catching it.
+
+Haris then shared a screenshot described as "SaaS categories" meant to replace my placeholder 8 industries with an authoritative list (the same pattern as the earlier 27-field list). The image came through unreadably low-resolution (checked file dimensions directly — effectively unreadable, not just a rendering issue on my end) despite two read attempts, so **did not guess** at the category names from it. Asked Haris to paste the list as text instead, the same way the field list was shared. The current 8-industry placeholder set is live and verified working in the meantime, ready to be swapped once the real list arrives.
+
+**Still open:** the real category list (text, not image) to replace the placeholder 8 industries; Formspree endpoint (blocking); placeholder domain; domain purchase; hosting.
+
+## 2026-09-11 (later still) — Category directory rebuilt as a searchable list, then expanded
+
+Haris shared the real category list — turned out to be a huge (1,786-item) list of SaaS/technographic categories (CRM, Payroll, Sales Intelligence, etc.), not "industries served" in the marketing sense. Confirmed scope with Haris before rebuilding: he chose to replace the Industries page content with this list entirely.
+
+Rebuilt `industries.html`: dropped the 8 hand-written industry cards, replaced with a live-search box + a compact chip grid of every category, generated programmatically from `Industries.txt` (kept in the repo as the source record). Updated the page's title/hero copy to "Target by category" / "Business & Software Categories" framing (nav label left as "Industries" — only the page content changed). Hit and fixed a real CSS bug: `.cat-chip { display: inline-block }` was overriding the browser's default `[hidden]` behavior, so the search count updated but chips never actually hid — fixed with `.cat-chip[hidden] { display: none; }`.
+
+Haris then asked to merge near-duplicate variants (his example: "CRM" should be one entry, not scattered across "Crm", "Crm Software", "Customer Relationship Management"). Implemented two merge passes: (1) a safe mechanical rule — collapse any "{X}" + "{X} Software/Platform/Tool/Solution/System" pair into just "{X}" (caught 117 pairs), and (2) a small hand-verified synonym-cluster merge for CRM, ERP, LMS, and HR (each collapsing 2-4 literal-duplicate entries into one clean label). Deliberately did NOT merge legitimate niche variants like "Insurance Crm" or "Healthcare Crm Software" into generic "CRM" — those represent real, distinct targeting granularity.
+
+Finally, Haris asked to add ~100 local/service-business categories (Plumbing, Construction, Restaurant, etc.) that weren't in the SaaS list. Curated and added exactly 100 (93 were genuinely new — 7 like "Construction" and "HVAC" turned out to already exist in the source list and were skipped as dupes).
+
+**Final category count: 1,757**, fully searchable, verified with live browser tests (search for "crm" returns exactly the CRM cluster + niche variants; search for "plumbing" returns the new entry).
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.

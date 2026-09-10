@@ -8,13 +8,15 @@ A static landing page for a personal data-extraction / lead-sourcing service. Pu
 index.html           Home (hero, free-trial form, stats, sources, dashboard preview, process, CTA)
 about.html            About
 services.html         Services & pricing
+industries.html       Searchable directory of 1,757 business/software/service categories
 portfolio.html        Samples (illustrative example datasets)
 contact.html          Contact
 css/styles.css        All styling (shared across every page)
-js/animations.js      Scroll-reveal, entrance animation, and stat count-up (vanilla JS, no dependencies)
+js/animations.js      Scroll-reveal, entrance animation, stat count-up, cursor glow (vanilla JS, no dependencies)
 assets/favicon.svg    Site favicon
 robots.txt            Crawler rules + sitemap reference
 sitemap.xml           Page list for search engines
+Industries.txt        Source data for the category directory (kept for reference/regeneration)
 design-mockup/        Editable design canvas mockups explored during the build (not all reflect the live site)
 CONVERSATION_LOG.md   Running log of decisions made while building this site
 ```
@@ -35,6 +37,7 @@ python -m http.server 8000
 - [x] Scroll/entrance animations, stat count-up
 - [x] SEO: per-page meta titles/descriptions, Open Graph + Twitter cards, canonical links, JSON-LD structured data (homepage), `robots.txt`, `sitemap.xml`
 - [x] Free-trial lead capture form ("Get 100 Free Verified Contacts") on the homepage
+- [x] Searchable category directory (1,757 entries) at `industries.html`
 - [ ] **Free-trial form needs a real Formspree endpoint** — currently `action="https://formspree.io/f/YOUR_FORM_ID"` in `index.html`. Sign up at formspree.io, create a form, and swap in the real endpoint URL, or the form won't actually deliver submissions.
 - [ ] `robots.txt`, `sitemap.xml`, and every page's canonical/OG URL use a **placeholder domain** (`https://leadscoutdata.com`) — update all of these once the real domain is purchased.
 - [ ] Facebook contact link intentionally removed (was a placeholder, Haris asked to drop it)
