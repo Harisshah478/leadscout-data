@@ -198,3 +198,11 @@ Haris asked for a slight blue glow that follows the cursor. Implemented as a fix
 **Real bug found and fixed:** Haris flagged that the Samples page table data was barely visible. Root cause: `td { color: oklch(30% 0.02 255); }` and `.footer__title { color: oklch(30% 0.02 255); }` were hardcoded dark colors left over from the original light theme — they never got updated when the whole site flipped to dark (unlike everything else, which uses CSS custom properties and re-themed automatically). Fixed both to `var(--text)`. Grepped the rest of the stylesheet for the same hardcoded-color pattern; nothing else was affected.
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-11 (later still) — Recognizable WhatsApp and LinkedIn icons
+
+Haris asked for real WhatsApp/LinkedIn icons instead of the generic phone/link glyphs. Added simplified line-art versions (matching the site's existing stroke-icon style, not filled brand badges) in every place they identify those specific links: Contact page's contact cards, the Contact page's footer (Contact + Elsewhere columns), and the Services page's "Person LinkedIn Url" / "Company LinkedIn Url" field rows. Left the generic phone icon alone everywhere it represents a literal phone-number field rather than a WhatsApp link (Phone Number field, Company Phone field, the free-trial checklist).
+
+First WhatsApp attempt looked jittery/scribbly — Haris flagged it ("whatsapp looks wired") — replaced the handset path with a much simpler, smoother curve. Verified visually afterward; reads clearly now.
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
