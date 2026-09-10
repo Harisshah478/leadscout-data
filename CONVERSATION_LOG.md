@@ -180,3 +180,13 @@ Haris said to go ahead with both suggestions from the previous turn:
 Verified all field rows and the updated link via page-text extraction (a couple of screenshots came back blank — confirmed via DOM text and a follow-up screenshot that this was browser-tool flakiness, not a real rendering bug).
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-11 (later still) — Authoritative 27-field list
+
+Haris shared the exact, real field list his service delivers: First Name, Last Name, Email, Title, Company Name, Email Status, Seniority, Departments, Sub Departments, Phone Number, # Employees, Industry, Keywords, Person LinkedIn Url, Website, Company LinkedIn Url, Facebook Url, Twitter Url, Address, City, State, Country, Company Address, Company City, Company State, Company Country, Company Phone (27 total).
+
+Rebuilt the Services page's field breakdown to match this exactly — removed two fields I'd previously guessed that aren't real (Company Reg. Number, Google Maps Listing), added the ones I was missing (Email, Sub Departments, Company LinkedIn Url, Twitter Url, and separate person/company Address/City/State/Country instead of a combined "Country & City"). Reused icons by category (person icon for name fields, building icon for all company-location fields, pin icon for all person-location fields, phone icon for both phone fields) rather than inventing 27 unique icons — keeps the list scannable. Updated the homepage stat from "16+" to "27+" Data Fields, and renamed the Samples page's "Department" column header to "Departments" to match the official name.
+
+Verified the full list renders correctly (all 27 rows, correct order, card closes properly at the end) via page-text extraction and screenshots — a couple of screenshot attempts came back blank/timed out again mid-check, confirmed as browser-tool flakiness (not a site bug) the same way as earlier in this session.
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
