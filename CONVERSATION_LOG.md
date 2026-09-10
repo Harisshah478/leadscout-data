@@ -206,3 +206,11 @@ Haris asked for real WhatsApp/LinkedIn icons instead of the generic phone/link g
 First WhatsApp attempt looked jittery/scribbly — Haris flagged it ("whatsapp looks wired") — replaced the handset path with a much simpler, smoother curve. Verified visually afterward; reads clearly now.
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-11 (later still) — Removed personal name from visible copy
+
+Haris asked to remove the name "Haris" from the site. Removed it from the two places it appeared as visible personal-identity text: the About page bio ("I'm Haris — I run LeadScout Data..." → "I run LeadScout Data...") and the Contact page's LinkedIn card, which previously displayed the profile slug "in/haris-shah-207a4026b" as visible text — changed to "View Profile →" (the underlying href still points to the real LinkedIn profile, unavoidable since that's the actual account URL).
+
+Left the email address (harisshah478@gmail.com) and its mailto/JSON-LD references untouched — asked Haris directly since removing "haris" there would mean removing the actual functional email text, and he confirmed to leave it as-is.
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
