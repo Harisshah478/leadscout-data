@@ -190,3 +190,11 @@ Rebuilt the Services page's field breakdown to match this exactly — removed tw
 Verified the full list renders correctly (all 27 rows, correct order, card closes properly at the end) via page-text extraction and screenshots — a couple of screenshot attempts came back blank/timed out again mid-check, confirmed as browser-tool flakiness (not a site bug) the same way as earlier in this session.
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-11 (later still) — Cursor glow effect + a real contrast bug fix
+
+Haris asked for a slight blue glow that follows the cursor. Implemented as a fixed, `mix-blend-mode: screen` overlay (`.cursor-glow`) added via `js/animations.js` — no HTML changes needed, works across every page automatically. Skips touch devices (`pointer: fine` check) and respects `prefers-reduced-motion`. Tuned down after Haris said the initial version was too bright (radius 560px→500px, opacity 0.35→0.16).
+
+**Real bug found and fixed:** Haris flagged that the Samples page table data was barely visible. Root cause: `td { color: oklch(30% 0.02 255); }` and `.footer__title { color: oklch(30% 0.02 255); }` were hardcoded dark colors left over from the original light theme — they never got updated when the whole site flipped to dark (unlike everything else, which uses CSS custom properties and re-themed automatically). Fixed both to `var(--text)`. Grepped the rest of the stylesheet for the same hardcoded-color pattern; nothing else was affected.
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.

@@ -80,4 +80,28 @@
   document.querySelectorAll(".stat__num").forEach(function (el) {
     countIo.observe(el);
   });
+
+  var hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+
+  if (hasFinePointer && !reduceMotion) {
+    var glow = document.createElement("div");
+    glow.className = "cursor-glow";
+    document.body.appendChild(glow);
+
+    var glowRaf = null;
+
+    document.addEventListener("mousemove", function (e) {
+      if (glowRaf) return;
+      glowRaf = window.requestAnimationFrame(function () {
+        glow.style.setProperty("--mx", e.clientX + "px");
+        glow.style.setProperty("--my", e.clientY + "px");
+        glow.classList.add("is-active");
+        glowRaf = null;
+      });
+    });
+
+    document.addEventListener("mouseleave", function () {
+      glow.classList.remove("is-active");
+    });
+  }
 })();

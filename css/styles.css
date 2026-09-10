@@ -801,7 +801,7 @@ th {
 
 td {
   border-bottom: 1px solid var(--border-soft);
-  color: oklch(30% 0.02 255);
+  color: var(--text);
 }
 
 tr:last-child td {
@@ -971,7 +971,7 @@ tr:last-child td {
 .footer__title {
   font-weight: 600;
   font-size: 14px;
-  color: oklch(30% 0.02 255);
+  color: var(--text);
 }
 
 .footer__col a {
@@ -1247,6 +1247,23 @@ tr:last-child td {
   font-weight: 600;
   font-size: 14.5px;
   color: var(--text-secondary);
+}
+
+/* Cursor glow */
+
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 20%), oklch(62% 0.16 255 / 0.16), transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.cursor-glow.is-active {
+  opacity: 1;
 }
 
 /* Motion */
