@@ -123,3 +123,17 @@ Haris shared a screenshot of the Services page asking how to make it better. Dia
 Fixed by separating them into nested divs (`.container` > `.page-hero__inner`) across all 4 subpages, so hero headings now align with the page content below. Also added an eyebrow label (e.g. "SERVICES", "CONTACT") above each page-hero heading for consistency with the section headers below, and adjusted the entrance-animation delays since the eyebrow is now a new first child.
 
 **Still open:** WhatsApp country-code confirmation, domain purchase, hosting.
+
+## 2026-09-10 (later still) — Theme exploration: dark cinematic → Glide-style → dark agency (final)
+
+Haris went through several reference themes in quick succession:
+
+1. Shared a dark, cinematic "videographer's portfolio" theme. Drafted a translated mockup (dark violet/cyan, data-map hero visual) as a Claude Design canvas — not committed to the live site.
+2. Shared Glide's landing page (clean, centered, light, a "describe what you want to build" prompt-box input, category tabs, a rich dashboard-screenshot visual). Drafted a second mockup, Haris said "go with glide theme" — **rebuilt the whole site in this direction**: pill-shaped buttons, black primary CTA, centered hero with a `.prompt-box` linking to Contact, industry tab pills, and a `.dashboard-card` visual (colorful field icons, sample records, coverage panel, masked "sample output" panel) replacing the old plain fields-grid on the homepage.
+3. Shared paidmediaguys.com (dark agency style: bold two-tone headline, icon eyebrow badge, animated glow, a stat row, a client-logo strip) and said "i need a website like them best lines animation everything" — asked whether to blend, fully switch, or hold; Haris chose **fully switch**.
+
+**Final direction implemented (supersedes Glide):** flipped the whole site to a dark theme via CSS custom properties (`--bg`, `--surface`, `--surface-2`, `--text`, etc. redefined dark; `--accent` blue kept from the original brand) so every page restyled automatically. Homepage hero rebuilt to match Paid Media Guys' pattern: icon eyebrow pill ("Verified Lead Extraction"), two-line headline with the second line in accent blue ("We find leads that **actually convert.**"), an animated ambient glow behind the hero (`@keyframes glow-drift`, respects `prefers-reduced-motion`), a stat row (12+ Data Fields / 3 Verified Sources / 1–2 Day Turnaround — kept to real, structural facts rather than fabricated numbers) with a **count-up animation** on scroll, and a dark logo-strip ("Sources I Extract From": Google Maps, LinkedIn, Facebook, Company Sites). The existing `.dashboard-card` data-preview section was kept (auto-restyled dark via tokens) further down the homepage.
+
+Verified all 5 pages render correctly in dark mode with no console errors — subpage alignment fix and icon-chip work from earlier held up correctly under the new palette.
+
+**Still open:** WhatsApp country-code confirmation, domain purchase, hosting. Note the two earlier mockups (dark-cinematic and Glide) remain in `design-mockup/` as historical artifacts, not reflecting the live site.

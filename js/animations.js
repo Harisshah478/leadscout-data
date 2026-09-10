@@ -4,7 +4,7 @@
   if (!("IntersectionObserver" in window)) return;
 
   var staggerGroups = document.querySelectorAll(
-    ".fields-grid, .value-props, .steps, .formats, .contact-grid, .checklist, .field-rows"
+    ".fields-grid, .value-props, .steps, .formats, .contact-grid, .checklist, .field-rows, .stat-row, .logo-strip"
   );
 
   staggerGroups.forEach(function (group) {
@@ -15,12 +15,39 @@
   });
 
   var singles = document.querySelectorAll(
-    ".section__head, .table-card, .prose p, .cta"
+    ".section__head, .table-card, .prose p, .cta, .dashboard-card"
   );
 
   singles.forEach(function (el) {
     el.classList.add("reveal");
   });
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function animateCount(el) {
+    var match = /^(\d+(?:\.\d+)?)(.*)$/.exec(el.textContent.trim());
+    if (!match) return;
+    if (reduceMotion) return;
+    var target = parseFloat(match[1]);
+    var suffix = match[2];
+    var duration = 1000;
+    var start = null;
+
+    function step(timestamp) {
+      if (start === null) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.round(target * eased);
+      el.textContent = current + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        el.textContent = match[1] + suffix;
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
 
   var io = new IntersectionObserver(
     function (entries) {
@@ -36,5 +63,21 @@
 
   document.querySelectorAll(".reveal").forEach(function (el) {
     io.observe(el);
+  });
+
+  var countIo = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          countIo.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  document.querySelectorAll(".stat__num").forEach(function (el) {
+    countIo.observe(el);
   });
 })();

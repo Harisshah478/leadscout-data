@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Work Sans', system-ui, sans-serif; background: oklch(15% 0.035 290); color: oklch(97% 0.01 290); }
+  h1, h2, h3 { font-family: 'Sora', system-ui, sans-serif; margin: 0; }
+  p { margin: 0; }
+  a { color: oklch(78% 0.13 200); text-decoration: none; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 0.03em; text-transform: uppercase; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; }
+  .btn-primary { background: oklch(78% 0.13 200); color: oklch(14% 0.03 290); }
+  .btn-ghost { background: transparent; color: oklch(97% 0.01 290); border: 1.5px solid oklch(35% 0.03 290); }
+  .icon { width: 24px; height: 24px; stroke: oklch(78% 0.13 200); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden; background: oklch(15% 0.035 290);">
+
+  <!-- NAV -->
+  <div style="display:flex; justify-content:center; border-bottom:1px solid oklch(28% 0.03 290);">
+    <div style="width:100%; max-width:1280px; display:flex; align-items:center; justify-content:space-between; padding:22px 32px;">
+      <div style="display:flex; align-items:center; gap:9px;">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span style="font-family:'Sora',sans-serif; font-weight:800; font-size:18px; letter-spacing:0.02em;">LEADSCOUT <span style="color:oklch(65% 0.02 290); font-weight:600;">DATA</span></span>
+      </div>
+      <div style="display:flex; align-items:center; gap:36px;">
+        <a href="#" style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:oklch(85% 0.01 290);">Home</a>
+        <a href="#" style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:oklch(65% 0.02 290);">About</a>
+        <a href="#" style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:oklch(65% 0.02 290);">Services</a>
+        <a href="#" style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:oklch(65% 0.02 290);">Samples</a>
+        <a href="#" style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:oklch(65% 0.02 290);">Contact</a>
+      </div>
+      <button class="btn btn-primary" style="padding:12px 22px; font-size:12.5px;">Get a Quote</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display:flex; justify-content:center; padding:88px 32px 0;">
+    <div style="width:100%; max-width:1280px; display:grid; grid-template-columns: 1.05fr 0.95fr; gap:56px; align-items:center;">
+
+      <div style="display:flex; flex-direction:column; gap:26px;">
+        <div style="display:inline-flex; align-items:center; gap:9px; padding:8px 16px; border-radius:999px; background:oklch(24% 0.05 200); width:fit-content; border:1px solid oklch(34% 0.06 200);">
+          <span style="width:7px; height:7px; border-radius:999px; background:oklch(78% 0.13 200);"></span>
+          <span style="font-size:12.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:oklch(80% 0.1 200);">Data Extraction &amp; Lead Sourcing</span>
+        </div>
+        <h1 style="font-size:60px; line-height:1.02; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em;">Business<br>Data,<br><span style="color:oklch(78% 0.13 200);">Extracted.</span></h1>
+        <p style="font-size:17px; line-height:1.65; color:oklch(72% 0.02 290); max-width:460px;">I pull verified names, titles, phone numbers, companies and locations from Google Maps, LinkedIn and Facebook — so your outreach starts with real leads, not guesswork.</p>
+        <div style="display:flex; gap:14px; margin-top:6px;">
+          <button class="btn btn-primary">Request a Sample</button>
+          <button class="btn btn-ghost">See What's Included</button>
+        </div>
+      </div>
+
+      <!-- Data map visual -->
+      <div style="position:relative;">
+        <div style="position:relative; height:460px; border-radius:22px; background: oklch(20% 0.04 290); border:1px solid oklch(30% 0.035 290); overflow:hidden; background-image: radial-gradient(oklch(32% 0.03 290) 1px, transparent 1.5px), radial-gradient(circle at 75% 20%, oklch(30% 0.08 200 / 0.35), transparent 55%); background-size: 22px 22px, auto;">
+
+          <svg width="100%" height="100%" viewBox="0 0 480 460" style="position:absolute; top:0; left:0;">
+            <line x1="240" y1="230" x2="120" y2="120" stroke="oklch(50% 0.1 200)" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <line x1="240" y1="230" x2="370" y2="100" stroke="oklch(50% 0.1 200)" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <line x1="240" y1="230" x2="350" y2="330" stroke="oklch(50% 0.1 200)" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <line x1="240" y1="230" x2="100" y2="330" stroke="oklch(50% 0.1 200)" stroke-width="1.2" stroke-dasharray="4 4"/>
+
+            <circle cx="240" cy="230" r="9" fill="oklch(78% 0.13 200)"/>
+            <circle cx="240" cy="230" r="18" fill="none" stroke="oklch(78% 0.13 200 / 0.35)" stroke-width="1.5"/>
+
+            <circle cx="120" cy="120" r="5.5" fill="oklch(90% 0.02 290)"/>
+            <circle cx="370" cy="100" r="5.5" fill="oklch(90% 0.02 290)"/>
+            <circle cx="350" cy="330" r="5.5" fill="oklch(90% 0.02 290)"/>
+            <circle cx="100" cy="330" r="5.5" fill="oklch(90% 0.02 290)"/>
+          </svg>
+
+          <div style="position:absolute; top:88px; left:96px; font-size:11.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:oklch(88% 0.01 290); background:oklch(15% 0.035 290 / 0.85); padding:5px 10px; border-radius:6px; border:1px solid oklch(32% 0.03 290);">Google Maps</div>
+          <div style="position:absolute; top:68px; left:330px; font-size:11.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:oklch(88% 0.01 290); background:oklch(15% 0.035 290 / 0.85); padding:5px 10px; border-radius:6px; border:1px solid oklch(32% 0.03 290);">LinkedIn</div>
+          <div style="position:absolute; top:340px; left:300px; font-size:11.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:oklch(88% 0.01 290); background:oklch(15% 0.035 290 / 0.85); padding:5px 10px; border-radius:6px; border:1px solid oklch(32% 0.03 290);">Facebook</div>
+          <div style="position:absolute; top:340px; left:40px; font-size:11.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:oklch(88% 0.01 290); background:oklch(15% 0.035 290 / 0.85); padding:5px 10px; border-radius:6px; border:1px solid oklch(32% 0.03 290);">Company Sites</div>
+
+          <div style="position:absolute; bottom:0; left:0; right:0; padding:20px 24px; background:linear-gradient(0deg, oklch(15% 0.035 290 / 0.95), transparent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(65% 0.02 290); font-weight:600;">One clean, deduplicated record per contact</div>
+        </div>
+
+        <div style="position:absolute; bottom:-24px; left:-24px; background:oklch(20% 0.04 290); border:1px solid oklch(34% 0.06 200); border-radius:14px; padding:16px 20px; display:flex; align-items:center; gap:12px; box-shadow: 0 12px 32px oklch(10% 0.02 290 / 0.5);">
+          <svg class="icon" viewBox="0 0 24 24" style="width:20px;height:20px;"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <div style="font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:oklch(65% 0.02 290); font-weight:600;">Every Record</div>
+            <div style="font-size:13.5px; font-weight:700; color:oklch(96% 0.01 290);">Verified &amp; Deduplicated</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SOURCES STRIP -->
+  <div style="display:flex; justify-content:center; padding:120px 32px 60px;">
+    <div style="width:100%; max-width:1280px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; padding:28px 0; border-top:1px solid oklch(26% 0.03 290); border-bottom:1px solid oklch(26% 0.03 290);">
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:oklch(58% 0.02 290);">Sources</span>
+      <span style="font-size:14px; font-weight:600; color:oklch(75% 0.02 290);">Google Maps</span>
+      <span style="font-size:14px; font-weight:600; color:oklch(75% 0.02 290);">LinkedIn</span>
+      <span style="font-size:14px; font-weight:600; color:oklch(75% 0.02 290);">Facebook</span>
+      <span style="font-size:14px; font-weight:600; color:oklch(75% 0.02 290);">Company Websites</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div style="display:flex; justify-content:center; padding:60px 32px 110px;">
+    <div style="width:100%; max-width:1280px; display:flex; flex-direction:column; gap:48px;">
+      <div style="display:flex; flex-direction:column; gap:14px; max-width:560px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="width:16px; height:2px; background:oklch(78% 0.13 200);"></span>
+          <span style="font-size:12.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:oklch(78% 0.13 200);">Our Services</span>
+        </div>
+        <h2 style="font-size:36px; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em;">What We Deliver</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px;">
+
+        <div style="background:oklch(19% 0.04 290); border:1px solid oklch(28% 0.03 290); border-radius:16px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:12px; background:oklch(24% 0.05 200); border:1px solid oklch(34% 0.06 200); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.01em;">Verified Data</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:oklch(68% 0.02 290);">Every record is cross-checked and deduplicated by hand before it reaches you — never a raw, unverified scrape.</p>
+        </div>
+
+        <div style="background:oklch(19% 0.04 290); border:1px solid oklch(28% 0.03 290); border-radius:16px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:12px; background:oklch(24% 0.05 200); border:1px solid oklch(34% 0.06 200); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h13"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="15" cy="18" r="2"/></svg>
+          </div>
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.01em;">Custom Targeting</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:oklch(68% 0.02 290);">Scoped to your exact target — industry, location, company size or keyword — not a generic bulk export.</p>
+        </div>
+
+        <div style="background:oklch(19% 0.04 290); border:1px solid oklch(28% 0.03 290); border-radius:16px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:12px; background:oklch(24% 0.05 200); border:1px solid oklch(34% 0.06 200); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </div>
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.01em;">Fast Turnaround</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:oklch(68% 0.02 290);">Send your target today, get a scoped sample back fast — most jobs turned around within a day or two.</p>
+        </div>
+
+        <div style="background:oklch(19% 0.04 290); border:1px solid oklch(28% 0.03 290); border-radius:16px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:12px; background:oklch(24% 0.05 200); border:1px solid oklch(34% 0.06 200); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6M9 9h2"/></svg>
+          </div>
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.01em;">Flexible Delivery</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:oklch(68% 0.02 290);">CSV, Excel, or a live Google Sheet — delivered in the format you'll actually use.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="display:flex; justify-content:center; padding:0 32px 100px;">
+    <div style="width:100%; max-width:1280px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:22px; padding:72px 40px; border-radius:24px; background: oklch(20% 0.045 290); border:1px solid oklch(34% 0.06 200); background-image: radial-gradient(circle at 80% 20%, oklch(30% 0.09 200 / 0.4), transparent 55%);">
+      <h2 style="font-size:34px; font-weight:800; text-transform:uppercase; max-width:560px;">Ready To Fill Your Pipeline With Real Leads?</h2>
+      <p style="font-size:15.5px; color:oklch(70% 0.02 290); max-width:460px; line-height:1.6;">Pricing depends on volume and the fields you need — send me your target and I'll quote it.</p>
+      <button class="btn btn-primary" style="margin-top:6px;">Get A Quote</button>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

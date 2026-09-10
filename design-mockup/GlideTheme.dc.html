@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Work Sans', system-ui, sans-serif; background: oklch(98% 0.004 260); color: oklch(15% 0.01 260); }
+  h1, h2 { font-family: 'Sora', system-ui, sans-serif; margin: 0; }
+  p { margin: 0; }
+  a { color: oklch(15% 0.01 260); text-decoration: none; }
+  .pill-btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 22px; border-radius: 999px; font-weight: 600; font-size: 13.5px; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; }
+  .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden; background: oklch(98% 0.004 260);">
+
+  <!-- NAV -->
+  <div style="display:flex; justify-content:center; border-bottom:1px solid oklch(92% 0.006 260);">
+    <div style="width:100%; max-width:1280px; display:flex; align-items:center; justify-content:space-between; padding:20px 32px;">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(56% 0.19 255); width:22px; height:22px;"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span style="font-family:'Sora',sans-serif; font-weight:700; font-size:16px;">LeadScout Data</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:32px;">
+        <a href="#" style="font-size:14px; font-weight:500; color:oklch(35% 0.008 260);">Services</a>
+        <a href="#" style="font-size:14px; font-weight:500; color:oklch(35% 0.008 260);">Samples</a>
+        <a href="#" style="font-size:14px; font-weight:500; color:oklch(35% 0.008 260);">About</a>
+        <a href="#" style="font-size:14px; font-weight:500; color:oklch(35% 0.008 260);">Pricing</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:18px;">
+        <a href="#" style="font-size:14px; font-weight:500; color:oklch(35% 0.008 260);">Contact</a>
+        <button class="pill-btn" style="background:oklch(15% 0.01 260); color:white;">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display:flex; justify-content:center; padding:80px 32px 0;">
+    <div style="max-width:720px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:22px;">
+      <h1 style="font-size:46px; line-height:1.15; font-weight:800; letter-spacing:-0.02em;">Turn public listings into leads that fill your pipeline</h1>
+      <p style="font-size:16.5px; line-height:1.6; color:oklch(45% 0.008 260); max-width:520px;">LeadScout Data pulls verified names, titles, companies and contact details from Google Maps, LinkedIn and Facebook — built to your exact target, no code required.</p>
+
+      <!-- Prompt box -->
+      <div style="margin-top:14px; width:100%; max-width:560px; background:white; border:1px solid oklch(90% 0.006 260); border-radius:16px; box-shadow:0 12px 32px oklch(20% 0.02 260 / 0.06); padding:16px 16px 16px 20px; display:flex; align-items:center; gap:12px;">
+        <span style="font-size:14.5px; color:oklch(55% 0.008 260); flex:1; text-align:left;">Describe the leads you need — e.g. "dentists in Austin"</span>
+        <button style="width:34px; height:34px; border-radius:999px; background:oklch(15% 0.01 260); border:none; display:flex; align-items:center; justify-content:center; flex-shrink:0; cursor:pointer;">
+          <svg class="icon" viewBox="0 0 24 24" style="stroke:white; width:16px; height:16px;"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY PILLS -->
+  <div style="display:flex; justify-content:center; padding:36px 32px 0;">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center;">
+      <span style="padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:500; color:oklch(45% 0.008 260); border:1px solid oklch(90% 0.006 260);">Real Estate</span>
+      <span style="padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:500; color:oklch(45% 0.008 260); border:1px solid oklch(90% 0.006 260);">E-commerce</span>
+      <span style="padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:600; color:white; background:oklch(15% 0.01 260);">B2B Services</span>
+      <span style="padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:500; color:oklch(45% 0.008 260); border:1px solid oklch(90% 0.006 260);">Healthcare</span>
+      <span style="padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:500; color:oklch(45% 0.008 260); border:1px solid oklch(90% 0.006 260);">Logistics</span>
+      <span style="padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:500; color:oklch(45% 0.008 260); border:1px solid oklch(90% 0.006 260);">Agencies</span>
+    </div>
+  </div>
+
+  <!-- PRODUCT VISUAL -->
+  <div style="display:flex; justify-content:center; padding:44px 32px 100px;">
+    <div style="width:100%; max-width:1040px; background:white; border-radius:24px; border:1px solid oklch(91% 0.006 260); box-shadow:0 24px 64px oklch(20% 0.02 260 / 0.08); padding:28px; display:flex; flex-direction:column; gap:22px;">
+
+      <!-- field icon row -->
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <div style="width:44px; height:44px; border-radius:12px; background:oklch(90% 0.05 255); display:flex; align-items:center; justify-content:center;"><svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(45% 0.15 255);"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
+        <div style="width:44px; height:44px; border-radius:12px; background:oklch(92% 0.06 150); display:flex; align-items:center; justify-content:center;"><svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(42% 0.12 150);"><rect x="3" y="8" width="18" height="11" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <div style="width:44px; height:44px; border-radius:12px; background:oklch(90% 0.07 55); display:flex; align-items:center; justify-content:center;"><svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(48% 0.15 55);"><path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2 2C10.5 19 5 13.5 5 6a2 2 0 0 1 1-2z"/></svg></div>
+        <div style="width:44px; height:44px; border-radius:12px; background:oklch(90% 0.06 320); display:flex; align-items:center; justify-content:center;"><svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(45% 0.14 320);"><rect x="4" y="3" width="10" height="18"/><rect x="14" y="8" width="6" height="13"/></svg></div>
+        <div style="width:44px; height:44px; border-radius:12px; background:oklch(90% 0.06 200); display:flex; align-items:center; justify-content:center;"><svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(45% 0.13 200);"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div style="width:44px; height:44px; border-radius:12px; background:oklch(92% 0.04 90); display:flex; align-items:center; justify-content:center;"><svg class="icon" viewBox="0 0 24 24" style="stroke:oklch(42% 0.1 90);"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg></div>
+      </div>
+
+      <!-- main grid -->
+      <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:18px;">
+
+        <div style="background:oklch(97% 0.004 260); border:1px solid oklch(92% 0.006 260); border-radius:14px; padding:18px;">
+          <div style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:oklch(50% 0.008 260); margin-bottom:14px;">Sample Records</div>
+          <div style="display:flex; flex-direction:column; gap:2px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid oklch(93% 0.006 260);"><span style="font-size:14px; font-weight:600;">J. Carter — Operations Mgr.</span><span style="font-size:12.5px; color:oklch(50% 0.008 260);">Austin, US</span></div>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid oklch(93% 0.006 260);"><span style="font-size:14px; font-weight:600;">M. Alvi — Marketing Dir.</span><span style="font-size:12.5px; color:oklch(50% 0.008 260);">Manchester, UK</span></div>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid oklch(93% 0.006 260);"><span style="font-size:14px; font-weight:600;">S. Novak — Founder</span><span style="font-size:12.5px; color:oklch(50% 0.008 260);">Toronto, CA</span></div>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 0;"><span style="font-size:14px; font-weight:600;">R. Iqbal — Procurement Lead</span><span style="font-size:12.5px; color:oklch(50% 0.008 260);">Dubai, AE</span></div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div style="background:oklch(97% 0.004 260); border:1px solid oklch(92% 0.006 260); border-radius:14px; padding:18px;">
+            <div style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:oklch(50% 0.008 260); margin-bottom:12px;">Coverage</div>
+            <div style="display:flex; flex-direction:column; gap:9px; font-size:13.5px;">
+              <div style="display:flex; justify-content:space-between;"><span>Google Maps</span><span style="color:oklch(50% 0.008 260);">Local businesses</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>LinkedIn</span><span style="color:oklch(50% 0.008 260);">Decision-makers</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>Facebook</span><span style="color:oklch(50% 0.008 260);">Business pages</span></div>
+            </div>
+          </div>
+          <div style="background:oklch(15% 0.01 260); border-radius:14px; padding:18px;">
+            <div style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:oklch(65% 0.01 260); margin-bottom:12px;">Sample Output</div>
+            <div style="display:flex; flex-direction:column; gap:8px; font-family:monospace; font-size:12.5px; color:oklch(85% 0.01 260);">
+              <div>phone: +1 512 •• •• 44</div>
+              <div>linkedin: in/j-carter-••••</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- delivery formats row -->
+      <div style="display:flex; align-items:center; gap:22px; padding-top:6px; border-top:1px solid oklch(93% 0.006 260); padding-top:16px;">
+        <span style="font-size:12.5px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:oklch(50% 0.008 260);">Delivered As</span>
+        <span style="font-size:13.5px; font-weight:600; color:oklch(35% 0.008 260);">CSV</span>
+        <span style="font-size:13.5px; font-weight:600; color:oklch(35% 0.008 260);">Excel</span>
+        <span style="font-size:13.5px; font-weight:600; color:oklch(35% 0.008 260);">Google Sheets</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
