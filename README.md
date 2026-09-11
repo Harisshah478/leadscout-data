@@ -38,7 +38,7 @@ python -m http.server 8000
 - [x] SEO: per-page meta titles/descriptions, Open Graph + Twitter cards, canonical links, JSON-LD structured data (homepage), `robots.txt`, `sitemap.xml`
 - [x] Free-trial lead capture form ("Get 100 Free Verified Contacts") on the homepage
 - [x] Searchable category directory (1,757 entries) at `industries.html`
-- [ ] **Free-trial form needs a real Formspree endpoint** — currently `action="https://formspree.io/f/YOUR_FORM_ID"` in `index.html`. Sign up at formspree.io, create a form, and swap in the real endpoint URL, or the form won't actually deliver submissions.
+- [x] Free-trial form wired to a real Formspree endpoint (`https://formspree.io/f/mwlkyaoe`) — submissions email Haris automatically
 - [ ] `robots.txt`, `sitemap.xml`, and every page's canonical/OG URL use a **placeholder domain** (`https://leadscoutdata.com`) — update all of these once the real domain is purchased.
 - [ ] Facebook contact link intentionally removed (was a placeholder, Haris asked to drop it)
 - [ ] Domain purchased

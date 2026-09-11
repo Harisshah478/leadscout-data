@@ -244,3 +244,9 @@ Finally, Haris asked to add ~100 local/service-business categories (Plumbing, Co
 Haris asked to "make the site more accurate," then narrowed it to categories. Audited the site and found a real mismatch: the nav/footer said "Industries" everywhere, but that page is actually a searchable directory of software/technographic + local-service categories (CRM, Payroll, Plumbing, etc.) — not business verticals like Real Estate or Healthcare, which is what "Industries" implies. Renamed the nav and footer link text to "Categories" across all 6 pages (URL/filename `industries.html` left unchanged to avoid breaking links). Checked the rest of the site for other stale "industries" references — everything else found was a legitimate generic use of the word ("your target industry," the "Industry" data field, category chips literally named "Industrial..."), so no further changes needed there.
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-12 (later) — Formspree endpoint wired in, free-trial form now live
+
+Haris signed up for Formspree and sent the real endpoint (`https://formspree.io/f/mwlkyaoe`). Swapped it into the free-trial form's `action` attribute in `index.html`, replacing the placeholder. Formspree emails submissions to the account's registered address automatically — no further config needed for the "auto-email on form submit" behavior Haris asked about. This was the last real blocker on the site's functionality.
+
+**Still open:** placeholder domain across SEO tags/sitemap/robots.txt, domain purchase, hosting.
