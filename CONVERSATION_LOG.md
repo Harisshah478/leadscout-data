@@ -369,3 +369,9 @@ Every page also got a `BreadcrumbList` (Home > Page). Also fixed the homepage's 
 Verified every block is valid JSON (scripted check) and correctly parses in-browser via `JSON.parse` on the live DOM, not just the raw file.
 
 **Still open:** Google Search Console setup (needs Haris's Google account — can't do this myself); domain purchase itself.
+
+## 2026-09-11 (later still) — Suppressed the cursor glow over pricing tier cards
+
+Haris reported something "popping out" following the cursor on the Pricing page's price boxes. Reproduced it as the site's existing global cursor-following glow effect (added in an earlier session) — not a bug, but distracting specifically over the large bold price numbers. Rather than removing the glow site-wide, added a `mouseenter`/`mouseleave` listener on `.tier-card` elements in `js/animations.js` that toggles a new `is-suppressed` class on the glow, forcing its opacity to 0 while the cursor is over any pricing tier card, and restoring it immediately on mouseleave. Verified via direct DOM event dispatch that the class toggles correctly and computed opacity actually drops to 0.
+
+**Still open:** Google Search Console setup; domain purchase itself.
