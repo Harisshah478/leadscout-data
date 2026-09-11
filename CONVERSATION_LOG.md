@@ -276,18 +276,3 @@ Haris also linked his Vercel Analytics checklist and asked to install everything
 These paths are served automatically by Vercel's edge network once Web Analytics and Speed Insights are toggled on for the project in the Vercel dashboard — no dependency install needed. README status checklist updated to reflect hosting is live and analytics is installed.
 
 **Still open:** Haris to enable Web Analytics + Speed Insights in the Vercel project dashboard if not already on (the script tags alone don't turn the feature on); placeholder domain (`leadscoutdata.com`) across SEO tags/sitemap/robots.txt; logo direction to be picked.
-
-## 2026-09-11 (later) — Provet-style theme pass (announcement bar, data-network hero background, glass buttons)
-
-Resumed the logo conversation, then Haris shared a saaspo.com showcase link to Provet's landing page (provet.com — a Webflow veterinary-PIMS site) and asked to copy its theme. Inspected the live site with the browser tool and pulled its actual computed styles (font: a custom "Armin Grotesk"; pill-shaped nav/CTA buttons at `border-radius: 48px`; a translucent "glass" secondary button — `rgba(255,255,255,0.05)` fill, `10%`-opacity white border; a dismissible dark sticky announcement bar above the nav; a dark, blurred/vignetted photo behind the hero content).
-
-Haris then specified the one deliberate deviation: instead of Provet's blurred pet/vet photo, use a "digital data" wallpaper in that glass hero background — fitting for a data-extraction brand instead of copying a photo that has nothing to do with the business.
-
-Implemented site-wide (all 6 pages), reusing the existing dark-theme tokens/fonts rather than adopting Provet's proprietary font or literal colors:
-- **Dismissible announcement bar** — new `.announce` component above the header, CSS-only dismiss (checkbox/label toggle pattern, same technique as the existing mobile nav burger — no JS/localStorage needed). Reads "Free trial: 300 verified leads, no cost — Get started →", linking to the free-trial form.
-- **Data-network wallpaper** — new `.data-net-bg` component: an inline SVG tiled pattern of small nodes connected by thin lines (in the brand's accent blue, via `currentColor`), with a radial+linear gradient vignette fading it into the solid background at the edges — replacing a flat dot-grid with something that actually reads as "data" behind the glass hero. Applied to the homepage `.hero` and every subpage's `.page-hero`.
-- **Glass button/badge variant** — new `.btn--glass` and `.pill--glass` classes (translucent white fill + soft white border + `backdrop-filter: blur`), matching Provet's secondary-CTA treatment. Applied to the homepage hero's eyebrow badge and its "See What's Included" secondary button.
-
-Verified via a local server + browser: announcement bar dismiss works and collapses cleanly, the data-network background renders correctly on the homepage hero and on `about.html`'s page-hero, no console errors, existing scroll-reveal/count-up animations still fire correctly below the fold. Did not verify true mobile viewport rendering — the browser tool's window-resize is known from earlier sessions not to reliably change the captured screenshot viewport in this environment; the announcement bar and new components use the same flex-wrap / responsive patterns as the rest of the nav, so risk is low, but Haris should spot-check on an actual phone.
-
-**Still open:** logo direction to be picked; mobile spot-check of the new announcement bar; Vercel Analytics dashboard toggle; placeholder domain across SEO tags/sitemap/robots.txt.

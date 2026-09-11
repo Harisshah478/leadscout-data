@@ -128,100 +128,6 @@ a:hover {
   color: var(--accent);
 }
 
-.btn--glass {
-  background: oklch(97% 0.004 260 / 0.07);
-  color: var(--text);
-  border: 1px solid oklch(97% 0.004 260 / 0.16);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-.btn--glass:hover {
-  background: oklch(97% 0.004 260 / 0.12);
-  border-color: oklch(97% 0.004 260 / 0.26);
-  color: var(--text);
-}
-
-/* Announcement bar */
-
-.announce {
-  position: relative;
-  background: var(--ink);
-  overflow: hidden;
-}
-
-.announce__toggle {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.announce__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 46px;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-.announce__dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-
-.announce__link {
-  color: var(--accent);
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.announce__link:hover {
-  color: var(--accent-dark);
-}
-
-.announce__close {
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 7px;
-  cursor: pointer;
-  color: oklch(85% 0.01 260 / 0.6);
-  transition: background-color 150ms ease, color 150ms ease;
-}
-
-.announce__close:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-}
-
-.announce__close svg {
-  width: 13px;
-  height: 13px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-}
-
-.announce__toggle:checked ~ .announce__inner,
-.announce__toggle:checked ~ .announce__close {
-  display: none;
-}
-
 /* Nav */
 
 .nav {
@@ -333,12 +239,10 @@ a:hover {
   background: radial-gradient(circle, oklch(45% 0.16 255 / 0.35), transparent 65%);
   filter: blur(20px);
   pointer-events: none;
-  z-index: 1;
 }
 
 .hero__inner {
   position: relative;
-  z-index: 2;
   max-width: 760px;
   display: flex;
   flex-direction: column;
@@ -346,33 +250,6 @@ a:hover {
   text-align: center;
   gap: 24px;
   padding: 0;
-}
-
-/* Data-network wallpaper (glass hero background) */
-
-.data-net-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  color: var(--accent);
-  opacity: 0.6;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.data-net-bg svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.data-net-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 50% 32%, transparent 0%, var(--bg) 88%),
-    linear-gradient(180deg, var(--bg), transparent 24%, transparent 68%, var(--bg));
 }
 
 .hero h1 {
@@ -410,14 +287,6 @@ a:hover {
 .pill .icon {
   width: 16px;
   height: 16px;
-}
-
-.pill--glass {
-  background: oklch(97% 0.004 260 / 0.07);
-  border-color: oklch(97% 0.004 260 / 0.16);
-  color: var(--text);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 
 .lead {
@@ -1206,11 +1075,9 @@ tr:last-child td {
 /* Page hero (subpages) */
 
 .page-hero {
-  position: relative;
   display: flex;
   justify-content: center;
   padding: 72px 24px 56px;
-  overflow: hidden;
   background-image:
     radial-gradient(circle at 18% 0%, oklch(45% 0.14 255 / 0.3), transparent 55%),
     radial-gradient(oklch(30% 0.02 260 / 0.7) 1px, transparent 1.5px);
@@ -1218,8 +1085,6 @@ tr:last-child td {
 }
 
 .page-hero__inner {
-  position: relative;
-  z-index: 2;
   max-width: 680px;
   display: flex;
   flex-direction: column;
