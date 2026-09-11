@@ -291,3 +291,11 @@ Separately, Haris asked to make the Services page "more professional" and said h
 - Added `pricing.html` and the previously-missing `industries.html` to `sitemap.xml`.
 
 **Still open:** the real per-contact rate for `pricing.html` (blocking — currently a visible placeholder); Web Analytics + Speed Insights dashboard toggle; placeholder domain across SEO tags/sitemap/robots.txt; logo direction to be picked.
+
+## 2026-09-11 (later still) — Researched real per-contact pricing, rebuilt Pricing page as tiers
+
+Haris asked what the per-contact rate should actually be. Rather than guessing, researched current market rates: Apollo.io/ZoomInfo credit-based pricing works out to roughly $0.20–$3/contact but requires monthly seats or (for ZoomInfo) $15k+/year minimums; cheap Fiverr-style scrape gigs run $0.15–$0.35/contact for unverified name+email only; genuinely verified freelance lists run $1–$5/contact. Recommended and implemented **$0.75–$1.25/contact tiered by volume** (Starter <500: $1.25, Growth 500–2,000: $0.90, Scale 2,000+: $0.60) — priced to undercut ZoomInfo's entry rate while staying well above disposable-scraper territory, using the volume tiers to defend the higher anchor price on small trial orders. Flagged clearly to Haris that this is a recommendation for him to confirm, not a committed final number.
+
+Haris also shared a screenshot of a "HexaCore" landing page (dark-teal IT-consulting site) with a card-based "Flexible Pricing" section and asked to model the Pricing page on it. Rebuilt `pricing.html`'s single `$__.__` placeholder panel into a proper **3-tier pricing card grid** (Starter / Growth / Scale, middle tier visually highlighted as "Most Common") using the researched numbers above — kept the site's existing blue/dark palette rather than switching to HexaCore's teal, to avoid a one-off inconsistent page (the full-site Provet reskin earlier this session was reverted for exactly this kind of consistency reason). Added `.pricing-tiers`/`.tier-card` CSS; removed the now-unused `.price-panel` styles.
+
+**Still open:** Haris to confirm or adjust the tiered rates ($1.25 / $0.90 / $0.60) before this is genuinely final, even though they're no longer a visible placeholder; Web Analytics + Speed Insights dashboard toggle; placeholder domain across SEO tags/sitemap/robots.txt; logo direction to be picked.
