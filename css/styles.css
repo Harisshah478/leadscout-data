@@ -924,6 +924,10 @@ tr:last-child td {
   box-shadow: 0 1px 3px oklch(20% 0.02 255 / 0.04), 0 8px 24px oklch(20% 0.02 255 / 0.03);
 }
 
+.value-props--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .value-prop {
   display: flex;
   flex-direction: column;
@@ -945,6 +949,45 @@ tr:last-child td {
 .value-prop__icon-wrap .icon {
   width: 20px;
   height: 20px;
+}
+
+/* Pricing panel */
+
+.price-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 24px 64px oklch(20% 0.02 260 / 0.08);
+}
+
+.price-panel__amount {
+  font-family: 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.price-panel__unit {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.price-panel__note {
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+.price-panel .btn {
+  margin-top: 10px;
 }
 
 /* CTA banner */
