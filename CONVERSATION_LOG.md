@@ -238,3 +238,9 @@ Finally, Haris asked to add ~100 local/service-business categories (Plumbing, Co
 **Final category count: 1,757**, fully searchable, verified with live browser tests (search for "crm" returns exactly the CRM cluster + niche variants; search for "plumbing" returns the new entry).
 
 **Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
+
+## 2026-09-12 — Nav label accuracy fix
+
+Haris asked to "make the site more accurate," then narrowed it to categories. Audited the site and found a real mismatch: the nav/footer said "Industries" everywhere, but that page is actually a searchable directory of software/technographic + local-service categories (CRM, Payroll, Plumbing, etc.) — not business verticals like Real Estate or Healthcare, which is what "Industries" implies. Renamed the nav and footer link text to "Categories" across all 6 pages (URL/filename `industries.html` left unchanged to avoid breaking links). Checked the rest of the site for other stale "industries" references — everything else found was a legitimate generic use of the word ("your target industry," the "Industry" data field, category chips literally named "Industrial..."), so no further changes needed there.
+
+**Still open:** Formspree endpoint (blocking), placeholder domain, domain purchase, hosting.
