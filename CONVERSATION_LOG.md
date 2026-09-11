@@ -325,3 +325,11 @@ Implemented site-wide: rescaled the monogram's paths from the original canvas's 
 Verified locally: monogram renders correctly in teal in the nav and footer on Home and Services, favicon renders as a clean bold mark at full size, no console errors. Branch had been created one commit behind the just-merged teal-theme PR — merged latest `main` in before finishing so the logo and the teal palette landed together instead of reintroducing blue.
 
 **Still open:** placeholder domain across SEO tags/sitemap/robots.txt is the only item left from the original site build checklist.
+
+## 2026-09-11 (later still) — Placeholder domain replaced with the real live URL
+
+Haris asked to update the placeholder domain. Before touching anything, checked whether `leadscoutdata.com` (the originally suggested name) actually resolves — it doesn't (DNS lookup failure), and Haris confirmed he hasn't purchased it yet. Pointing canonical URLs/sitemap/robots.txt at a domain that doesn't resolve would actively hurt SEO rather than fix a placeholder, so replaced every `https://leadscoutdata.com` reference (canonical links, `og:url`, the homepage's JSON-LD `url` field, `sitemap.xml`, `robots.txt`'s Sitemap line) across all 7 pages with the actual live URL, `https://leadscout-data.vercel.app`. This is a real, resolving canonical domain today; swapping it again once a real custom domain is purchased is a quick follow-up, not a redo.
+
+Haris then said he wants to "start SEO now." Ran a quick technical audit: sitemap covers all 7 pages, canonical + `og:url` present and consistent everywhere, robots.txt correct — solid foundation. Two real gaps found: no `og:image`/`twitter:image` anywhere (shared links show no preview image on LinkedIn/WhatsApp/etc.), and structured data (JSON-LD) exists only on the homepage, not the other 6 pages. Flagged both; not yet actioned — awaiting Haris's direction on scope/priority for the next SEO pass.
+
+**Still open:** decide and build the next SEO pass (og:image, per-page structured data, or something else Haris prioritizes); domain purchase itself.
