@@ -353,3 +353,19 @@ Haris picked the og:image gap as the first SEO fix. Built a 1200×630 share grap
 Wired it into all 7 pages: added `og:image` (+ width/height) and `twitter:image` meta tags, and upgraded `twitter:card` from `summary` (small card) to `summary_large_image` so Twitter/X actually renders the big picture instead of a tiny thumbnail. Verified all pages still load correctly and no console errors.
 
 **Still open:** structured data (JSON-LD) still only on the homepage — a candidate for a follow-up SEO pass; domain purchase itself.
+
+## 2026-09-11 (later still) — Structured data added to every remaining page
+
+Haris asked to add JSON-LD to the other 6 pages. Gave each a schema.org type matching what the page actually is, using only real site data (no fabricated ratings/reviews/prices):
+- **About** — `AboutPage`
+- **Services** — `Service`, describing the actual data-extraction offering
+- **Pricing** — `Product` with an `AggregateOffer` reflecting the real tiered rates ($0.15–$0.35/contact)
+- **Categories** — `CollectionPage` describing the 1,757-category directory (deliberately not an `ItemList` of all 1,757 entries — that would be excessive/spammy structured data)
+- **Samples** — `CollectionPage` for the illustrative sample datasets
+- **Contact** — `ContactPage` with a real `ContactPoint` (email, WhatsApp number, LinkedIn)
+
+Every page also got a `BreadcrumbList` (Home > Page). Also fixed the homepage's own JSON-LD, which still said `"priceRange": "Custom quote"` — stale since the site moved to real tiered per-contact pricing — updated to reflect the actual $0.15–$0.35 range.
+
+Verified every block is valid JSON (scripted check) and correctly parses in-browser via `JSON.parse` on the live DOM, not just the raw file.
+
+**Still open:** Google Search Console setup (needs Haris's Google account — can't do this myself); domain purchase itself.
