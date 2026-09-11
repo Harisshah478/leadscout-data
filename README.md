@@ -39,7 +39,8 @@ python -m http.server 8000
 - [x] Free-trial lead capture form ("Get 100 Free Verified Contacts") on the homepage
 - [x] Searchable category directory (1,757 entries) at `industries.html`
 - [x] Free-trial form wired to a real Formspree endpoint (`https://formspree.io/f/mwlkyaoe`) — submissions email Haris automatically
+- [x] Deployed and live on Vercel: https://leadscout-data.vercel.app (auto-deploys on push to `main`)
+- [x] Vercel Web Analytics + Speed Insights installed (script tags on every page — no package install needed for a plain static site; the `/_vercel/...` paths are served automatically once enabled in the Vercel dashboard)
 - [ ] `robots.txt`, `sitemap.xml`, and every page's canonical/OG URL use a **placeholder domain** (`https://leadscoutdata.com`) — update all of these once the real domain is purchased.
 - [ ] Facebook contact link intentionally removed (was a placeholder, Haris asked to drop it)
 - [ ] Domain purchased
-- [ ] Hosting connected (deliberately last — decide once the site content is finalized)

@@ -261,3 +261,18 @@ Haris connected the GitHub repo to Vercel himself (account creation/login is som
 Vercel auto-deploys on every push to `main` going forward, so future pushes from here go live automatically.
 
 **Still open:** placeholder domain (`leadscoutdata.com`) across SEO tags/sitemap/robots.txt — should be updated once Haris either buys that domain or decides to just use the `.vercel.app` URL / attaches a different domain in the Vercel dashboard. Otherwise the site is functionally complete and live.
+
+## 2026-09-11 — Logo concept directions + Vercel Analytics
+
+Haris asked for several logo ideas to react to. Drafted four low-fi directions as a Claude Design canvas (Main.dc.html + LogoOptionA-D.dc.html, working files kept in `design-mockup/`) and published it for review: Pin & Focus (evolves the existing pin mark), Network Scout (hub-and-spoke node mark), LS Monogram (continuous-stroke L+S letterform), and Scout Compass (needle over pin dot). Canvas link: https://claude.ai/code/artifact/b95290c3-2bed-4b7e-a55d-98b4e5c54489. Still open: Haris to pick a direction (or ask for a blend/iteration).
+
+Haris also linked his Vercel Analytics checklist and asked to install everything Vercel suggests. Since this is a plain static site with no build step or `package.json`, the framework-agnostic install is two script tags rather than an npm package — added to all six pages, right after the existing `js/animations.js` tag:
+
+```html
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+```
+
+These paths are served automatically by Vercel's edge network once Web Analytics and Speed Insights are toggled on for the project in the Vercel dashboard — no dependency install needed. README status checklist updated to reflect hosting is live and analytics is installed.
+
+**Still open:** Haris to enable Web Analytics + Speed Insights in the Vercel project dashboard if not already on (the script tags alone don't turn the feature on); placeholder domain (`leadscoutdata.com`) across SEO tags/sitemap/robots.txt; logo direction to be picked.
