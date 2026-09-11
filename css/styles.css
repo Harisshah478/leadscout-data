@@ -1282,6 +1282,66 @@ tr:last-child td {
   margin-top: 2px;
 }
 
+/* Field groups (Contact-level / Company-level) */
+
+.field-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.field-group__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.field-group__title {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.field-group__count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Field icon grid (compact tiles) */
+
+.field-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.field-tile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 13.5px;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.field-tile:hover {
+  background: var(--accent-tint);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.field-tile .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* Services list (field rows with description) */
 
 .field-rows {
