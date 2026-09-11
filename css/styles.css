@@ -1,17 +1,17 @@
 :root {
-  --bg: oklch(9% 0.016 260);
-  --surface: oklch(14% 0.02 260);
-  --surface-2: oklch(19% 0.022 260);
-  --border: oklch(24% 0.02 260);
-  --border-soft: oklch(20% 0.02 260);
-  --text: oklch(97% 0.004 260);
-  --text-secondary: oklch(68% 0.012 260);
-  --text-muted: oklch(48% 0.01 260);
-  --accent: oklch(62% 0.19 255);
-  --accent-dark: oklch(50% 0.19 255);
-  --accent-tint: oklch(20% 0.07 255);
-  --ink: oklch(15% 0.012 260);
-  --ink-hover: oklch(30% 0.014 260);
+  --bg: oklch(9% 0.014 210);
+  --surface: oklch(14% 0.018 210);
+  --surface-2: oklch(19% 0.02 210);
+  --border: oklch(24% 0.018 210);
+  --border-soft: oklch(20% 0.018 210);
+  --text: oklch(97% 0.004 210);
+  --text-secondary: oklch(68% 0.01 210);
+  --text-muted: oklch(48% 0.008 210);
+  --accent: oklch(68% 0.14 185);
+  --accent-dark: oklch(56% 0.14 185);
+  --accent-tint: oklch(20% 0.06 185);
+  --ink: oklch(15% 0.01 210);
+  --ink-hover: oklch(30% 0.012 210);
 }
 
 * {
@@ -224,8 +224,9 @@ a:hover {
   padding: 110px 24px 84px;
   overflow: hidden;
   background-image:
-    radial-gradient(oklch(30% 0.02 260 / 0.7) 1px, transparent 1.5px);
-  background-size: 26px 26px;
+    linear-gradient(135deg, oklch(28% 0.09 185 / 0.4) 0%, transparent 48%),
+    radial-gradient(oklch(30% 0.02 210 / 0.7) 1px, transparent 1.5px);
+  background-size: auto, 26px 26px;
 }
 
 .hero::before {
@@ -236,7 +237,7 @@ a:hover {
   transform: translateX(-50%);
   width: 900px;
   height: 500px;
-  background: radial-gradient(circle, oklch(45% 0.16 255 / 0.35), transparent 65%);
+  background: radial-gradient(circle, oklch(50% 0.14 185 / 0.35), transparent 65%);
   filter: blur(20px);
   pointer-events: none;
 }
@@ -381,6 +382,7 @@ a:hover {
 /* Stat row */
 
 .stat-row {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -388,6 +390,19 @@ a:hover {
   padding: 36px 0;
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
+}
+
+.stat-row::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translateX(-50%);
+  width: min(640px, 80%);
+  height: 60px;
+  background: radial-gradient(ellipse at center, oklch(60% 0.14 185 / 0.35), transparent 72%);
+  filter: blur(6px);
+  pointer-events: none;
 }
 
 .stat {
@@ -693,11 +708,11 @@ a:hover {
 
 .dashboard-panel--dark {
   background: var(--accent-tint);
-  border: 1px solid oklch(32% 0.09 255);
+  border: 1px solid oklch(32% 0.08 185);
 }
 
 .dashboard-panel--dark .panel-label {
-  color: oklch(75% 0.06 255);
+  color: oklch(75% 0.06 185);
 }
 
 .sample-line {
@@ -790,7 +805,7 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 1px 3px oklch(20% 0.02 255 / 0.04), 0 8px 24px oklch(20% 0.02 255 / 0.03);
+  box-shadow: 0 1px 3px oklch(20% 0.02 185 / 0.04), 0 8px 24px oklch(20% 0.02 185 / 0.03);
 }
 
 .field-card {
@@ -838,7 +853,7 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 1px 3px oklch(20% 0.02 255 / 0.04), 0 8px 24px oklch(20% 0.02 255 / 0.03);
+  box-shadow: 0 1px 3px oklch(20% 0.02 185 / 0.04), 0 8px 24px oklch(20% 0.02 185 / 0.03);
 }
 
 .table-scroll {
@@ -921,7 +936,7 @@ tr:last-child td {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 36px;
-  box-shadow: 0 1px 3px oklch(20% 0.02 255 / 0.04), 0 8px 24px oklch(20% 0.02 255 / 0.03);
+  box-shadow: 0 1px 3px oklch(20% 0.02 185 / 0.04), 0 8px 24px oklch(20% 0.02 185 / 0.03);
 }
 
 .value-props--cols-3 {
@@ -973,7 +988,7 @@ tr:last-child td {
 .tier-card--featured {
   background: var(--surface-2);
   border: 2px solid var(--accent);
-  box-shadow: 0 20px 48px oklch(56% 0.19 255 / 0.18);
+  box-shadow: 0 20px 48px oklch(56% 0.16 185 / 0.18);
 }
 
 .tier-card__badge {
@@ -1054,10 +1069,10 @@ tr:last-child td {
   text-align: center;
   gap: 22px;
   background: var(--accent);
-  background-image: radial-gradient(circle at 85% 20%, oklch(65% 0.18 255 / 0.6), transparent 55%);
+  background-image: radial-gradient(circle at 85% 20%, oklch(70% 0.15 185 / 0.6), transparent 55%);
   border-radius: 24px;
   padding: 72px 40px;
-  box-shadow: 0 16px 40px oklch(56% 0.19 255 / 0.28);
+  box-shadow: 0 16px 40px oklch(56% 0.16 185 / 0.28);
 }
 
 .cta h2 {
@@ -1069,7 +1084,7 @@ tr:last-child td {
 
 .cta p {
   font-size: 15.5px;
-  color: oklch(94% 0.02 255);
+  color: oklch(94% 0.02 185);
   max-width: 460px;
   line-height: 1.6;
 }
@@ -1093,7 +1108,7 @@ tr:last-child td {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), oklch(66% 0.14 225));
+  background: linear-gradient(90deg, var(--accent), oklch(72% 0.13 160));
 }
 
 .footer__grid {
@@ -1177,8 +1192,8 @@ tr:last-child td {
   justify-content: center;
   padding: 72px 24px 56px;
   background-image:
-    radial-gradient(circle at 18% 0%, oklch(45% 0.14 255 / 0.3), transparent 55%),
-    radial-gradient(oklch(30% 0.02 260 / 0.7) 1px, transparent 1.5px);
+    radial-gradient(circle at 18% 0%, oklch(50% 0.13 185 / 0.3), transparent 55%),
+    radial-gradient(oklch(30% 0.02 210 / 0.7) 1px, transparent 1.5px);
   background-size: auto, 26px 26px;
 }
 
@@ -1364,7 +1379,7 @@ tr:last-child td {
 
 .format-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px oklch(20% 0.02 255 / 0.08);
+  box-shadow: 0 10px 28px oklch(20% 0.02 185 / 0.08);
 }
 
 .format-card__icon-wrap {
@@ -1415,7 +1430,7 @@ tr:last-child td {
 
 .contact-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px oklch(20% 0.02 255 / 0.08);
+  box-shadow: 0 10px 28px oklch(20% 0.02 185 / 0.08);
   border-color: var(--accent-tint);
 }
 
@@ -1478,7 +1493,7 @@ tr:last-child td {
   inset: 0;
   pointer-events: none;
   z-index: 40;
-  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 20%), oklch(62% 0.16 255 / 0.16), transparent 70%);
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 20%), oklch(65% 0.14 185 / 0.16), transparent 70%);
   mix-blend-mode: screen;
   opacity: 0;
   transition: opacity 400ms ease;
