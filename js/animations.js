@@ -103,5 +103,14 @@
     document.addEventListener("mouseleave", function () {
       glow.classList.remove("is-active");
     });
+
+    document.querySelectorAll(".tier-card").forEach(function (card) {
+      card.addEventListener("mouseenter", function () {
+        glow.classList.add("is-suppressed");
+      });
+      card.addEventListener("mouseleave", function () {
+        glow.classList.remove("is-suppressed");
+      });
+    });
   }
 })();

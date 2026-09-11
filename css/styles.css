@@ -1564,6 +1564,10 @@ tr:last-child td {
   opacity: 1;
 }
 
+.cursor-glow.is-suppressed {
+  opacity: 0;
+}
+
 /* Motion */
 
 @media (prefers-reduced-motion: no-preference) {
