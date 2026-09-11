@@ -333,3 +333,11 @@ Haris asked to update the placeholder domain. Before touching anything, checked 
 Haris then said he wants to "start SEO now." Ran a quick technical audit: sitemap covers all 7 pages, canonical + `og:url` present and consistent everywhere, robots.txt correct — solid foundation. Two real gaps found: no `og:image`/`twitter:image` anywhere (shared links show no preview image on LinkedIn/WhatsApp/etc.), and structured data (JSON-LD) exists only on the homepage, not the other 6 pages. Flagged both; not yet actioned — awaiting Haris's direction on scope/priority for the next SEO pass.
 
 **Still open:** decide and build the next SEO pass (og:image, per-page structured data, or something else Haris prioritizes); domain purchase itself.
+
+## 2026-09-11 (later still) — Built and wired in a branded og:image
+
+Haris picked the og:image gap as the first SEO fix. Built a 1200×630 share graphic matching the site's actual teal theme (diagonal wash + dot-grid like the real hero, LS Monogram, "LeadScout Data" wordmark, the homepage's headline "We find leads that actually convert.", and the 27+/13+/1-2 Day stat row) — HTML/CSS rendered in the browser tool and captured, then resized with Pillow to the exact spec dimensions since the browser's device-pixel-ratio scaled the raw capture up to 1470×771. Saved as `assets/og-image.png`.
+
+Wired it into all 7 pages: added `og:image` (+ width/height) and `twitter:image` meta tags, and upgraded `twitter:card` from `summary` (small card) to `summary_large_image` so Twitter/X actually renders the big picture instead of a tiny thumbnail. Verified all pages still load correctly and no console errors.
+
+**Still open:** structured data (JSON-LD) still only on the homepage — a candidate for a follow-up SEO pass; domain purchase itself.
