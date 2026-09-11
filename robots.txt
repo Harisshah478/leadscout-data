@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leadscoutdata.com/sitemap.xml
+Sitemap: https://leadscout-data.vercel.app/sitemap.xml

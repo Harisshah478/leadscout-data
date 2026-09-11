@@ -337,3 +337,19 @@ Implemented the A-Z grouping in `industries.html`: kept the existing flat `.cat-
 **Real bug found and fixed during testing:** the jump bar didn't actually hide when set via `element.hidden = true` — its own `.cat-jumpbar { display: flex }` rule (author stylesheet) was overriding the browser's default `[hidden] { display: none }` behavior, since author rules beat the UA stylesheet regardless of selector specificity. This is the exact same bug class documented earlier in this log for `.cat-chip[hidden]` on the Samples page search — fixed the same way, with an explicit `.cat-jumpbar[hidden] { display: none; }` rule.
 
 **Still open:** placeholder domain across SEO tags/sitemap/robots.txt is the only item left from the original site build checklist.
+
+## 2026-09-11 (later still) — Placeholder domain replaced with the real live URL
+
+Haris asked to update the placeholder domain. Before touching anything, checked whether `leadscoutdata.com` (the originally suggested name) actually resolves — it doesn't (DNS lookup failure), and Haris confirmed he hasn't purchased it yet. Pointing canonical URLs/sitemap/robots.txt at a domain that doesn't resolve would actively hurt SEO rather than fix a placeholder, so replaced every `https://leadscoutdata.com` reference (canonical links, `og:url`, the homepage's JSON-LD `url` field, `sitemap.xml`, `robots.txt`'s Sitemap line) across all 7 pages with the actual live URL, `https://leadscout-data.vercel.app`. This is a real, resolving canonical domain today; swapping it again once a real custom domain is purchased is a quick follow-up, not a redo.
+
+Haris then said he wants to "start SEO now." Ran a quick technical audit: sitemap covers all 7 pages, canonical + `og:url` present and consistent everywhere, robots.txt correct — solid foundation. Two real gaps found: no `og:image`/`twitter:image` anywhere (shared links show no preview image on LinkedIn/WhatsApp/etc.), and structured data (JSON-LD) exists only on the homepage, not the other 6 pages. Flagged both; not yet actioned — awaiting Haris's direction on scope/priority for the next SEO pass.
+
+**Still open:** decide and build the next SEO pass (og:image, per-page structured data, or something else Haris prioritizes); domain purchase itself.
+
+## 2026-09-11 (later still) — Built and wired in a branded og:image
+
+Haris picked the og:image gap as the first SEO fix. Built a 1200×630 share graphic matching the site's actual teal theme (diagonal wash + dot-grid like the real hero, LS Monogram, "LeadScout Data" wordmark, the homepage's headline "We find leads that actually convert.", and the 27+/13+/1-2 Day stat row) — HTML/CSS rendered in the browser tool and captured, then resized with Pillow to the exact spec dimensions since the browser's device-pixel-ratio scaled the raw capture up to 1470×771. Saved as `assets/og-image.png`.
+
+Wired it into all 7 pages: added `og:image` (+ width/height) and `twitter:image` meta tags, and upgraded `twitter:card` from `summary` (small card) to `summary_large_image` so Twitter/X actually renders the big picture instead of a tiny thumbnail. Verified all pages still load correctly and no console errors.
+
+**Still open:** structured data (JSON-LD) still only on the homepage — a candidate for a follow-up SEO pass; domain purchase itself.
