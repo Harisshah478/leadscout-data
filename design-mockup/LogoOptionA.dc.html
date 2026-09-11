@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Work Sans', system-ui, sans-serif; background: oklch(9% 0.016 260); }
+</style>
+</helmet>
+
+<div style="width:360px; height:460px; background:oklch(14% 0.02 260); border:1px solid oklch(24% 0.02 260); border-radius:20px; padding:32px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:28px;">
+
+  <span style="font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:oklch(62% 0.19 255); align-self:flex-start;">Option A</span>
+
+  <div style="width:120px; height:120px; border-radius:24px; background:oklch(20% 0.07 255); display:flex; align-items:center; justify-content:center;">
+    <svg viewBox="0 0 96 96" width="56" height="56" fill="none">
+      <path d="M48 85s28-26 28-48A28 28 0 1 0 20 37c0 22 28 48 28 48z" stroke="oklch(62% 0.19 255)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="48" cy="37" r="10.5" stroke="oklch(62% 0.19 255)" stroke-width="6"/>
+      <circle cx="48" cy="37" r="3" fill="oklch(62% 0.19 255)"/>
+    </svg>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:8px;">
+    <svg viewBox="0 0 96 96" width="22" height="22" fill="none">
+      <path d="M48 85s28-26 28-48A28 28 0 1 0 20 37c0 22 28 48 28 48z" stroke="oklch(62% 0.19 255)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="48" cy="37" r="10.5" stroke="oklch(62% 0.19 255)" stroke-width="8"/>
+      <circle cx="48" cy="37" r="3" fill="oklch(62% 0.19 255)"/>
+    </svg>
+    <span style="font-family:'Sora',sans-serif; font-weight:800; font-size:19px; color:oklch(97% 0.004 260);">LeadScout <span style="font-weight:600; color:oklch(68% 0.012 260);">Data</span></span>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:6px; margin-top:auto;">
+    <span style="font-family:'Sora',sans-serif; font-weight:700; font-size:15px; color:oklch(97% 0.004 260);">Pin &amp; Focus</span>
+    <span style="font-size:13px; line-height:1.5; color:oklch(68% 0.012 260); max-width:280px;">Evolves the current pin mark — the plain dot becomes a target ring, reinforcing precision. Safest, most brand-continuous option.</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
