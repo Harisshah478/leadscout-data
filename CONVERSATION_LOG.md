@@ -276,3 +276,18 @@ Haris also linked his Vercel Analytics checklist and asked to install everything
 These paths are served automatically by Vercel's edge network once Web Analytics and Speed Insights are toggled on for the project in the Vercel dashboard — no dependency install needed. README status checklist updated to reflect hosting is live and analytics is installed.
 
 **Still open:** Haris to enable Web Analytics + Speed Insights in the Vercel project dashboard if not already on (the script tags alone don't turn the feature on); placeholder domain (`leadscoutdata.com`) across SEO tags/sitemap/robots.txt; logo direction to be picked.
+
+## 2026-09-11 (later) — Provet-theme experiment tried and reverted; Services page reworked; new Pricing page
+
+Resumed the logo conversation, then Haris asked to copy the theme from a saaspo.com showcase of provet.com's landing page. Built and merged a pass adding a dismissible announcement bar, an inline-SVG "data network" wallpaper behind the hero (deliberately swapped in for Provet's blurred vet-clinic photo, per Haris's own call), and glass-style buttons (PR #1). Haris then said he preferred the previous look, so it was cleanly reverted via a second PR (`git revert -m 1`, PR #2) — both merged by Haris directly on GitHub (agent merges are blocked by an auto-mode safety guardrail; talked through that limitation rather than working around it).
+
+**Note for next time:** skip the intermediate design-mockup/review step for site-wide visual changes like this — build straight into the real pages so Haris can judge the actual look immediately, rather than merging first and finding out after deploy that it wasn't wanted.
+
+Separately, Haris asked to make the Services page "more professional" and said he didn't like the field-list content. Landed as its own PR (kept independent of the theme back-and-forth):
+- Rewrote the page-hero copy to lead with what's actually delivered instead of generic "built to order" phrasing.
+- Restructured the flat 27-row field list (previously in delivery order, mixing person and company fields) into two labeled groups — **Contact-level fields** (14) and **Company-level fields** (13) — each shown as a compact icon+label tile grid instead of a wall of description rows, after Haris confirmed he wanted a grid over a sample-record card or tabs.
+- Split pricing out to its own new `pricing.html` page (nav + footer link added on all 7 pages), since Haris wants "what we offer = data" to be the whole point of the Services page. Built as **per-contact pricing** (Haris's choice over tiered packages or quote-only) with an explicit `$__.__ / verified contact` placeholder — deliberately not a fabricated real number, since this is a live business site. **Still needs Haris's real per-contact rate before this page is genuinely finished.**
+- Added a `.value-props--cols-3` grid modifier so a 3-item benefit row doesn't sit lopsided in the existing 4-column layout.
+- Added `pricing.html` and the previously-missing `industries.html` to `sitemap.xml`.
+
+**Still open:** the real per-contact rate for `pricing.html` (blocking — currently a visible placeholder); Web Analytics + Speed Insights dashboard toggle; placeholder domain across SEO tags/sitemap/robots.txt; logo direction to be picked.
