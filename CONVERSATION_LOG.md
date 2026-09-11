@@ -250,3 +250,14 @@ Haris asked to "make the site more accurate," then narrowed it to categories. Au
 Haris signed up for Formspree and sent the real endpoint (`https://formspree.io/f/mwlkyaoe`). Swapped it into the free-trial form's `action` attribute in `index.html`, replacing the placeholder. Formspree emails submissions to the account's registered address automatically — no further config needed for the "auto-email on form submit" behavior Haris asked about. This was the last real blocker on the site's functionality.
 
 **Still open:** placeholder domain across SEO tags/sitemap/robots.txt, domain purchase, hosting.
+
+## 2026-09-12 (later) — Site deployed live on Vercel
+
+Haris connected the GitHub repo to Vercel himself (account creation/login is something I can't do on his behalf) and deployed. Verified the live site at **https://leadscout-data.vercel.app**:
+- Home page renders correctly (dark theme, cursor glow, nav showing "Categories")
+- `industries.html` loads with correct title, no console errors
+- Confirmed via curl that the live HTML's free-trial form has the real Formspree endpoint (`https://formspree.io/f/mwlkyaoe`), not a stale cached version
+
+Vercel auto-deploys on every push to `main` going forward, so future pushes from here go live automatically.
+
+**Still open:** placeholder domain (`leadscoutdata.com`) across SEO tags/sitemap/robots.txt — should be updated once Haris either buys that domain or decides to just use the `.vercel.app` URL / attaches a different domain in the Vercel dashboard. Otherwise the site is functionally complete and live.
