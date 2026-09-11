@@ -23,6 +23,18 @@
 </head>
 <body>
 
+  <div class="announce">
+    <input type="checkbox" id="announce-toggle" class="announce__toggle">
+    <label for="announce-toggle" class="announce__close" aria-label="Dismiss">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </label>
+    <div class="announce__inner">
+      <span class="announce__dot"></span>
+      <span>Free trial: 300 verified leads, no cost</span>
+      <a href="index.html#free-trial" class="announce__link">Get started →</a>
+    </div>
+  </div>
+
   <header class="nav">
     <div class="container nav__inner">
       <a href="index.html" class="brand">
@@ -49,6 +61,21 @@
   <main>
 
     <section class="page-hero">
+      <div class="data-net-bg" aria-hidden="true">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="data-net" width="100" height="100" patternUnits="userSpaceOnUse">
+              <circle cx="12" cy="14" r="2.2" fill="currentColor" opacity="0.55"/>
+              <circle cx="62" cy="38" r="1.8" fill="currentColor" opacity="0.4"/>
+              <circle cx="38" cy="76" r="2" fill="currentColor" opacity="0.45"/>
+              <circle cx="88" cy="88" r="1.6" fill="currentColor" opacity="0.35"/>
+              <circle cx="8" cy="70" r="1.5" fill="currentColor" opacity="0.3"/>
+              <path d="M12 14 L62 38 L38 76 L88 88 M62 38 L8 70" stroke="currentColor" stroke-width="0.6" opacity="0.3" fill="none"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="300" fill="url(#data-net)"/>
+        </svg>
+      </div>
       <div class="container">
         <div class="page-hero__inner">
           <span class="eyebrow">Samples</span>
