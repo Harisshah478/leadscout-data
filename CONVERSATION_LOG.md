@@ -470,4 +470,10 @@ All three independently flagged the same top issue, plus AEO surfaced one more:
 
 Verified via HTML tag-balance check + JSON-LD parse validation on all 7 pages after the edits (browser tool still disconnected this session).
 
-**Still open:** the robots.txt training-crawler question (needs Haris's call); a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
+**Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later still) — Blocked AI training crawlers, kept retrieval bots open
+
+Haris decided on the robots.txt question flagged in the previous audit pass: block AI training crawlers, but keep citation-driving retrieval bots open. Added explicit named `User-agent: GPTBot` / `User-agent: CCBot` groups with `Disallow: /`, ahead of the existing wildcard `User-agent: * / Allow: /` group. Per the robots.txt spec, a bot matches its own named group instead of the wildcard, so GPTBot/CCBot are now fully blocked while everything else — including the GEO-relevant retrieval bots (PerplexityBot, OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User) — stays allowed via the wildcard, unchanged.
+
+**Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
