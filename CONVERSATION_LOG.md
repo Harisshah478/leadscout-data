@@ -451,3 +451,23 @@ Haris asked to "download Content Writing Skills," the same pattern as the SEO/GE
 Committed to the repo alongside the other three skills, per the same explicit instruction that everything stays inside this project folder.
 
 **Still open:** actually running all four skills against the live site; structured data for the new services; Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later still) — Ran SEO/GEO/AEO audits, fixed the real findings
+
+Haris asked to run `/seo-audit`, then `/geo-optimization` and `/aeo-optimization` too, then to implement whatever they found. Ran all three as parallel read-only audits against the live site (forked agents, each following its skill's checklist) rather than guessing at what needed fixing.
+
+All three independently flagged the same top issue, plus AEO surfaced one more:
+
+- **Services page JSON-LD was stale** (flagged by all three audits) — the `Service` block still described only the original single data-extraction offering, not the 6-service lineup added in an earlier pass (LinkedIn Outreach, Email Marketing, Lead List Building, Data Extraction & Research, Custom Lead Generation, B2B Data & Lead Generation). Fixed by expanding the `@graph` to 6 separate `Service` entries, one per real service, each pointing back to the same `ProfessionalService` provider. Verified the count (6) and names match the visible cards exactly.
+- **Services page had no in-body link to Pricing** (SEO + GEO) — nav/footer only. Added one contextual sentence + link in the Data Fields section: "Data is priced per verified contact — see pricing by volume."
+- **Contact page skipped a heading level** (SEO + AEO) — went h1 → h3 with no h2 anywhere on the page. Changed the "Have a specific list in mind?" heading from h3 to h2 (confirmed via CSS check this doesn't inherit any h3-specific styling, so no visual regression).
+- **Pricing page had no direct answer for "how much does this cost"** (AEO) — the likely single most-searched query for this business had no matching heading or snippet-sized answer anywhere; the actual rate only appeared inside the tier cards. Added a new block right after the hero: a question-phrased h2 ("How much does verified lead data cost?") followed by a 46-word direct-answer paragraph stating the $0.15–$0.35/contact range and how it breaks down by volume tier, before the existing tier-card grid.
+
+**Deliberately not touched:**
+- `robots.txt` blocking training crawlers (GPTBot/CCBot) separately from retrieval crawlers — currently wide open to everything, which is fine for GEO (retrieval bots are unblocked) but leaving training-crawler exposure as a business decision for Haris to make explicitly rather than assuming an answer.
+- `llms.txt`, a "last updated" freshness signal, and a real FAQ section — all flagged as optional future opportunities in the audits, not current defects; adding a FAQ section in particular needs real customer questions from Haris, not invented ones.
+- Nice-to-have heading rewrites (e.g. "Sources and tools we work with" → a question form) — low-value enough to skip rather than rewrite headings that already work fine as page-section labels.
+
+Verified via HTML tag-balance check + JSON-LD parse validation on all 7 pages after the edits (browser tool still disconnected this session).
+
+**Still open:** the robots.txt training-crawler question (needs Haris's call); a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
