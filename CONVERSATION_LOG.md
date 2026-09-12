@@ -504,3 +504,11 @@ Verified via HTML tag-balance + JSON-LD parse validation on all 7 pages, confirm
 No stale first-person-singular voice, no AI-cliché phrasing, and no pricing inconsistencies were found elsewhere — those checks from earlier passes still hold.
 
 **Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
+
+## 2026-09-13 — Honeypot spam-prevention field added to the free-trial form
+
+Haris reported a spam form submission and asked to block bots with a CAPTCHA. Explained that a real CAPTCHA (Google reCAPTCHA) needs Haris to register a site key at google.com/recaptcha/admin himself (requires his own Google account — not something done on his behalf), and offered to wire it in once he has a Site Key.
+
+In the meantime, implemented an immediate, zero-setup mitigation: added a Formspree honeypot field (`name="_gotcha"`, hidden off-screen via `position:absolute; left:-9999px`, `aria-hidden="true"`, `tabindex="-1"`) to the homepage's free-trial form — the only form on the site. Formspree silently discards any submission where this field is filled in, since real users never see or fill it but basic spam bots that auto-fill every field do. No account setup or external dependency required.
+
+**Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself; a real reCAPTCHA integration if the honeypot alone doesn't fully stop the spam (needs Haris to provide a Google reCAPTCHA Site Key).
