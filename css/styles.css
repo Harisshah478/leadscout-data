@@ -576,6 +576,8 @@ a:hover {
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
+  content-visibility: auto;
+  contain-intrinsic-size: 140px 34px;
 }
 
 .cat-chip[hidden] {

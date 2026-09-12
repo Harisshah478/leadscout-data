@@ -534,3 +534,13 @@ Haris invited adding any further skills useful for managing the site end-to-end 
 - **`/performance`** — Core Web Vitals / load-speed auditing, pointed at the already-installed Vercel Speed Insights as the one real data source rather than fabricated Lighthouse scores. Documented site-specific facts worth knowing before auditing: the deliberate no-build-step/no-bundler choice, the already-correct font-loading pattern (preconnect + `display=swap`), why the 340KB `og-image.png` isn't a real page-weight concern (only fetched by link-preview crawlers), and the one genuine performance risk on the site — `industries.html` rendering all 1,757 category chips into the DOM at once.
 
 All eight project skills (`/seo-audit`, `/geo-optimization`, `/aeo-optimization`, `/content-writing`, `/website-builder`, `/design`, `/marketing`, `/performance`) are committed inside `.claude/skills/` in the repo per the standing working agreement.
+
+## 2026-09-13 (later) — Fixed the Categories page's DOM-size performance risk
+
+Haris asked for a recommendation on the Categories page, then said to implement whatever fit best. The `/performance` skill (just built) had already flagged the real issue: `industries.html` renders all 1,757 `.cat-chip` spans into the DOM statically (not JS-generated), which is real layout/paint cost even though search filtering feels instant.
+
+Initially proposed lazy-rendering each A-Z section on scroll/jump-bar click, but on reading the actual markup found a simpler fix: added `content-visibility: auto` + `contain-intrinsic-size: 140px 34px` to the existing `.cat-chip` rule in `css/styles.css`. This tells supporting browsers to skip layout/paint work for any chip that's off-screen until it scrolls near, with zero JS or HTML structure changes — the existing letter-heading insertion, jump-bar scroll targets, and search-filter `hidden`-toggle logic are all untouched and unaffected, since `content-visibility` only skips rendering work, not DOM queries or attribute toggling. Unsupported browsers (older Safari) simply ignore the property and render normally — pure progressive enhancement, no functional risk.
+
+Verified: CSS brace balance, HTML tag-balance on all 7 pages, and the 1,757 chip count unchanged.
+
+**Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself; a real reCAPTCHA integration if the honeypot alone doesn't fully stop spam.
