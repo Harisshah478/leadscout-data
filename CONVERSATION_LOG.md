@@ -375,3 +375,21 @@ Verified every block is valid JSON (scripted check) and correctly parses in-brow
 Haris reported something "popping out" following the cursor on the Pricing page's price boxes. Reproduced it as the site's existing global cursor-following glow effect (added in an earlier session) — not a bug, but distracting specifically over the large bold price numbers. Rather than removing the glow site-wide, added a `mouseenter`/`mouseleave` listener on `.tier-card` elements in `js/animations.js` that toggles a new `is-suppressed` class on the glow, forcing its opacity to 0 while the cursor is over any pricing tier card, and restoring it immediately on mouseleave. Verified via direct DOM event dispatch that the class toggles correctly and computed opacity actually drops to 0.
 
 **Still open:** Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 — Full copy rewrite applied site-wide
+
+Haris sent back `content-audit.md` (the copy audit from the previous session) rewritten by an SEO person as `content-audit-rewritten.md`, and asked to put the new copy on the live site. Applied it across all 7 pages, mapping each piece of the rewritten doc back to its exact spot in the HTML:
+
+- **Titles, meta descriptions, and their `og:`/`twitter:` mirrors** updated on every page (kept JSON-LD `description` fields untouched — they weren't part of the audit/rewrite, and changing them wasn't asked for)
+- **Full voice shift** from first-person-singular ("I", "me", "my" — Haris as a solo operator) to first-person-plural ("we", "us", "our") throughout every headline, paragraph, button and form label
+- **Home**: new hero headline "Build your pipeline with better data." (kept the site's existing two-line accent-color heading pattern rather than the plain single line in the doc, to preserve the visual design); rewrote the hero secondary button to "See How It Works" and repointed its link from services.html to the on-page `#process` anchor, since that's what the new label actually promises; added a proper heading+paragraph to the previously-bare "Sources & Tools I Use" label; added a 4th free-trial checklist item since the rewrite split one bullet into two
+- **About**: expanded the intro from 2 paragraphs to the 4 the rewrite provided; converted the 4-item "why work with me" checklist to bold-lead-in + description per item to match the rewrite's two-part structure per point
+- **Services**: renamed `Person/Company LinkedIn Url` → `...URL`, `Facebook/Twitter Url` → `...URL` to match the rewrite's casing
+- **Pricing**: dropped a now-redundant supporting paragraph from the Rates section since its content had moved into the hero copy in the rewrite; removed the Oxford comma from "CSV, Excel or Google Sheets" across all three tiers to match
+- **Categories**: only touched the hero/browse-section/CTA/footer text — deliberately left the 1,757 category chip labels untouched, exactly as the original audit had excluded them (confirmed chip count still 1,757 after editing)
+- **Samples**: renamed the three example-table captions; left all table headers and the fictional row data untouched (illustrative example data, not prose)
+- **Contact**: added a new "Have a specific list in mind?" h3 above the closing note, since the rewrite introduced a heading there that didn't exist in the current markup
+
+Verified all 7 files are well-formed (custom Python HTML tag-balance checker, since the browser tool was temporarily disconnected this session) and all JSON-LD blocks still parse as valid JSON. Grepped for leftover first-person pronouns across all pages to confirm the voice shift was complete — the only remaining "I"/"me" matches were false positives (a genuine category named "I-9 Compliance", an "ROI" acronym artifact, and the `wa.me` WhatsApp URL domain).
+
+**Still open:** Google Search Console setup; domain purchase itself.
