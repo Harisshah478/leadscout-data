@@ -403,3 +403,15 @@ Duplicated the 13-chip list into two copies inside a `.logo-marquee__track` flex
 Browser tool was disconnected for the entire session, so this was verified via HTML tag-balance validation and careful manual review of the CSS/animation math rather than a live visual check — worth a quick look once deployed to confirm the loop is seamless.
 
 **Still open:** Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later) — Services page expanded to 6 services, business scope broadened
+
+Haris pasted a new content spec for the Services page listing 6 distinct services: B2B Data & Lead Generation, LinkedIn Outreach, Email Marketing, Lead List Building, Data Extraction & Research, Custom Lead Generation. This introduces two services (LinkedIn Outreach, Email Marketing) never mentioned anywhere on the site before — since publishing that would be a real claim about business capability, checked with Haris first rather than assuming; he confirmed these are genuine services he now offers.
+
+Implemented as an **expansion** rather than a full replacement: kept the existing 27-field data breakdown and delivery-format cards (real, specific, valuable detail that the new content didn't ask to remove and that Pricing still references), and dropped the old data-extraction-specific 3-step "Process" section (didn't ask to keep it, and it no longer describes all 6 services accurately). Final page order: Hero (new) → **Our Services** (new, 6 cards reusing the `.formats`/`.format-card` pattern — 6 items land as 2 clean rows in the existing 3-column grid) → Available data fields (kept) → Delivery formats (kept) → **Why Choose LeadScout Data** (new, 4 items reusing the `.value-props` grid with an added description line per item) → CTA (new copy, "Get Started" button pointed at Contact rather than Pricing, since Pricing is data-only per-contact pricing and doesn't cover the new outreach/email services).
+
+Lightly touched up the page's `<title>`/meta description (not given in the new content) since the old one referenced the now-removed "process" — kept minimal and accurate rather than inventing new marketing copy. Left the page's `Service` JSON-LD block untouched (still only describes the data-extraction service) — flagged as a follow-up if Haris wants structured data for the new services too.
+
+Verified via HTML tag-balance + JSON-LD validation (browser tool still disconnected all session) and confirmed card counts by hand: 9 total `.format-card`s (6 new + 3 existing delivery formats), exactly 4 `.value-prop` items.
+
+**Still open:** structured data for the new LinkedIn Outreach/Email Marketing services (currently not reflected in JSON-LD); Google Search Console setup; domain purchase itself.
