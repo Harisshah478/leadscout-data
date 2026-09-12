@@ -478,6 +478,19 @@ Haris decided on the robots.txt question flagged in the previous audit pass: blo
 
 **Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
 
+## 2026-09-12 (later still) — Design audit, four real fixes applied
+
+Haris asked to check the site's design. Ran a read-only audit (per `/website-builder` + `/design` conventions) across `css/styles.css`, `js/animations.js`, and all 7 pages. Confirmed clean: no third instance of the `[hidden]`+`display` override bug, motion fully gated by `prefers-reduced-motion` with sane fallbacks, consistent component reuse (`.format-card`/`.value-prop`/`.tier-card`/etc.), and existing focus states on all custom inputs. Found and fixed four real issues:
+
+- **`--text-muted` failed WCAG AA contrast** everywhere it was used (~13 selectors, including the "Data" wordmark suffix and the Services field-group captions) — computed 2.8–3.2:1 against its actual backgrounds, below the 4.5:1 minimum for body text. Lightened the token from `oklch(48% 0.008 210)` to `oklch(58% 0.01 210)`.
+- **~50 lines of dead CSS removed**: `.prompt-box`/`.prompt-box__*` (leftover from the pre-teal Glide-theme experiment) and `.fields-grid`/`.field-card` plus their two orphaned breakpoint overrides (leftover from before the field list became icon tiles) — confirmed zero matches in any of the 7 HTML files before deleting.
+- **Hardcoded pre-reskin hue-260 (blue) colors normalized to hue 210** (the current teal-neutral hue) on `.trial-card`, `.dashboard-card`, and `.sample-line` — the same "hardcoded color survives a palette swap" bug class that's shipped on this project before, caught before it caused a visible mismatch.
+- **Removed a dead duplicate `.contact-grid` rule** inside the 900px breakpoint block — a 2-column rule was immediately followed by a 1-column rule for the same selector in the same media block, so the first was unreachable; kept only the winning rule.
+
+Verified: CSS brace balance, HTML tag-balance + JSON-LD validation on all 7 pages, confirmed no HTML references the removed dead classes, confirmed the surviving `.contact-grid` rule still correctly collapses to 1 column at 900px.
+
+**Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself. (Noted but not fixed, out of scope for this pass: `.tabs` CSS also appears to be dead/unused — flagging for a future cleanup pass rather than expanding scope here.)
+
 ## 2026-09-12 (later still) — Fifth project skill: Website Builder
 
 Haris asked to "download professional website builder skills." Built `.claude/skills/website-builder/SKILL.md` — the structural/visual counterpart to `/content-writing` (which owns wording). Documents this site's actual design tokens (`--bg`, `--accent`, etc. from `css/styles.css`), layout primitives (`.container`, `.page-hero`/`.page-hero__inner` nesting requirement, `.section`/`.section__head`), the two real breakpoints (900px/600px), the `prefers-reduced-motion` gating pattern already used everywhere, and — called out explicitly since it's shipped twice already — the `[hidden]` + author-stylesheet `display` override bug (`.cat-chip[hidden]`, `.cat-jumpbar[hidden]`), with an instruction to always pair a toggled `hidden` attribute with an explicit `[hidden] { display: none; }` rule.
