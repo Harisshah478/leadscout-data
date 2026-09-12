@@ -429,3 +429,15 @@ Browser tool still disconnected this session — verified via CSS brace-balance 
 Haris asked for the same "bigger and lighter" hover effect on the Pricing page's tier cards. `.tier-card` (Starter/Growth/Scale) previously had no hover state at all. Added the identical scale-up + accent-tint background/border treatment just applied to the Services page's `.format-card`, for visual consistency across both pages.
 
 **Still open:** structured data for the new LinkedIn Outreach/Email Marketing services; Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later) — Custom SEO/GEO/AEO project skills added
+
+Haris asked to "download SEO GEO and AEO skills." Clarified there's no external skill marketplace I have access to — instead built three custom project-level Claude Code skills, confirmed via the Claude Code guide agent to live at `.claude/skills/<name>/SKILL.md` (folder name becomes the slash command). Researched current (2026) best practices for each discipline first rather than relying on possibly-stale training knowledge, since GEO/AEO are fast-evolving:
+
+- **`/seo-audit`** — technical + on-page SEO checklist tailored to this site's actual files (meta tags, JSON-LD validity, sitemap/robots.txt, heading hierarchy, internal linking)
+- **`/geo-optimization`** — optimizing to be retrieved/cited by AI answer tools (ChatGPT, Perplexity, AI Overviews): direct-answer-first content structure, and critically, checking `robots.txt` allows AI retrieval bots (PerplexityBot, OAI-SearchBot, ChatGPT-User, Claude-SearchBot/User) — research found ~41% of B2B sites accidentally block a major AI bot, each costing 18–34% of potential citations on that engine
+- **`/aeo-optimization`** — winning featured snippets/direct-answer boxes: question-phrased headings, 40–60 word direct-answer paragraphs, list/table formatting, and a hard warning against adding FAQ schema to content that isn't genuinely visible on the page (a real Search Console penalty risk, not just wasted effort)
+
+Haris also explicitly reinforced the project's working agreement — everything stays inside this project folder, nothing in a global/personal location like `~/.claude/skills/`. Saved this as a standing memory. All three skills are committed to the repo (not a personal skill directory), so they travel with the project and are available in any future session working on this repo.
+
+**Still open:** actually running these skills against the live site; structured data for the new services; Google Search Console setup; domain purchase itself.
