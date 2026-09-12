@@ -487,3 +487,20 @@ Haris asked to "download professional website builder skills." Built `.claude/sk
 Haris then asked to "download design skills" as a separate request. Built `.claude/skills/design/SKILL.md`, deliberately scoped apart from `/website-builder` — that skill owns *reusing* the existing component system, this one owns aesthetic *judgment* for genuinely new visual decisions (a new hover state, a new hero layout, reacting to a reference screenshot). Documents the site's actual established identity (dark teal palette post-reskin, Sora+Work Sans pairing, restrained motion, the lift+scale+accent-tint hover pattern already used on `.format-card`/`.tier-card`), a checklist against generic "AI-made" design tells, and process guidance drawn directly from this project's real history — translate reference screenshots into the site's own visual language rather than copying wholesale (the reverted Provet-theme experiment), and prototype directly in the live pages rather than a separate mockup when the ask is about the live site's actual look (a lesson explicitly logged earlier this session).
 
 All six project skills (`/seo-audit`, `/geo-optimization`, `/aeo-optimization`, `/content-writing`, `/website-builder`, `/design`) now live in `.claude/skills/` and are committed to the repo per Haris's standing instruction that everything stays inside this project folder.
+
+## 2026-09-12 (later still) — Content audit against the 6-service expansion, business-scope copy fixed
+
+Haris asked to check the site's content for needed changes. Ran a read-only content audit (per `/content-writing` conventions) across all 7 live pages, looking specifically for whether copy elsewhere on the site still matched the Services page's expansion to 6 offerings (B2B Data & Lead Generation, LinkedIn Outreach, Email Marketing, Lead List Building, Data Extraction & Research, Custom Lead Generation) from an earlier pass this session.
+
+Found a real, consistent gap: every other page — and even the shared footer on the Services page itself — still described the business as a single-service data-extraction shop, undercutting the broader business that's now real and confirmed. Fixed:
+
+- **Shared footer blurb** (identical on all 7 pages, including Services) — "Verified business and contact data sourced from public listings and sales intelligence platforms, carefully structured and prepared for outreach." → "Verified business and contact data, LinkedIn outreach and email marketing — built around the audience you want to reach."
+- **About page hero paragraph** — "LeadScout Data is a data extraction service focused on turning scattered business and contact information into structured prospect lists..." → "LeadScout Data helps you find and reach the right prospects — through targeted data, LinkedIn outreach and email marketing." (mirrors Services' own hero line for consistency)
+- **About page "Direct and focused" checklist item** — "Work directly with the person handling your data project" (singular, data-only) → "Work directly with our team throughout your project" (matches the we/us voice and broader scope used elsewhere)
+- **Home page** — title tag + og:title + twitter:title, meta/og/twitter description, hero lead paragraph, and the homepage's `ProfessionalService` JSON-LD `description` field were all data-extraction-only; broadened each to mention LinkedIn outreach and email marketing alongside the core data offering, without dropping the free-trial/data-specific framing that's the actual homepage conversion path.
+
+Verified via HTML tag-balance + JSON-LD parse validation on all 7 pages, confirmed the footer blurb is identical and present on exactly 7 pages, and confirmed the Categories page's 1,757-chip count is unchanged.
+
+No stale first-person-singular voice, no AI-cliché phrasing, and no pricing inconsistencies were found elsewhere — those checks from earlier passes still hold.
+
+**Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself.
