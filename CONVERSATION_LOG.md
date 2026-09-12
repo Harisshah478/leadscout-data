@@ -415,3 +415,11 @@ Lightly touched up the page's `<title>`/meta description (not given in the new c
 Verified via HTML tag-balance + JSON-LD validation (browser tool still disconnected all session) and confirmed card counts by hand: 9 total `.format-card`s (6 new + 3 existing delivery formats), exactly 4 `.value-prop` items.
 
 **Still open:** structured data for the new LinkedIn Outreach/Email Marketing services (currently not reflected in JSON-LD); Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later) — Stronger hover state on Services page cards
+
+Haris asked for the boxes on the Services page to get bigger and lighter on hover. `.format-card` (used by both the 6 new service cards and the 3 delivery-format cards — confirmed it's not used anywhere else on the site) previously only lifted 3px with a shadow on hover. Added `scale(1.03)` to the existing lift, and changed the background/border to the site's established light-accent hover pattern (`var(--accent-tint)` background, `var(--accent)` border) already used elsewhere for hover states, rather than inventing a new color treatment.
+
+Browser tool still disconnected this session — verified via CSS brace-balance check only, no live render.
+
+**Still open:** structured data for the new LinkedIn Outreach/Email Marketing services; Google Search Console setup; domain purchase itself.

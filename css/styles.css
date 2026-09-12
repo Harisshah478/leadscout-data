@@ -1492,11 +1492,13 @@ tr:last-child td {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease, border-color 150ms ease;
 }
 
 .format-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.03);
+  background: var(--accent-tint);
+  border-color: var(--accent);
   box-shadow: 0 10px 28px oklch(20% 0.02 185 / 0.08);
 }
 
