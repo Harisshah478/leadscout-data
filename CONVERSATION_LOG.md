@@ -441,3 +441,13 @@ Haris asked to "download SEO GEO and AEO skills." Clarified there's no external 
 Haris also explicitly reinforced the project's working agreement — everything stays inside this project folder, nothing in a global/personal location like `~/.claude/skills/`. Saved this as a standing memory. All three skills are committed to the repo (not a personal skill directory), so they travel with the project and are available in any future session working on this repo.
 
 **Still open:** actually running these skills against the live site; structured data for the new services; Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later still) — Content Writing project skill added
+
+Haris asked to "download Content Writing Skills," the same pattern as the SEO/GEO/AEO request moments earlier — built as a fourth custom project skill rather than re-asking the already-resolved marketplace-vs-custom question.
+
+- **`/content-writing`** — codifies conventions this project has already settled through real back-and-forth this session, so future copy work doesn't have to rediscover them: the "we/us" voice shift from the big rewrite pass, a table mapping content shapes to the site's existing reusable CSS components (`.format-card`, `.value-prop`, `.tier-card`, etc.) so new copy reuses markup instead of inventing new styling, a hard accuracy rule against fabricating pricing/services/stats/testimonials (citing the LinkedIn Outreach/Email Marketing confirmation and the per-contact pricing back-and-forth as precedent), and a pointer to apply the `/seo-audit`/`/geo-optimization`/`/aeo-optimization` skills' conventions to new copy rather than duplicating that guidance. Skipped a fresh research fork for this one (unlike SEO/GEO/AEO) — copywriting fundamentals are stable, and the most valuable content here is this project's own established conventions, not generic theory.
+
+Committed to the repo alongside the other three skills, per the same explicit instruction that everything stays inside this project folder.
+
+**Still open:** actually running all four skills against the live site; structured data for the new services; Google Search Console setup; domain purchase itself.
