@@ -423,3 +423,9 @@ Haris asked for the boxes on the Services page to get bigger and lighter on hove
 Browser tool still disconnected this session — verified via CSS brace-balance check only, no live render.
 
 **Still open:** structured data for the new LinkedIn Outreach/Email Marketing services; Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later) — Same hover treatment applied to Pricing tier cards
+
+Haris asked for the same "bigger and lighter" hover effect on the Pricing page's tier cards. `.tier-card` (Starter/Growth/Scale) previously had no hover state at all. Added the identical scale-up + accent-tint background/border treatment just applied to the Services page's `.format-card`, for visual consistency across both pages.
+
+**Still open:** structured data for the new LinkedIn Outreach/Email Marketing services; Google Search Console setup; domain purchase itself.
