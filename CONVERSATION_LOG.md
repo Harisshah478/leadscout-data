@@ -393,3 +393,13 @@ Haris sent back `content-audit.md` (the copy audit from the previous session) re
 Verified all 7 files are well-formed (custom Python HTML tag-balance checker, since the browser tool was temporarily disconnected this session) and all JSON-LD blocks still parse as valid JSON. Grepped for leftover first-person pronouns across all pages to confirm the voice shift was complete — the only remaining "I"/"me" matches were false positives (a genuine category named "I-9 Compliance", an "ROI" acronym artifact, and the `wa.me` WhatsApp URL domain).
 
 **Still open:** Google Search Console setup; domain purchase itself.
+
+## 2026-09-12 (later) — Sources & Tools strip converted to an auto-scrolling marquee
+
+Haris shared a screenshot of the "Sources & Tools" logo-chip strip and asked for it to "rotate in a circle" — implemented as a continuous auto-scrolling marquee (logos loop endlessly leftward, like a ticker) rather than literal rotation, since that's the standard interpretation of this request for a logo strip. Applied to both places this component appears — the homepage and About page.
+
+Duplicated the 13-chip list into two copies inside a `.logo-marquee__track` flex row, animated via a `translateX(-50%)` keyframe looping infinitely (pauses on hover), with an edge fade mask so chips don't hard-cut at the container edges. Respects `prefers-reduced-motion`: falls back to the original static wrapped grid with the duplicate copy hidden.
+
+Browser tool was disconnected for the entire session, so this was verified via HTML tag-balance validation and careful manual review of the CSS/animation math rather than a live visual check — worth a quick look once deployed to confirm the loop is seamless.
+
+**Still open:** Google Search Console setup; domain purchase itself.
