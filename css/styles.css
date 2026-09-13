@@ -12,6 +12,8 @@
   --accent-tint: oklch(20% 0.06 185);
   --ink: oklch(15% 0.01 210);
   --ink-hover: oklch(30% 0.012 210);
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
 }
 
 * {
@@ -24,13 +26,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Work Sans', system-ui, sans-serif;
+  font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
 }
 
 h1, h2, h3 {
-  font-family: 'Sora', system-ui, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
 }
 
@@ -84,7 +86,7 @@ a:hover {
   font-size: 15px;
   cursor: pointer;
   border: none;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-sans);
   transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
 }
 
@@ -151,7 +153,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 19px;
   color: var(--text);
@@ -280,6 +282,7 @@ a:hover {
   border-radius: 999px;
   background: var(--surface);
   border: 1px solid var(--border);
+  font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -363,12 +366,13 @@ a:hover {
 }
 
 .stat__num {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-size: 38px;
   font-weight: 800;
 }
 
 .stat__label {
+  font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -380,6 +384,7 @@ a:hover {
 
 .logo-strip-label {
   text-align: center;
+  font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -402,6 +407,7 @@ a:hover {
   color: var(--text);
   padding: 13px 24px;
   border-radius: 10px;
+  font-family: var(--font-mono);
   font-weight: 700;
   font-size: 14px;
   white-space: nowrap;
@@ -481,7 +487,7 @@ a:hover {
   padding: 13px 18px;
   color: var(--text);
   font-size: 15px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-sans);
   transition: border-color 150ms ease;
 }
 
@@ -521,6 +527,7 @@ a:hover {
   height: 28px;
   padding: 0 6px;
   border-radius: 7px;
+  font-family: var(--font-mono);
   font-size: 12.5px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -547,7 +554,7 @@ a:hover {
 .cat-letter-heading {
   flex: 1 0 100%;
   scroll-margin-top: 125px;
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-mono);
   font-weight: 700;
   font-size: 15px;
   color: var(--accent);
@@ -637,7 +644,7 @@ a:hover {
   padding: 13px 16px;
   color: var(--text);
   font-size: 14.5px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-sans);
   transition: border-color 150ms ease;
 }
 
@@ -658,6 +665,7 @@ a:hover {
 }
 
 .trial-form__note {
+  font-family: var(--font-mono);
   font-size: 12.5px;
   color: var(--text-muted);
   text-align: center;
@@ -833,6 +841,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: var(--font-mono);
   font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -851,6 +860,15 @@ a:hover {
 .section__head h2 {
   font-size: 32px;
   font-weight: 700;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .section__head h2 {
+    background: linear-gradient(90deg, var(--text) 0%, var(--text) 45%, var(--text-muted) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .section__head p {
@@ -922,7 +940,7 @@ tr:last-child td {
   height: 38px;
   border-radius: 999px;
   background: var(--accent-tint);
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 700;
   color: var(--accent-dark);
@@ -1016,6 +1034,7 @@ tr:last-child td {
   align-self: flex-start;
   background: var(--accent);
   color: white;
+  font-family: var(--font-mono);
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1025,7 +1044,7 @@ tr:last-child td {
 }
 
 .tier-card__name {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 20px;
 }
@@ -1043,7 +1062,7 @@ tr:last-child td {
 }
 
 .tier-card__price-amount {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-size: 40px;
   font-weight: 800;
 }
@@ -1167,6 +1186,7 @@ tr:last-child td {
 }
 
 .footer__title {
+  font-family: var(--font-mono);
   font-weight: 600;
   font-size: 14px;
   color: var(--text);
@@ -1202,6 +1222,7 @@ tr:last-child td {
 }
 
 .footer__bottom p {
+  font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-muted);
 }
@@ -1298,12 +1319,13 @@ tr:last-child td {
 }
 
 .field-group__title {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 17px;
 }
 
 .field-group__count {
+  font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-muted);
 }
@@ -1422,7 +1444,7 @@ tr:last-child td {
 
 .format-card__label {
   font-weight: 700;
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
 }
 
@@ -1475,6 +1497,7 @@ tr:last-child td {
 }
 
 .contact-card__label {
+  font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-muted);
 }

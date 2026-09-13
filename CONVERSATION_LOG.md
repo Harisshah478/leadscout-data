@@ -544,3 +544,19 @@ Initially proposed lazy-rendering each A-Z section on scroll/jump-bar click, but
 Verified: CSS brace balance, HTML tag-balance on all 7 pages, and the 1,757 chip count unchanged.
 
 **Still open:** a possible future FAQ section (needs real questions from Haris); Google Search Console setup; domain purchase itself; a real reCAPTCHA integration if the honeypot alone doesn't fully stop spam.
+
+## 2026-09-13 (later) — Typography refresh: Geist / Geist Mono + gradient-fade headings
+
+Haris shared a local mockup file (`apex-solv-mockup.html`) and asked to apply its theme. Read the mockup's actual CSS/markup before doing anything: its color palette (near-black bg, teal accent) turned out to already be very close to the site's current teal reskin — the real distinguishing elements were the **Geist / Geist Mono** typeface pairing (mono used specifically for small labels/tags/eyebrows), a **gradient-fade heading treatment** (solid color fading to muted on the trailing portion), pill-shaped nav/buttons, and small decorative "viz" dashboard graphics.
+
+The mockup's actual business content ("Apex Solv") was a broader software-development + data agency reusing LeadScout Data's real stats (27+ fields, 13+ sources, 300 free contacts) under different branding and added services (web/app/e-commerce development). Flagged this distinction clearly and asked Haris to confirm scope before touching anything — he chose **visual theme only**, no business/content changes.
+
+Implemented, CSS/typography only, no content or structural changes:
+- Added `--font-sans: 'Geist', system-ui, sans-serif` and `--font-mono: 'Geist Mono', ui-monospace, monospace` tokens; replaced all 13 hardcoded `'Sora'`/`'Work Sans'` `font-family` declarations across `css/styles.css` with `var(--font-sans)`, and swapped the Google Fonts `<link>` on all 7 pages from Sora+Work Sans to Geist+Geist Mono
+- Applied `var(--font-mono)` specifically to label/tag-style elements matching the mockup's actual usage pattern: `.eyebrow`, `.pill`, `.stat__label`, `.logo-strip-label`, `.logo-chip`, `.cat-jumpbar__btn`, `.cat-letter-heading`, `.trial-form__note`, `.tier-card__badge`, `.footer__title`, `.footer__bottom p`, `.field-group__count`, `.contact-card__label` — everything else (headings, body, buttons, card titles) stays on the main sans face
+- Added the gradient-fade treatment to `.section__head h2` (used by nearly every section heading site-wide) via `background: linear-gradient(...); background-clip: text; color: transparent`, wrapped in an `@supports` guard so heading text never goes invisible on a browser without `background-clip: text` support
+- Deliberately left the homepage hero's teal `.accent-text` two-line heading pattern, the existing pill-shaped `.btn`/`.pill` components, and card/border styling untouched — they already matched the mockup's mood closely enough, and are part of the site's established identity built up over several prior redesigns
+
+Browser tool reconnected briefly this session then disconnected again before a screenshot could be taken — verified structurally only (CSS brace balance, HTML tag-balance + JSON-LD validation on all 7 pages, confirmed zero leftover Sora/Work Sans references). Worth a visual spot-check once deployed.
+
+**Still open:** a possible future FAQ section; Google Search Console setup; domain purchase itself; reCAPTCHA if the honeypot alone doesn't fully stop spam; visual spot-check of the new typography once live.
