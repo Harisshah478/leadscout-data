@@ -525,15 +525,25 @@ a:hover {
 }
 
 .cat-chip {
-  display: inline-block;
-  padding: 7px 14px;
-  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 16px;
+  border-radius: 8px;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 500;
-  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.cat-chip:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-tint);
 }
 
 .cat-chip[hidden] {
@@ -598,6 +608,7 @@ a:hover {
   gap: 4px;
   padding: 16px 18px;
   text-align: left;
+  text-decoration: none;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -609,7 +620,8 @@ a:hover {
   display: none;
 }
 
-button.cat-card:hover {
+button.cat-card:hover,
+a.cat-card:hover {
   cursor: pointer;
   transform: translateY(-3px) scale(1.02);
   background: var(--accent-tint);
@@ -629,19 +641,40 @@ button.cat-card:hover {
   color: var(--text-muted);
 }
 
-.cat-card--flat {
-  opacity: 0.85;
+.cat-card--flat .cat-card__meta {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .cat-subgrid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
+  max-width: 560px;
   scroll-margin-top: 100px;
 }
 
 .cat-subgrid[hidden] {
   display: none;
+}
+
+.cat-subgrid-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: gap 150ms ease;
+}
+
+.cat-subgrid-cta:hover {
+  gap: 10px;
+  color: var(--accent-dark);
 }
 
 /* Free trial */

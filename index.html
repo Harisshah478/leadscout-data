@@ -298,7 +298,7 @@
             <input type="text" name="name" placeholder="Full name" aria-label="Full name" autocomplete="name" required>
             <input type="email" name="email" placeholder="Work email" aria-label="Work email" autocomplete="email" required>
             <input type="text" name="company" placeholder="Company name" aria-label="Company name" autocomplete="organization">
-            <input type="text" name="target" placeholder="What leads are you looking for? Industry, location, keyword" aria-label="What leads are you looking for" required>
+            <input type="text" name="target" id="trial-target" placeholder="What leads are you looking for? Industry, location, keyword" aria-label="What leads are you looking for" required>
             <input type="hidden" name="_subject" value="New Free Trial Request — LeadScout Data">
             <input type="text" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button type="submit" class="btn btn--primary">Claim My 300 Free Contacts</button>
@@ -338,5 +338,13 @@
 <script src="js/animations.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
+<script>
+(function () {
+  var target = new URLSearchParams(location.search).get('target');
+  if (!target) return;
+  var input = document.getElementById('trial-target');
+  if (input) input.value = target;
+})();
+</script>
 </body>
 </html>
