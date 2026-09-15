@@ -684,3 +684,11 @@ Verified live: tag-balance/JSON-LD after the regen (37 cards, 474 chips, 474 det
 Haris said the Categories page search bar wasn't properly visible. Checked the actual rendered colors rather than guessing: the box used `--surface` (14% lightness) on a `--bg` page background of 9% — only a 5-point lightness gap, and with no shadow, so on an otherwise empty stretch of page it barely registered as a distinct element (the category cards below it get away with the same subtle border because they're packed into a dense grid where many edges together read as a pattern; the isolated search box had no such help). Switched its background to `--surface-2` (19%, the same token the free-trial form's inputs already use) and added a small drop shadow + a faint inset highlight for depth, so it reads as its own raised element rather than blending into the page.
 
 Verified live — clearly more distinguishable against the dark background now, still restrained/on-theme, not a harsh box.
+
+## 2026-09-15 (later still) — Removed the company-count number from subcategory list rows
+
+Same PR (#37), still open. Haris asked to remove the number shown next to every subcategory — the `.cat-chip__count` company-count badge (e.g. "Accounting Practice Management Software 1,846") on all 474 subcategory rows. Removed the span from every chip, then cleaned up what became dead CSS as a result: deleted the now-unused `.cat-chip__count` rule entirely, and dropped `justify-content: space-between` / `gap: 12px` from `.cat-chip` since those existed specifically to push the count to the right edge against the name — with only one child now they were inert, not just unnecessary.
+
+The count itself isn't gone from the site, just this list view — it's still shown in each subcategory's detail modal ("N companies tracked"), which Haris didn't ask to change.
+
+Verified: HTML tag-balance/JSON-LD after the removal (0 remaining `cat-chip__count` references), CSS brace balance, and visually in the browser — clean subcategory names with no trailing numbers, search bar contrast fix from the same PR still holding up correctly alongside it.

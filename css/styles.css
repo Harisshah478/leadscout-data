@@ -528,8 +528,6 @@ a:hover {
 .cat-chip {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   width: 100%;
   padding: 11px 16px;
   border-radius: 8px;
@@ -553,13 +551,6 @@ a:hover {
 
 .cat-chip[hidden] {
   display: none;
-}
-
-.cat-chip__count {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-left: 6px;
 }
 
 .category-empty {
