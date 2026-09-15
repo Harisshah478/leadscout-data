@@ -6,5 +6,6 @@ Disallow: /
 
 User-agent: *
 Allow: /
+Disallow: /design-mockup/
 
 Sitemap: https://leadscout-data.vercel.app/sitemap.xml
