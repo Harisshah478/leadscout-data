@@ -646,3 +646,13 @@ Because the modal now floats on top of whatever's underneath instead of replacin
 Caught and fixed a real bug before shipping, not after: the first version removed the backdrop's `.is-open` class on close (fading it out) but never set `hidden` back on it or `pointer-events: none` in its base state — so after closing a modal once, the still-`display`-present, fully-transparent backdrop kept `pointer-events: auto` and silently ate every click on the rest of the page. Caught this by testing "can I still click something after closing," not just "does it look closed" — fixed both in CSS (`pointer-events: none` outside `.is-open`) and JS (`backdrop.hidden = true` in the same timeout that hides the detail panel).
 
 Verified live: modal opens centered with the zoom/fade-in, shows the correct distinct content per subcategory, and all three close paths (× button, backdrop click, Escape key) correctly hide both the panel and backdrop, restore body scroll, and return focus to the chip that opened it — then re-confirmed via a real click that the page underneath is actually interactive again post-close (the specific case the bug broke).
+
+## 2026-09-15 (later still) — Added a Country field to the free-trial form
+
+Haris asked to add country to the form. Only real form on the site is the homepage free-trial form (`name`, `email`, `company`, `target`) — added a `<select name="country">` between company and target, with a 197-country list (alphabetical, "Other" as the final catch-all) plus a disabled/hidden placeholder option so it visually reads as "Country" like the other fields' placeholders until a real value is picked. Marked `required` (consistent with name/email/target, not optional like company) and `autocomplete="country-name"` for browser autofill.
+
+Styled to match the existing dark theme: native `<select>` styling reset (`appearance: none`) with a custom SVG chevron and `:invalid` state colored the same muted placeholder color as the other inputs, since a native select has no `::placeholder` pseudo-element of its own.
+
+Verified live: option count (198 = 197 countries + placeholder), `required`/`autocomplete` attributes present, `checkValidity()` correctly fails on the empty placeholder value and passes once a real country is selected — confirms the browser will actually block submission without one, not just that the field looks required.
+
+Formspree needs no server-side config change — it emails whatever fields are POSTed, so `country` will just show up in the lead-notification email Haris already receives.
