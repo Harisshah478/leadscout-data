@@ -597,3 +597,18 @@ Haris looked at the new category browser locally and asked for cleaner alignment
 While verifying in a live browser session, found a real (pre-existing, unrelated to the grid change) bug: clicking a category card scrolls to its subgrid via `element.scrollIntoView({block:'start'})`, but the sticky nav bar (`position: sticky; top: 0`) sat on top of the scrolled-to content with no offset, hiding the breadcrumb and first row of chips underneath it. The old flat-list version had this covered via `.cat-letter-heading { scroll-margin-top: 125px }`, but that rule (and the whole jump-bar it supported) was removed when the category browser was rebuilt, and no equivalent was added to the new `.cat-subgrid`. Added `scroll-margin-top: 100px` to `.cat-subgrid` (nav renders ~77px tall) to fix it. Confirmed via a real mouse-driven click (not a synthetic `.click()`, which doesn't reliably trigger the same smooth-scroll timing in an automated browser session) that the breadcrumb and first row of chips now land clear of the nav.
 
 Verified: CSS brace balance, and visually in the browser (card grid alignment across multiple rows, drill-down scroll landing correctly).
+
+## 2026-09-15 (later still) — Subcategory drill-down made to convert, not just inform
+
+PR #30 merged to main. Haris then asked to make the subcategory view "better" with no further detail; asked a clarifying question rather than guess between visual-only polish vs. adding conversion paths, since they're genuinely different amounts of work. He picked: make it convert.
+
+Before this, the drill-down subcategory chips and the 4 zero-subcategory "flat" cards (EMR, Human Resources, LMS, Legal Software) were purely informational — plain text, no hover state, not clickable, no path back to the site's actual funnel. Changed:
+- All 197 subcategory chips are now real `<a>` links to `index.html?target=<Subcategory Name>#free-trial` (URL-encoded, HTML entities unescaped first so e.g. "Analytics Tools & Software" round-trips correctly) — clicking one takes you straight to the free-trial form with that exact subcategory pre-filled
+- The 4 flat cards (no subcategories to drill into) are now links too, each to its own category's free-trial URL, with a "Get leads →" hint replacing the old dimmed/non-interactive `opacity: 0.85` styling
+- On `index.html`, added a small inline script that reads `?target=` from the query string on load and fills `#trial-target` (the target input got an `id` for this — it only had a `name` before)
+- Added a "Get leads in [Category Name] →" CTA as the last element inside each of the 33 populated subgrids (`flex: 1 0 100%` so it drops to its own full-width row under the chips), for the case where none of the individual subcategories are an exact fit but the category itself is
+- Added hover states to `.cat-chip` (border/background tint, previously none since chips weren't interactive) and broadened the card hover selector from `button.cat-card:hover` to also cover `a.cat-card:hover` now that some cards are links, not buttons
+
+Verified live: clicked a chip in the CRM Software subgrid, confirmed the generated `href`, followed it, and confirmed `#trial-target`'s value was set to the exact subcategory name before the page even finished its own scroll-to-anchor. HTML tag-balance (div/section/button/span/a) and JSON-LD re-verified after the conversion (chip and flat-card element counts matched: 197 chips, 33 CTAs, 4 flat-card links).
+
+Opened as a fresh branch off latest `main` (`subcategory-cta`) rather than continuing on the already-merged `worktree-website-improve` branch, to keep future PRs one-topic-at-a-time per Haris's earlier note.
