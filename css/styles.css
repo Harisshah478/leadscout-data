@@ -489,14 +489,15 @@ a:hover {
 .category-search {
   width: 100%;
   max-width: 480px;
-  background: var(--surface);
+  background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 13px 18px;
   color: var(--text);
   font-size: 15px;
   font-family: var(--font-sans);
-  transition: border-color 150ms ease;
+  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.15), inset 0 1px 0 oklch(100% 0 0 / 0.02);
+  transition: border-color 150ms ease, background-color 150ms ease;
 }
 
 .category-search::placeholder {
@@ -527,8 +528,6 @@ a:hover {
 .cat-chip {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   width: 100%;
   padding: 11px 16px;
   border-radius: 8px;
@@ -552,13 +551,6 @@ a:hover {
 
 .cat-chip[hidden] {
   display: none;
-}
-
-.cat-chip__count {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-left: 6px;
 }
 
 .category-empty {
