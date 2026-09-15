@@ -8,7 +8,7 @@ A static landing page for a personal data-extraction / lead-sourcing service. Pu
 index.html           Home (hero, free-trial form, stats, sources, dashboard preview, process, CTA)
 about.html            About
 services.html         Services & pricing
-industries.html       Category directory — 37 main software categories, click through to 197 subcategories
+industries.html       Category directory — 37 main software categories, click through to 474 subcategories
 portfolio.html        Samples (illustrative example datasets)
 contact.html          Contact
 css/styles.css        All styling (shared across every page)
@@ -38,7 +38,7 @@ python -m http.server 8000
 - [x] Scroll/entrance animations, stat count-up
 - [x] SEO: per-page meta titles/descriptions, Open Graph + Twitter cards, canonical links, JSON-LD structured data (homepage), `robots.txt`, `sitemap.xml`
 - [x] Free-trial lead capture form ("Get 100 Free Verified Contacts") on the homepage
-- [x] Category directory at `industries.html` — 37 main software categories, click-through to 197 subcategories, built from a real ~39,600-company dataset
+- [x] Category directory at `industries.html` — 37 main software categories, click-through to 474 subcategories, built from a real ~39,600-company dataset
 - [x] Free-trial form wired to a real Formspree endpoint (`https://formspree.io/f/mwlkyaoe`) — submissions email Haris automatically
 - [x] Deployed and live on Vercel: https://leadscout-data.vercel.app (auto-deploys on push to `main`)
 - [x] Vercel Web Analytics + Speed Insights installed (script tags on every page — no package install needed for a plain static site; the `/_vercel/...` paths are served automatically once enabled in the Vercel dashboard)

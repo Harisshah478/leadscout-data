@@ -28,6 +28,18 @@
 "companies": 6
 },
 {
+"name": "Budgeting Software",
+"companies": 51
+},
+{
+"name": "Church Accounting Software",
+"companies": 41
+},
+{
+"name": "Debt Collection Software",
+"companies": 111
+},
+{
 "name": "Expense Management Software",
 "companies": 23
 },
@@ -36,8 +48,24 @@
 "companies": 27
 },
 {
+"name": "Financial Planning Software",
+"companies": 162
+},
+{
 "name": "Mobile Accounting",
 "companies": 12
+},
+{
+"name": "Subscription Management Software",
+"companies": 79
+},
+{
+"name": "Tax Compliance Software",
+"companies": 23
+},
+{
+"name": "Treasury Software",
+"companies": 21
 }
 ]
 },
@@ -54,12 +82,36 @@
 "companies": 16
 },
 {
+"name": "Dashboard Software",
+"companies": 125
+},
+{
+"name": "Data Analysis Software",
+"companies": 193
+},
+{
+"name": "Data Extraction Software",
+"companies": 155
+},
+{
 "name": "Data Integration Tools",
 "companies": 35
 },
 {
+"name": "Data Management Software",
+"companies": 276
+},
+{
+"name": "Data Visualization Software",
+"companies": 211
+},
+{
 "name": "Drone Analytics Software",
 "companies": 43
+},
+{
+"name": "Heatmap Software",
+"companies": 31
 },
 {
 "name": "Predictive Analytics Tools and Software",
@@ -72,6 +124,10 @@
 {
 "name": "Text Analysis Software",
 "companies": 7
+},
+{
+"name": "Web Analytics Software",
+"companies": 153
 }
 ]
 },
@@ -80,8 +136,64 @@
 "companies": 3553,
 "subs": [
 {
+"name": "AI Agent Builders",
+"companies": 187
+},
+{
+"name": "AI Automation Tools",
+"companies": 217
+},
+{
+"name": "AI Avatar Generators",
+"companies": 65
+},
+{
+"name": "AI Code Generator",
+"companies": 115
+},
+{
+"name": "AI Content Detector",
+"companies": 66
+},
+{
+"name": "AI Humanizer Tools",
+"companies": 34
+},
+{
+"name": "AI Image Generator Software",
+"companies": 462
+},
+{
+"name": "AI Logo Generators",
+"companies": 73
+},
+{
+"name": "AI Music Generators",
+"companies": 106
+},
+{
+"name": "AI Video Generator Software",
+"companies": 392
+},
+{
+"name": "AI Voice Agent Software",
+"companies": 44
+},
+{
+"name": "AI Voice Generator",
+"companies": 123
+},
+{
+"name": "AI Writing Software",
+"companies": 224
+},
+{
 "name": "Active Learning Tools",
 "companies": 9
+},
+{
+"name": "Chatbot Software",
+"companies": 177
 },
 {
 "name": "Conversational Intelligence Software",
@@ -96,6 +208,10 @@
 "companies": 19
 },
 {
+"name": "Face Detection Software",
+"companies": 43
+},
+{
 "name": "Generative AI Software",
 "companies": 323
 },
@@ -104,8 +220,24 @@
 "companies": 36
 },
 {
+"name": "OCR Software",
+"companies": 70
+},
+{
 "name": "Robotic Process Automation Software",
 "companies": 22
+},
+{
+"name": "Speech Recognition Software",
+"companies": 94
+},
+{
+"name": "Text to Speech Software",
+"companies": 113
+},
+{
+"name": "Transcription Software",
+"companies": 101
 }
 ]
 },
@@ -116,6 +248,10 @@
 {
 "name": "Auto Body Software",
 "companies": 15
+},
+{
+"name": "Auto Dealer Software",
+"companies": 66
 },
 {
 "name": "Auto Repair Shop Management Software",
@@ -132,12 +268,28 @@
 "companies": 34
 },
 {
+"name": "Calibration Management Software",
+"companies": 42
+},
+{
 "name": "EAM Software",
 "companies": 1802
 },
 {
+"name": "Maintenance Management Software",
+"companies": 206
+},
+{
+"name": "Tool Management Software",
+"companies": 38
+},
+{
 "name": "Web Based CMMS Software",
 "companies": 305
+},
+{
+"name": "Work Order Software",
+"companies": 117
 }
 ]
 },
@@ -178,8 +330,16 @@
 "companies": 11
 },
 {
+"name": "Contact Management Software",
+"companies": 63
+},
+{
 "name": "Customer Engagement Platform",
 "companies": 425
+},
+{
+"name": "Healthcare CRM Software",
+"companies": 121
 },
 {
 "name": "Insurance CRM",
@@ -188,6 +348,10 @@
 {
 "name": "Non-Profits CRM",
 "companies": 5
+},
+{
+"name": "Real Estate CRM Software",
+"companies": 128
 }
 ]
 },
@@ -196,12 +360,28 @@
 "companies": 1042,
 "subs": [
 {
+"name": "Auto Dialer Software",
+"companies": 62
+},
+{
+"name": "Call Tracking Software",
+"companies": 92
+},
+{
 "name": "Contact Center Software",
 "companies": 132
 },
 {
 "name": "IVR Software",
 "companies": 11
+},
+{
+"name": "Predictive Dialer Software",
+"companies": 67
+},
+{
+"name": "VoIP Software",
+"companies": 91
 }
 ]
 },
@@ -214,6 +394,10 @@
 "companies": 1
 },
 {
+"name": "Collaboration Software",
+"companies": 296
+},
+{
 "name": "Collaborative Whiteboard Software",
 "companies": 3
 },
@@ -222,8 +406,24 @@
 "companies": 40
 },
 {
+"name": "File Sharing Software",
+"companies": 209
+},
+{
+"name": "Forms Automation Software",
+"companies": 121
+},
+{
 "name": "Internal Communications Software",
 "companies": 201
+},
+{
+"name": "Intranet Software",
+"companies": 55
+},
+{
+"name": "Meeting Room Booking System",
+"companies": 91
 },
 {
 "name": "Noise Cancellation Software",
@@ -242,16 +442,48 @@
 "companies": 40
 },
 {
+"name": "Presentation Software",
+"companies": 65
+},
+{
 "name": "Productivity Bots Software",
 "companies": 235
+},
+{
+"name": "Productivity Software",
+"companies": 315
+},
+{
+"name": "Remote Work Software",
+"companies": 117
+},
+{
+"name": "Screen Sharing Software",
+"companies": 83
 },
 {
 "name": "Screen and Video Capture Software",
 "companies": 61
 },
 {
+"name": "Time Tracking Software",
+"companies": 360
+},
+{
+"name": "Video Conferencing Software",
+"companies": 141
+},
+{
 "name": "Visual Collaboration Platforms",
 "companies": 12
+},
+{
+"name": "Web Conferencing Software",
+"companies": 130
+},
+{
+"name": "Webinar Software",
+"companies": 69
 }
 ]
 },
@@ -262,6 +494,10 @@
 {
 "name": "AI-Driven Construction Management",
 "companies": 1947
+},
+{
+"name": "BIM Software",
+"companies": 31
 },
 {
 "name": "Construction Accounting Software",
@@ -278,6 +514,22 @@
 {
 "name": "Electrical Contractor Software",
 "companies": 4
+},
+{
+"name": "Electrical Estimating Software",
+"companies": 35
+},
+{
+"name": "Home Builder Software",
+"companies": 45
+},
+{
+"name": "Job Costing Software",
+"companies": 78
+},
+{
+"name": "Roofing Software",
+"companies": 33
 }
 ]
 },
@@ -285,6 +537,10 @@
 "name": "Content Management Software",
 "companies": 354,
 "subs": [
+{
+"name": "Blog Software",
+"companies": 49
+},
 {
 "name": "CMS Tools",
 "companies": 8
@@ -306,12 +562,24 @@
 "companies": 7
 },
 {
+"name": "Digital Asset Management Software",
+"companies": 79
+},
+{
+"name": "Document Generation Software",
+"companies": 136
+},
+{
 "name": "Document Management Software",
 "companies": 17
 },
 {
 "name": "Headless CMS Software",
 "companies": 12
+},
+{
+"name": "Knowledge Management Software",
+"companies": 133
 },
 {
 "name": "Live Blog Software",
@@ -352,8 +620,16 @@
 "companies": 100
 },
 {
+"name": "Claims Processing Software",
+"companies": 61
+},
+{
 "name": "Employee Dishonesty/crime coverage",
 "companies": 4
+},
+{
+"name": "Insurance Agency Software",
+"companies": 39
 },
 {
 "name": "Terrorism and Political Violence Insurance",
@@ -372,6 +648,18 @@
 {
 "name": "Customer Education Software",
 "companies": 8
+},
+{
+"name": "Customer Engagement Software",
+"companies": 264
+},
+{
+"name": "Customer Experience Software",
+"companies": 267
+},
+{
+"name": "Customer Loyalty Software",
+"companies": 159
 },
 {
 "name": "Customer Self-Service Software",
@@ -408,6 +696,10 @@
 {
 "name": "Social Customer Service Software",
 "companies": 3
+},
+{
+"name": "Ticketing Software",
+"companies": 86
 }
 ]
 },
@@ -428,6 +720,18 @@
 "companies": 2
 },
 {
+"name": "Encryption Software",
+"companies": 54
+},
+{
+"name": "Firewall Software",
+"companies": 27
+},
+{
+"name": "Identity Management Software",
+"companies": 115
+},
+{
 "name": "Incident Response Software",
 "companies": 3
 },
@@ -436,8 +740,16 @@
 "companies": 155
 },
 {
+"name": "Network Security Software",
+"companies": 139
+},
+{
 "name": "OT Secure Remote Access Software",
 "companies": 7
+},
+{
+"name": "Password Management Software",
+"companies": 45
 },
 {
 "name": "Security Compliance Software",
@@ -446,6 +758,10 @@
 {
 "name": "Security Info and Event Management",
 "companies": 25
+},
+{
+"name": "VPN Software",
+"companies": 73
 }
 ]
 },
@@ -454,8 +770,88 @@
 "companies": 303,
 "subs": [
 {
+"name": "3D CAD Software",
+"companies": 78
+},
+{
 "name": "3D Design and Modeling Software",
 "companies": 273
+},
+{
+"name": "3D Printing Software",
+"companies": 28
+},
+{
+"name": "3D Rendering Software",
+"companies": 48
+},
+{
+"name": "Animation Software",
+"companies": 56
+},
+{
+"name": "App Design Software",
+"companies": 49
+},
+{
+"name": "Architecture Software",
+"companies": 34
+},
+{
+"name": "Audio Editing Software",
+"companies": 72
+},
+{
+"name": "Desktop Publishing Software",
+"companies": 7
+},
+{
+"name": "Drawing Software",
+"companies": 20
+},
+{
+"name": "Electrical Design Software",
+"companies": 24
+},
+{
+"name": "Fashion Design Software",
+"companies": 22
+},
+{
+"name": "Floor Plan Software",
+"companies": 34
+},
+{
+"name": "Graphic Design Software",
+"companies": 136
+},
+{
+"name": "Landscape Design Software",
+"companies": 26
+},
+{
+"name": "PCB Design Software",
+"companies": 24
+},
+{
+"name": "Photo Editing Software",
+"companies": 156
+},
+{
+"name": "Vector Graphics Software",
+"companies": 19
+},
+{
+"name": "Video Editing Software",
+"companies": 199
+},
+{
+"name": "Video Making Software",
+"companies": 176
+},
+{
+"name": "Web Design Software",
+"companies": 108
 }
 ]
 },
@@ -466,6 +862,10 @@
 {
 "name": "B2B E-Commerce Platform Software",
 "companies": 82
+},
+{
+"name": "Catalog Management Software",
+"companies": 26
 },
 {
 "name": "E-Commerce Analytics Software",
@@ -486,13 +886,102 @@
 {
 "name": "E-Commerce Tools",
 "companies": 19
+},
+{
+"name": "Marketplace Software",
+"companies": 106
+},
+{
+"name": "PIM Software",
+"companies": 49
+},
+{
+"name": "Payment Processing Software",
+"companies": 284
+},
+{
+"name": "Product Configurator Software",
+"companies": 78
+},
+{
+"name": "Shopping Cart Software",
+"companies": 30
 }
 ]
 },
 {
 "name": "EMR Software",
 "companies": 317,
-"subs": []
+"subs": [
+{
+"name": "Clinical Trial Management Software",
+"companies": 95
+},
+{
+"name": "Dental Practice Software",
+"companies": 44
+},
+{
+"name": "Electronic Medical Records Software",
+"companies": 167
+},
+{
+"name": "Home Health Care Software",
+"companies": 85
+},
+{
+"name": "Hospital Management Software",
+"companies": 125
+},
+{
+"name": "Laboratory Information Management System (LIMS) Software",
+"companies": 114
+},
+{
+"name": "Medical Billing Software",
+"companies": 122
+},
+{
+"name": "Medical Inventory Software",
+"companies": 50
+},
+{
+"name": "Medical Lab Software",
+"companies": 117
+},
+{
+"name": "Medical Practice Management Software",
+"companies": 136
+},
+{
+"name": "Medical Scheduling Software",
+"companies": 98
+},
+{
+"name": "Mental Health Software",
+"companies": 101
+},
+{
+"name": "Optometry Software",
+"companies": 20
+},
+{
+"name": "Patient Management Software",
+"companies": 71
+},
+{
+"name": "Pharmacy Software",
+"companies": 38
+},
+{
+"name": "Telemedicine Software",
+"companies": 76
+},
+{
+"name": "e-Prescribing Software",
+"companies": 45
+}
+]
 },
 {
 "name": "Ecosystem Service Providers",
@@ -545,6 +1034,10 @@
 "companies": 30
 },
 {
+"name": "Farm Management Software",
+"companies": 29
+},
+{
 "name": "Field Service ERP",
 "companies": 4
 },
@@ -573,6 +1066,14 @@
 {
 "name": "Event Registration and Ticketing Software",
 "companies": 91
+},
+{
+"name": "Venue Management Software",
+"companies": 48
+},
+{
+"name": "Virtual Event Software",
+"companies": 142
 }
 ]
 },
@@ -585,12 +1086,28 @@
 "companies": 3
 },
 {
+"name": "Building Maintenance Software",
+"companies": 112
+},
+{
 "name": "EHS Management Software",
 "companies": 17
 },
 {
+"name": "Inspection Software",
+"companies": 45
+},
+{
+"name": "Parking Management Software",
+"companies": 76
+},
+{
 "name": "School Facilities Management Software",
 "companies": 8
+},
+{
+"name": "Visitor Management Software",
+"companies": 81
 }
 ]
 },
@@ -599,12 +1116,40 @@
 "companies": 633,
 "subs": [
 {
+"name": "Field Service Management Software",
+"companies": 235
+},
+{
 "name": "Field Service Mobile Apps",
 "companies": 168
 },
 {
+"name": "HVAC Software",
+"companies": 73
+},
+{
+"name": "Handyman Software",
+"companies": 22
+},
+{
+"name": "Janitorial Software",
+"companies": 29
+},
+{
+"name": "Lawn Care Software",
+"companies": 34
+},
+{
+"name": "Pest Control Software",
+"companies": 46
+},
+{
 "name": "Pool Service Software",
 "companies": 18
+},
+{
+"name": "Service Dispatch Software",
+"companies": 60
 }
 ]
 },
@@ -627,6 +1172,14 @@
 {
 "name": "Moving Software",
 "companies": 22
+},
+{
+"name": "Route Planning Software",
+"companies": 81
+},
+{
+"name": "Trucking Software",
+"companies": 115
 }
 ]
 },
@@ -635,8 +1188,20 @@
 "companies": 387,
 "subs": [
 {
+"name": "AML Software",
+"companies": 46
+},
+{
 "name": "Audit Management Software",
 "companies": 65
+},
+{
+"name": "Board Management Software",
+"companies": 31
+},
+{
+"name": "Compliance Software",
+"companies": 229
 },
 {
 "name": "Enterprise Risk Management Software",
@@ -647,8 +1212,20 @@
 "companies": 31
 },
 {
+"name": "KYC Software",
+"companies": 83
+},
+{
+"name": "Policy Management Software",
+"companies": 50
+},
+{
 "name": "Risk Intelligence Software",
 "companies": 12
+},
+{
+"name": "Risk Management Software",
+"companies": 166
 },
 {
 "name": "Third Party & Supplier Risk Management Software",
@@ -661,6 +1238,10 @@
 "companies": 186,
 "subs": [
 {
+"name": "Hospitality Property Management Software",
+"companies": 50
+},
+{
 "name": "Hotel Housekeeping Software",
 "companies": 19
 },
@@ -671,25 +1252,150 @@
 {
 "name": "Hotel Revenue Management Systems",
 "companies": 11
+},
+{
+"name": "Reservation Software",
+"companies": 177
 }
 ]
 },
 {
 "name": "Human Resources Software",
 "companies": 2442,
-"subs": []
+"subs": [
+{
+"name": "Applicant Tracking Software",
+"companies": 291
+},
+{
+"name": "Attendance Tracking Software",
+"companies": 114
+},
+{
+"name": "Credentialing Software",
+"companies": 33
+},
+{
+"name": "Employee Engagement Software",
+"companies": 153
+},
+{
+"name": "Employee Monitoring Software",
+"companies": 164
+},
+{
+"name": "Employee Scheduling Software",
+"companies": 129
+},
+{
+"name": "HR Software",
+"companies": 458
+},
+{
+"name": "Job Board Software",
+"companies": 75
+},
+{
+"name": "Onboarding Software",
+"companies": 81
+},
+{
+"name": "Org Chart Software",
+"companies": 24
+},
+{
+"name": "Payroll Software",
+"companies": 249
+},
+{
+"name": "Performance Appraisal Software",
+"companies": 91
+},
+{
+"name": "Performance Management Software",
+"companies": 103
+},
+{
+"name": "Pre-employment Testing Software",
+"companies": 90
+},
+{
+"name": "Recruiting Software",
+"companies": 421
+},
+{
+"name": "Talent Management Software",
+"companies": 145
+},
+{
+"name": "Time Clock Software",
+"companies": 144
+},
+{
+"name": "Workforce Management Software",
+"companies": 174
+}
+]
 },
 {
 "name": "IT Management Software",
 "companies": 1181,
 "subs": [
 {
+"name": "AIOps Tools",
+"companies": 42
+},
+{
+"name": "API Management Tools",
+"companies": 96
+},
+{
+"name": "Archiving Software",
+"companies": 64
+},
+{
+"name": "Backup Software",
+"companies": 124
+},
+{
+"name": "CMDB Software",
+"companies": 30
+},
+{
+"name": "Change Management Software",
+"companies": 40
+},
+{
 "name": "Cloud Cost Management Software",
 "companies": 206
 },
 {
+"name": "Cloud Management Platforms",
+"companies": 78
+},
+{
+"name": "Data Center Management Software",
+"companies": 59
+},
+{
 "name": "Data Governance Software",
 "companies": 113
+},
+{
+"name": "Data Recovery Software",
+"companies": 113
+},
+{
+"name": "Database Management Software",
+"companies": 114
+},
+{
+"name": "Enterprise Search Software",
+"companies": 69
+},
+{
+"name": "File Sync Software",
+"companies": 56
 },
 {
 "name": "IT Asset Management Software",
@@ -708,8 +1414,44 @@
 "companies": 116
 },
 {
+"name": "ITSM Software",
+"companies": 41
+},
+{
 "name": "Incident Management Software",
 "companies": 228
+},
+{
+"name": "Integration Software",
+"companies": 142
+},
+{
+"name": "License Management Software",
+"companies": 39
+},
+{
+"name": "Load Balancing Software",
+"companies": 30
+},
+{
+"name": "MSP Software",
+"companies": 58
+},
+{
+"name": "Mobile Device Management Software",
+"companies": 74
+},
+{
+"name": "Network Mapping Software",
+"companies": 23
+},
+{
+"name": "Network Monitoring Software",
+"companies": 94
+},
+{
+"name": "Patch Management Software",
+"companies": 37
 },
 {
 "name": "Privileged Access Management Software",
@@ -720,20 +1462,114 @@
 "companies": 25
 },
 {
+"name": "Remote Monitoring & Management Software",
+"companies": 66
+},
+{
+"name": "Remote Support Software",
+"companies": 56
+},
+{
+"name": "Server Management Software",
+"companies": 80
+},
+{
 "name": "Unified Endpoint Management Software",
 "companies": 5
+},
+{
+"name": "Virtual Desktop Infrastructure (VDI) Software",
+"companies": 44
+},
+{
+"name": "Virtual Machine Software",
+"companies": 44
 }
 ]
 },
 {
 "name": "LMS Software",
 "companies": 972,
-"subs": []
+"subs": [
+{
+"name": "Coaching Software",
+"companies": 101
+},
+{
+"name": "Course Authoring Software",
+"companies": 60
+},
+{
+"name": "E-Learning Software",
+"companies": 268
+},
+{
+"name": "Exam Software",
+"companies": 97
+},
+{
+"name": "Learning Management System (LMS)",
+"companies": 297
+},
+{
+"name": "Mentoring Software",
+"companies": 58
+},
+{
+"name": "Plagiarism Checker Software",
+"companies": 41
+},
+{
+"name": "Training Software",
+"companies": 185
+},
+{
+"name": "Tutoring Software",
+"companies": 40
+}
+]
 },
 {
 "name": "Legal Software",
 "companies": 169,
-"subs": []
+"subs": [
+{
+"name": "Bankruptcy Software",
+"companies": 22
+},
+{
+"name": "Contract Management Software",
+"companies": 116
+},
+{
+"name": "Court Management Software",
+"companies": 18
+},
+{
+"name": "Intellectual Property Management Software",
+"companies": 74
+},
+{
+"name": "Law Practice Management Software",
+"companies": 81
+},
+{
+"name": "Legal Calendar Software",
+"companies": 57
+},
+{
+"name": "Legal Case Management Software",
+"companies": 118
+},
+{
+"name": "Virtual Data Room Software",
+"companies": 57
+},
+{
+"name": "eDiscovery Software",
+"companies": 49
+}
+]
 },
 {
 "name": "Manufacturing Software",
@@ -750,6 +1586,22 @@
 {
 "name": "Manufacturing Execution Systems",
 "companies": 6
+},
+{
+"name": "Product Lifecycle Management Software",
+"companies": 40
+},
+{
+"name": "Production Scheduling Software",
+"companies": 26
+},
+{
+"name": "Quality Management Software",
+"companies": 84
+},
+{
+"name": "SCADA Software",
+"companies": 25
 }
 ]
 },
@@ -758,8 +1610,16 @@
 "companies": 2969,
 "subs": [
 {
+"name": "A/B Testing Software",
+"companies": 42
+},
+{
 "name": "AI-Augmented Marketing Automation",
 "companies": 1476
+},
+{
+"name": "Affiliate Software",
+"companies": 67
 },
 {
 "name": "Brand Management Software",
@@ -770,28 +1630,84 @@
 "companies": 14
 },
 {
+"name": "Contest Software",
+"companies": 52
+},
+{
+"name": "Conversational Marketing Platform",
+"companies": 64
+},
+{
 "name": "Email Marketing Software",
 "companies": 392
+},
+{
+"name": "Email Verification Tools",
+"companies": 127
+},
+{
+"name": "Lead Generation Software",
+"companies": 403
 },
 {
 "name": "MRM Software",
 "companies": 4
 },
 {
+"name": "Market Research Software",
+"companies": 133
+},
+{
 "name": "Marketing Automation Software",
 "companies": 747
+},
+{
+"name": "PPC Software",
+"companies": 106
+},
+{
+"name": "Public Relations Software",
+"companies": 60
+},
+{
+"name": "Referral Software",
+"companies": 32
+},
+{
+"name": "Reputation Management Software",
+"companies": 126
+},
+{
+"name": "Review Management Software",
+"companies": 93
 },
 {
 "name": "SEO Platforms",
 "companies": 12
 },
 {
+"name": "SMS Marketing Software",
+"companies": 136
+},
+{
 "name": "Small Business Marketing Software",
 "companies": 15
 },
 {
+"name": "Social Listening Tools",
+"companies": 42
+},
+{
 "name": "Social Media Analytics Tools",
 "companies": 4
+},
+{
+"name": "Social Media Management Software",
+"companies": 258
+},
+{
+"name": "Social Media Marketing Software",
+"companies": 369
 }
 ]
 },
@@ -802,6 +1718,30 @@
 {
 "name": "Association Management Software",
 "companies": 31
+},
+{
+"name": "Church Management Software",
+"companies": 112
+},
+{
+"name": "Donor Management Software",
+"companies": 46
+},
+{
+"name": "Fundraising Software",
+"companies": 54
+},
+{
+"name": "Grant Management Software",
+"companies": 23
+},
+{
+"name": "Membership Management Software",
+"companies": 125
+},
+{
+"name": "Volunteer Management Software",
+"companies": 23
 }
 ]
 },
@@ -826,16 +1766,52 @@
 "companies": 5
 },
 {
+"name": "Business Process Management Software",
+"companies": 208
+},
+{
+"name": "Gantt Chart Software",
+"companies": 49
+},
+{
+"name": "Idea Management Software",
+"companies": 106
+},
+{
 "name": "Product Management Software",
 "companies": 60
+},
+{
+"name": "Product Roadmap Software",
+"companies": 50
 },
 {
 "name": "Project Management Software for Architects",
 "companies": 2
 },
 {
+"name": "Project Planning Software",
+"companies": 132
+},
+{
+"name": "Project Tracking Software",
+"companies": 93
+},
+{
+"name": "Resource Management Software",
+"companies": 144
+},
+{
+"name": "Strategic Planning Software",
+"companies": 75
+},
+{
 "name": "Task Management Software",
 "companies": 3
+},
+{
+"name": "Workflow Management Software",
+"companies": 290
 }
 ]
 },
@@ -860,12 +1836,32 @@
 "companies": 19
 },
 {
+"name": "Lease Management Software",
+"companies": 88
+},
+{
 "name": "Online Property Management Software",
 "companies": 13
 },
 {
+"name": "Real Estate Agency Software",
+"companies": 103
+},
+{
+"name": "Real Estate Property Management Software",
+"companies": 124
+},
+{
+"name": "Real Estate Transaction Management Software",
+"companies": 65
+},
+{
 "name": "Rental Property Management Software",
 "companies": 30
+},
+{
+"name": "Vacation Rental Software",
+"companies": 99
 }
 ]
 },
@@ -892,6 +1888,10 @@
 {
 "name": "Online Ordering Systems",
 "companies": 15
+},
+{
+"name": "POS Software",
+"companies": 268
 },
 {
 "name": "Restaurant Management Software",
@@ -924,6 +1924,14 @@
 "companies": 20
 },
 {
+"name": "CPQ Software",
+"companies": 66
+},
+{
+"name": "Channel Management Software",
+"companies": 63
+},
+{
 "name": "E- Signature Software",
 "companies": 18
 },
@@ -932,12 +1940,36 @@
 "companies": 9
 },
 {
+"name": "Lead Management Software",
+"companies": 528
+},
+{
+"name": "Partner Relationship Management Software",
+"companies": 37
+},
+{
+"name": "Pricing Optimization Software",
+"companies": 36
+},
+{
+"name": "RFP Software",
+"companies": 70
+},
+{
 "name": "Revenue Operations & Intelligence Software",
 "companies": 24
 },
 {
 "name": "Sales Compensation Software",
 "companies": 7
+},
+{
+"name": "Sales Force Automation Software",
+"companies": 167
+},
+{
+"name": "Sales Forecasting Software",
+"companies": 75
 },
 {
 "name": "Sales Gamification Software",
@@ -958,6 +1990,18 @@
 "companies": 103
 },
 {
+"name": "App Development Software",
+"companies": 275
+},
+{
+"name": "Automated Testing Software",
+"companies": 168
+},
+{
+"name": "Bug Tracking Software",
+"companies": 39
+},
+{
 "name": "CRM Development",
 "companies": 144
 },
@@ -968,6 +2012,30 @@
 {
 "name": "Game Development",
 "companies": 25
+},
+{
+"name": "Integrated Development Environment (IDE) Software",
+"companies": 34
+},
+{
+"name": "Low Code Development Platform",
+"companies": 131
+},
+{
+"name": "Requirements Management Software",
+"companies": 67
+},
+{
+"name": "Source Code Management Software",
+"companies": 42
+},
+{
+"name": "Text Editor Software",
+"companies": 18
+},
+{
+"name": "Vibe Coding  Tools",
+"companies": 80
 }
 ]
 },
@@ -976,8 +2044,24 @@
 "companies": 190,
 "subs": [
 {
+"name": "Barcoding Software",
+"companies": 52
+},
+{
+"name": "Courier Software",
+"companies": 77
+},
+{
+"name": "Delivery Management Software",
+"companies": 113
+},
+{
 "name": "Distribution Software",
 "companies": 14
+},
+{
+"name": "EDI Software",
+"companies": 91
 },
 {
 "name": "Freight Software",
@@ -992,12 +2076,40 @@
 "companies": 43
 },
 {
+"name": "Logistics Software",
+"companies": 196
+},
+{
+"name": "Order Management Software",
+"companies": 202
+},
+{
+"name": "Procurement Software",
+"companies": 202
+},
+{
+"name": "Shipment Tracking Software",
+"companies": 70
+},
+{
+"name": "Shipping Software",
+"companies": 193
+},
+{
 "name": "Supply Chain Planning Software",
 "companies": 9
 },
 {
 "name": "Supply Chain Suites",
 "companies": 11
+},
+{
+"name": "Transportation Management Software",
+"companies": 159
+},
+{
+"name": "Vendor Management Software",
+"companies": 110
 },
 {
 "name": "Warehouse Management Software",
