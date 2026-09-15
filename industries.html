@@ -102,6 +102,8 @@
           <span class="cat-breadcrumb__name" id="cat-breadcrumb-name"></span>
         </div>
 
+        <div class="cat-modal-backdrop" id="cat-modal-backdrop" hidden></div>
+
         <div class="category-grid" id="category-grid-main">
           <button type="button" class="cat-card" data-slug="accounting-software" data-name="accounting software" aria-expanded="false">
             <span class="cat-card__name">Accounting Software</span>
@@ -253,55 +255,64 @@
           <button type="button" class="cat-chip" data-name="mobile accounting" data-slug="mobile-accounting">Mobile Accounting<span class="cat-chip__count" aria-hidden="true">12</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Accounting%20Software#free-trial">Get leads in Accounting Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-accounting-practice-management-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-accounting-practice-management-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1,846 companies tracked</span>
           <h3 class="cat-detail__name">Accounting Practice Management Software</h3>
           <p class="cat-detail__desc">Helps accounting and bookkeeping firms manage client workflows, track engagement deadlines, and organize staff assignments across multiple client accounts in one system.</p>
           <a class="btn btn--primary" href="index.html?target=Accounting%20Practice%20Management%20Software#free-trial">Get 300 Free Leads in Accounting Practice Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-accounts-payable-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-accounts-payable-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">46 companies tracked</span>
           <h3 class="cat-detail__name">Accounts Payable Software</h3>
           <p class="cat-detail__desc">Automates the process of receiving, approving, and paying vendor invoices, helping finance teams track what a business owes and when payments are due.</p>
           <a class="btn btn--primary" href="index.html?target=Accounts%20Payable%20Software#free-trial">Get 300 Free Leads in Accounts Payable Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-accounts-receivable-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-accounts-receivable-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2 companies tracked</span>
           <h3 class="cat-detail__name">Accounts Receivable Software</h3>
           <p class="cat-detail__desc">Manages outstanding customer invoices and collections, giving finance teams visibility into what customers owe and when payments are expected.</p>
           <a class="btn btn--primary" href="index.html?target=Accounts%20Receivable%20Software#free-trial">Get 300 Free Leads in Accounts Receivable Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-audit-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-audit-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">250 companies tracked</span>
           <h3 class="cat-detail__name">Audit Software</h3>
           <p class="cat-detail__desc">Supports internal and external auditors in planning, documenting, and tracking audit engagements, from risk assessment through final reporting.</p>
           <a class="btn btn--primary" href="index.html?target=Audit%20Software#free-trial">Get 300 Free Leads in Audit Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-bank-accounting-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-bank-accounting-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2 companies tracked</span>
           <h3 class="cat-detail__name">Bank Accounting Software</h3>
           <p class="cat-detail__desc">Handles the accounting and reconciliation needs specific to banks and financial institutions, including transaction posting and regulatory reporting.</p>
           <a class="btn btn--primary" href="index.html?target=Bank%20Accounting%20Software#free-trial">Get 300 Free Leads in Bank Accounting Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-billing-and-invoice-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-billing-and-invoice-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Billing and Invoice Software</h3>
           <p class="cat-detail__desc">Creates and sends invoices, tracks payment status, and automates recurring billing for businesses that charge customers on a regular basis.</p>
           <a class="btn btn--primary" href="index.html?target=Billing%20and%20Invoice%20Software#free-trial">Get 300 Free Leads in Billing and Invoice Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-expense-management-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-expense-management-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">23 companies tracked</span>
           <h3 class="cat-detail__name">Expense Management Software</h3>
           <p class="cat-detail__desc">Lets employees submit expenses and receipts for approval while giving finance teams a centralized view of spending against budgets and policies.</p>
           <a class="btn btn--primary" href="index.html?target=Expense%20Management%20Software#free-trial">Get 300 Free Leads in Expense Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-expense-report-software" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-expense-report-software" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">27 companies tracked</span>
           <h3 class="cat-detail__name">Expense Report Software</h3>
           <p class="cat-detail__desc">Focused specifically on building and submitting itemized expense reports for reimbursement, typically tied to travel or business purchases.</p>
           <a class="btn btn--primary" href="index.html?target=Expense%20Report%20Software#free-trial">Get 300 Free Leads in Expense Report Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-mobile-accounting" data-parent="accounting-software" hidden>
+        <div class="cat-detail" id="cat-detail-mobile-accounting" data-parent="accounting-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Mobile Accounting</h3>
           <p class="cat-detail__desc">Accounting software accessed primarily through a mobile app, letting business owners and bookkeepers manage invoices, expenses, and records from a phone.</p>
@@ -317,43 +328,50 @@
           <button type="button" class="cat-chip" data-name="text analysis software" data-slug="text-analysis-software">Text Analysis Software<span class="cat-chip__count" aria-hidden="true">7</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Analytics%20Tools%20%26%20Software#free-trial">Get leads in Analytics Tools &amp; Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-analytics-software-platforms-and-tools" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-analytics-software-platforms-and-tools" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">649 companies tracked</span>
           <h3 class="cat-detail__name">Analytics Software Platforms and Tools</h3>
           <p class="cat-detail__desc">General-purpose platforms for collecting, processing, and visualizing business data to support reporting and decision-making.</p>
           <a class="btn btn--primary" href="index.html?target=Analytics%20Software%20Platforms%20and%20Tools#free-trial">Get 300 Free Leads in Analytics Software Platforms and Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-business-intelligence-software" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-business-intelligence-software" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">16 companies tracked</span>
           <h3 class="cat-detail__name">Business Intelligence Software</h3>
           <p class="cat-detail__desc">Combines data from multiple sources into dashboards and reports so leadership and analysts can track KPIs and spot trends.</p>
           <a class="btn btn--primary" href="index.html?target=Business%20Intelligence%20Software#free-trial">Get 300 Free Leads in Business Intelligence Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-data-integration-tools" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-data-integration-tools" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">35 companies tracked</span>
           <h3 class="cat-detail__name">Data Integration Tools</h3>
           <p class="cat-detail__desc">Connects and consolidates data from different systems and databases into a unified pipeline for analysis or storage.</p>
           <a class="btn btn--primary" href="index.html?target=Data%20Integration%20Tools#free-trial">Get 300 Free Leads in Data Integration Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-drone-analytics-software" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-drone-analytics-software" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">43 companies tracked</span>
           <h3 class="cat-detail__name">Drone Analytics Software</h3>
           <p class="cat-detail__desc">Processes imagery and sensor data captured by drones into usable reports and maps for industries like agriculture, construction, and surveying.</p>
           <a class="btn btn--primary" href="index.html?target=Drone%20Analytics%20Software#free-trial">Get 300 Free Leads in Drone Analytics Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-predictive-analytics-tools-and-software" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-predictive-analytics-tools-and-software" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Predictive Analytics Tools and Software</h3>
           <p class="cat-detail__desc">Uses historical data and statistical models to forecast future outcomes such as demand, churn, or risk.</p>
           <a class="btn btn--primary" href="index.html?target=Predictive%20Analytics%20Tools%20and%20Software#free-trial">Get 300 Free Leads in Predictive Analytics Tools and Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-statistical-analysis-software" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-statistical-analysis-software" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">74 companies tracked</span>
           <h3 class="cat-detail__name">Statistical Analysis Software</h3>
           <p class="cat-detail__desc">Provides tools for running statistical tests, modeling, and hypothesis testing on structured data sets.</p>
           <a class="btn btn--primary" href="index.html?target=Statistical%20Analysis%20Software#free-trial">Get 300 Free Leads in Statistical Analysis Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-text-analysis-software" data-parent="analytics-tools-and-software" hidden>
+        <div class="cat-detail" id="cat-detail-text-analysis-software" data-parent="analytics-tools-and-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">Text Analysis Software</h3>
           <p class="cat-detail__desc">Extracts patterns, sentiment, and meaning from unstructured text such as reviews, surveys, or support tickets.</p>
@@ -369,43 +387,50 @@
           <button type="button" class="cat-chip" data-name="robotic process automation software" data-slug="robotic-process-automation-software">Robotic Process Automation Software<span class="cat-chip__count" aria-hidden="true">22</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Artificial%20Intelligence%20Software#free-trial">Get leads in Artificial Intelligence Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-active-learning-tools" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-active-learning-tools" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">9 companies tracked</span>
           <h3 class="cat-detail__name">Active Learning Tools</h3>
           <p class="cat-detail__desc">Helps machine learning teams select which data points to label next, reducing the amount of manual labeling needed to train a model.</p>
           <a class="btn btn--primary" href="index.html?target=Active%20Learning%20Tools#free-trial">Get 300 Free Leads in Active Learning Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-conversational-intelligence-software" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-conversational-intelligence-software" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2,497 companies tracked</span>
           <h3 class="cat-detail__name">Conversational Intelligence Software</h3>
           <p class="cat-detail__desc">Analyzes recorded sales or support calls to surface talk-time ratios, keyword mentions, and coaching opportunities.</p>
           <a class="btn btn--primary" href="index.html?target=Conversational%20Intelligence%20Software#free-trial">Get 300 Free Leads in Conversational Intelligence Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-data-science-and-machine-learning-platforms" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-data-science-and-machine-learning-platforms" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">25 companies tracked</span>
           <h3 class="cat-detail__name">Data Science &amp; Machine Learning Platforms</h3>
           <p class="cat-detail__desc">Gives data scientists a workspace to build, train, and deploy machine learning models, often including notebooks and pipeline tools.</p>
           <a class="btn btn--primary" href="index.html?target=Data%20Science%20%26%20Machine%20Learning%20Platforms#free-trial">Get 300 Free Leads in Data Science &amp; Machine Learning Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-deep-learning-software" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-deep-learning-software" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">19 companies tracked</span>
           <h3 class="cat-detail__name">Deep Learning Software</h3>
           <p class="cat-detail__desc">Provides frameworks and infrastructure for building neural network models used in tasks like image recognition and natural language processing.</p>
           <a class="btn btn--primary" href="index.html?target=Deep%20Learning%20Software#free-trial">Get 300 Free Leads in Deep Learning Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-generative-ai-software" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-generative-ai-software" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">323 companies tracked</span>
           <h3 class="cat-detail__name">Generative AI Software</h3>
           <p class="cat-detail__desc">Produces new text, images, audio, or other content from a prompt, using large trained models.</p>
           <a class="btn btn--primary" href="index.html?target=Generative%20AI%20Software#free-trial">Get 300 Free Leads in Generative AI Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-mlops-platforms" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-mlops-platforms" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">36 companies tracked</span>
           <h3 class="cat-detail__name">MLOps Platforms</h3>
           <p class="cat-detail__desc">Manages the lifecycle of machine learning models in production, including versioning, monitoring, and retraining.</p>
           <a class="btn btn--primary" href="index.html?target=MLOps%20Platforms#free-trial">Get 300 Free Leads in MLOps Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-robotic-process-automation-software" data-parent="artificial-intelligence-software" hidden>
+        <div class="cat-detail" id="cat-detail-robotic-process-automation-software" data-parent="artificial-intelligence-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">22 companies tracked</span>
           <h3 class="cat-detail__name">Robotic Process Automation Software</h3>
           <p class="cat-detail__desc">Automates repetitive, rule-based digital tasks by mimicking the clicks and keystrokes a person would use across existing applications.</p>
@@ -416,13 +441,15 @@
           <button type="button" class="cat-chip" data-name="auto repair shop management software" data-slug="auto-repair-shop-management-software">Auto Repair Shop Management Software<span class="cat-chip__count" aria-hidden="true">60</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Auto%20Repair%20Software#free-trial">Get leads in Auto Repair Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-auto-body-software" data-parent="auto-repair-software" hidden>
+        <div class="cat-detail" id="cat-detail-auto-body-software" data-parent="auto-repair-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">15 companies tracked</span>
           <h3 class="cat-detail__name">Auto Body Software</h3>
           <p class="cat-detail__desc">Manages collision repair shop operations, including damage estimates, parts ordering, and insurance claim documentation.</p>
           <a class="btn btn--primary" href="index.html?target=Auto%20Body%20Software#free-trial">Get 300 Free Leads in Auto Body Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-auto-repair-shop-management-software" data-parent="auto-repair-software" hidden>
+        <div class="cat-detail" id="cat-detail-auto-repair-shop-management-software" data-parent="auto-repair-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">60 companies tracked</span>
           <h3 class="cat-detail__name">Auto Repair Shop Management Software</h3>
           <p class="cat-detail__desc">Handles day-to-day operations for general repair shops, such as scheduling, work orders, and customer vehicle history.</p>
@@ -434,19 +461,22 @@
           <button type="button" class="cat-chip" data-name="web based cmms software" data-slug="web-based-cmms-software">Web Based CMMS Software<span class="cat-chip__count" aria-hidden="true">305</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=CMMS%20Software#free-trial">Get leads in CMMS Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-asset-tracking-software" data-parent="cmms-software" hidden>
+        <div class="cat-detail" id="cat-detail-asset-tracking-software" data-parent="cmms-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">34 companies tracked</span>
           <h3 class="cat-detail__name">Asset Tracking Software</h3>
           <p class="cat-detail__desc">Records the location, condition, and maintenance history of physical equipment and assets across a facility or organization.</p>
           <a class="btn btn--primary" href="index.html?target=Asset%20Tracking%20Software#free-trial">Get 300 Free Leads in Asset Tracking Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-eam-software" data-parent="cmms-software" hidden>
+        <div class="cat-detail" id="cat-detail-eam-software" data-parent="cmms-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1,802 companies tracked</span>
           <h3 class="cat-detail__name">EAM Software</h3>
           <p class="cat-detail__desc">Enterprise asset management software that manages the full lifecycle of physical assets, from procurement and maintenance through eventual retirement.</p>
           <a class="btn btn--primary" href="index.html?target=EAM%20Software#free-trial">Get 300 Free Leads in EAM Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-web-based-cmms-software" data-parent="cmms-software" hidden>
+        <div class="cat-detail" id="cat-detail-web-based-cmms-software" data-parent="cmms-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">305 companies tracked</span>
           <h3 class="cat-detail__name">Web Based CMMS Software</h3>
           <p class="cat-detail__desc">A computerized maintenance management system delivered through a browser, used to schedule and track preventive and corrective maintenance work orders.</p>
@@ -466,67 +496,78 @@
           <button type="button" class="cat-chip" data-name="non-profits crm" data-slug="non-profits-crm">Non-Profits CRM<span class="cat-chip__count" aria-hidden="true">5</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=CRM%20Software#free-trial">Get leads in CRM Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-integrated-crm-solutions" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-integrated-crm-solutions" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">84 companies tracked</span>
           <h3 class="cat-detail__name">AI-Integrated CRM Solutions</h3>
           <p class="cat-detail__desc">Customer relationship management software with built-in AI features such as lead scoring, next-best-action suggestions, or automated data entry.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Integrated%20CRM%20Solutions#free-trial">Get 300 Free Leads in AI-Integrated CRM Solutions</a>
         </div>
-        <div class="cat-detail" id="cat-detail-account-management-software" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-account-management-software" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">64 companies tracked</span>
           <h3 class="cat-detail__name">Account Management Software</h3>
           <p class="cat-detail__desc">Helps account managers track relationship history, renewal dates, and upsell opportunities for existing customer accounts.</p>
           <a class="btn btn--primary" href="index.html?target=Account%20Management%20Software#free-trial">Get 300 Free Leads in Account Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-android-crm-software" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-android-crm-software" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1,173 companies tracked</span>
           <h3 class="cat-detail__name">Android CRM Software</h3>
           <p class="cat-detail__desc">CRM software built or optimized specifically for use on Android mobile devices, often for field sales teams.</p>
           <a class="btn btn--primary" href="index.html?target=Android%20CRM%20Software#free-trial">Get 300 Free Leads in Android CRM Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-bookkeepers-crm" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-bookkeepers-crm" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">27 companies tracked</span>
           <h3 class="cat-detail__name">Bookkeepers CRM</h3>
           <p class="cat-detail__desc">A CRM built for bookkeeping practices to track client relationships, engagement status, and recurring service schedules.</p>
           <a class="btn btn--primary" href="index.html?target=Bookkeepers%20CRM#free-trial">Get 300 Free Leads in Bookkeepers CRM</a>
         </div>
-        <div class="cat-detail" id="cat-detail-crm-for-accounting-firms" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-crm-for-accounting-firms" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">10 companies tracked</span>
           <h3 class="cat-detail__name">CRM For Accounting Firms</h3>
           <p class="cat-detail__desc">Manages client relationships, engagement pipelines, and referral tracking specifically for accounting and tax practices.</p>
           <a class="btn btn--primary" href="index.html?target=CRM%20For%20Accounting%20Firms#free-trial">Get 300 Free Leads in CRM For Accounting Firms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-crm-for-contractors" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-crm-for-contractors" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">CRM For Contractors</h3>
           <p class="cat-detail__desc">Tracks leads, job bids, and customer relationships for contracting and home-services businesses.</p>
           <a class="btn btn--primary" href="index.html?target=CRM%20For%20Contractors#free-trial">Get 300 Free Leads in CRM For Contractors</a>
         </div>
-        <div class="cat-detail" id="cat-detail-crm-for-financial-services" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-crm-for-financial-services" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">CRM For Financial Services</h3>
           <p class="cat-detail__desc">A CRM tailored to financial advisors and firms, often with compliance-aware record keeping for client interactions.</p>
           <a class="btn btn--primary" href="index.html?target=CRM%20For%20Financial%20Services#free-trial">Get 300 Free Leads in CRM For Financial Services</a>
         </div>
-        <div class="cat-detail" id="cat-detail-crm-for-mortgage" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-crm-for-mortgage" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">CRM For Mortgage</h3>
           <p class="cat-detail__desc">Manages borrower relationships and loan-pipeline tracking for mortgage brokers and lenders.</p>
           <a class="btn btn--primary" href="index.html?target=CRM%20For%20Mortgage#free-trial">Get 300 Free Leads in CRM For Mortgage</a>
         </div>
-        <div class="cat-detail" id="cat-detail-customer-engagement-platform" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-customer-engagement-platform" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">425 companies tracked</span>
           <h3 class="cat-detail__name">Customer Engagement Platform</h3>
           <p class="cat-detail__desc">Coordinates messaging and interactions with customers across channels like email, chat, and SMS to build and maintain relationships.</p>
           <a class="btn btn--primary" href="index.html?target=Customer%20Engagement%20Platform#free-trial">Get 300 Free Leads in Customer Engagement Platform</a>
         </div>
-        <div class="cat-detail" id="cat-detail-insurance-crm" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-insurance-crm" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">Insurance CRM</h3>
           <p class="cat-detail__desc">Tracks policyholder relationships, renewals, and claims-related communication for insurance agencies.</p>
           <a class="btn btn--primary" href="index.html?target=Insurance%20CRM#free-trial">Get 300 Free Leads in Insurance CRM</a>
         </div>
-        <div class="cat-detail" id="cat-detail-non-profits-crm" data-parent="crm-software" hidden>
+        <div class="cat-detail" id="cat-detail-non-profits-crm" data-parent="crm-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">5 companies tracked</span>
           <h3 class="cat-detail__name">Non-Profits CRM</h3>
           <p class="cat-detail__desc">Manages donor and supporter relationships, including donation history and outreach campaigns, for nonprofit organizations.</p>
@@ -537,13 +578,15 @@
           <button type="button" class="cat-chip" data-name="ivr software" data-slug="ivr-software">IVR Software<span class="cat-chip__count" aria-hidden="true">11</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Call%20Center%20Software#free-trial">Get leads in Call Center Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-contact-center-software" data-parent="call-center-software" hidden>
+        <div class="cat-detail" id="cat-detail-contact-center-software" data-parent="call-center-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">132 companies tracked</span>
           <h3 class="cat-detail__name">Contact Center Software</h3>
           <p class="cat-detail__desc">Routes and manages inbound and outbound customer calls, often alongside chat and email, for support and sales teams.</p>
           <a class="btn btn--primary" href="index.html?target=Contact%20Center%20Software#free-trial">Get 300 Free Leads in Contact Center Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-ivr-software" data-parent="call-center-software" hidden>
+        <div class="cat-detail" id="cat-detail-ivr-software" data-parent="call-center-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">IVR Software</h3>
           <p class="cat-detail__desc">Interactive voice response systems that let callers navigate a phone menu or get automated answers before reaching, or instead of, a live agent.</p>
@@ -563,67 +606,78 @@
           <button type="button" class="cat-chip" data-name="visual collaboration platforms" data-slug="visual-collaboration-platforms">Visual Collaboration Platforms<span class="cat-chip__count" aria-hidden="true">12</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Collaboration%20and%20Productivity%20Software#free-trial">Get leads in Collaboration and Productivity Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-cloud-pbx-platforms-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-cloud-pbx-platforms-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1 companies tracked</span>
           <h3 class="cat-detail__name">Cloud PBX Platforms Software</h3>
           <p class="cat-detail__desc">Hosted phone-system software that routes business calls over the internet instead of traditional phone lines.</p>
           <a class="btn btn--primary" href="index.html?target=Cloud%20PBX%20Platforms%20Software#free-trial">Get 300 Free Leads in Cloud PBX Platforms Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-collaborative-whiteboard-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-collaborative-whiteboard-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Collaborative Whiteboard Software</h3>
           <p class="cat-detail__desc">A shared digital canvas where teams can sketch ideas, diagram processes, and brainstorm together in real time.</p>
           <a class="btn btn--primary" href="index.html?target=Collaborative%20Whiteboard%20Software#free-trial">Get 300 Free Leads in Collaborative Whiteboard Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-digital-adoption-platforms" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-digital-adoption-platforms" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">40 companies tracked</span>
           <h3 class="cat-detail__name">Digital Adoption Platforms</h3>
           <p class="cat-detail__desc">Overlays guided walkthroughs and tooltips on top of other software to help employees learn and use new tools faster.</p>
           <a class="btn btn--primary" href="index.html?target=Digital%20Adoption%20Platforms#free-trial">Get 300 Free Leads in Digital Adoption Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-internal-communications-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-internal-communications-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">201 companies tracked</span>
           <h3 class="cat-detail__name">Internal Communications Software</h3>
           <p class="cat-detail__desc">Distributes company announcements, updates, and messaging to employees, often kept separate from day-to-day chat tools.</p>
           <a class="btn btn--primary" href="index.html?target=Internal%20Communications%20Software#free-trial">Get 300 Free Leads in Internal Communications Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-noise-cancellation-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-noise-cancellation-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">Noise Cancellation Software</h3>
           <p class="cat-detail__desc">Filters background noise out of microphone audio during calls and recordings.</p>
           <a class="btn btn--primary" href="index.html?target=Noise%20Cancellation%20Software#free-trial">Get 300 Free Leads in Noise Cancellation Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-objectives-and-key-results-okr-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-objectives-and-key-results-okr-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">124 companies tracked</span>
           <h3 class="cat-detail__name">Objectives and Key Results (OKR) Software</h3>
           <p class="cat-detail__desc">Helps teams set, track, and align goals and measurable key results across an organization.</p>
           <a class="btn btn--primary" href="index.html?target=Objectives%20and%20Key%20Results%20%28OKR%29%20Software#free-trial">Get 300 Free Leads in Objectives and Key Results (OKR) Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-online-appointment-scheduling-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-online-appointment-scheduling-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">65 companies tracked</span>
           <h3 class="cat-detail__name">Online Appointment Scheduling Software</h3>
           <p class="cat-detail__desc">Lets clients or colleagues book meeting times directly into a calendar based on real-time availability.</p>
           <a class="btn btn--primary" href="index.html?target=Online%20Appointment%20Scheduling%20Software#free-trial">Get 300 Free Leads in Online Appointment Scheduling Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-other-collaboration-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-other-collaboration-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">40 companies tracked</span>
           <h3 class="cat-detail__name">Other Collaboration Software</h3>
           <p class="cat-detail__desc">Tools supporting team collaboration that don&#x27;t fit neatly into a more specific category, such as shared task boards or team wikis.</p>
           <a class="btn btn--primary" href="index.html?target=Other%20Collaboration%20Software#free-trial">Get 300 Free Leads in Other Collaboration Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-productivity-bots-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-productivity-bots-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">235 companies tracked</span>
           <h3 class="cat-detail__name">Productivity Bots Software</h3>
           <p class="cat-detail__desc">Chat-based bots that automate reminders, status updates, or routine requests inside messaging platforms.</p>
           <a class="btn btn--primary" href="index.html?target=Productivity%20Bots%20Software#free-trial">Get 300 Free Leads in Productivity Bots Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-screen-and-video-capture-software" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-screen-and-video-capture-software" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">61 companies tracked</span>
           <h3 class="cat-detail__name">Screen and Video Capture Software</h3>
           <p class="cat-detail__desc">Records screen activity, webcam video, or both, for creating tutorials, demos, or asynchronous updates.</p>
           <a class="btn btn--primary" href="index.html?target=Screen%20and%20Video%20Capture%20Software#free-trial">Get 300 Free Leads in Screen and Video Capture Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-visual-collaboration-platforms" data-parent="collaboration-and-productivity-software" hidden>
+        <div class="cat-detail" id="cat-detail-visual-collaboration-platforms" data-parent="collaboration-and-productivity-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Visual Collaboration Platforms</h3>
           <p class="cat-detail__desc">Combines whiteboarding, diagramming, and shared visual workspaces for distributed teams working together in real time.</p>
@@ -637,31 +691,36 @@
           <button type="button" class="cat-chip" data-name="electrical contractor software" data-slug="electrical-contractor-software">Electrical Contractor Software<span class="cat-chip__count" aria-hidden="true">4</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Construction%20Management%20Software#free-trial">Get leads in Construction Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-driven-construction-management" data-parent="construction-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-driven-construction-management" data-parent="construction-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1,947 companies tracked</span>
           <h3 class="cat-detail__name">AI-Driven Construction Management</h3>
           <p class="cat-detail__desc">Construction project management software that uses AI for tasks like schedule optimization, risk flagging, or progress tracking from site photos.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Driven%20Construction%20Management#free-trial">Get 300 Free Leads in AI-Driven Construction Management</a>
         </div>
-        <div class="cat-detail" id="cat-detail-construction-accounting-software" data-parent="construction-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-construction-accounting-software" data-parent="construction-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Construction Accounting Software</h3>
           <p class="cat-detail__desc">Handles job costing, progress billing, and other accounting needs specific to construction projects.</p>
           <a class="btn btn--primary" href="index.html?target=Construction%20Accounting%20Software#free-trial">Get 300 Free Leads in Construction Accounting Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-construction-estimating-software" data-parent="construction-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-construction-estimating-software" data-parent="construction-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">25 companies tracked</span>
           <h3 class="cat-detail__name">Construction Estimating Software</h3>
           <p class="cat-detail__desc">Helps contractors calculate material, labor, and overhead costs to produce project bids and estimates.</p>
           <a class="btn btn--primary" href="index.html?target=Construction%20Estimating%20Software#free-trial">Get 300 Free Leads in Construction Estimating Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-construction-scheduling-software" data-parent="construction-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-construction-scheduling-software" data-parent="construction-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">5 companies tracked</span>
           <h3 class="cat-detail__name">Construction Scheduling Software</h3>
           <p class="cat-detail__desc">Plans and tracks construction project timelines, task dependencies, and crew assignments.</p>
           <a class="btn btn--primary" href="index.html?target=Construction%20Scheduling%20Software#free-trial">Get 300 Free Leads in Construction Scheduling Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-electrical-contractor-software" data-parent="construction-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-electrical-contractor-software" data-parent="construction-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">Electrical Contractor Software</h3>
           <p class="cat-detail__desc">Manages job scheduling, estimating, and invoicing specifically for electrical contracting businesses.</p>
@@ -683,79 +742,92 @@
           <button type="button" class="cat-chip" data-name="website builder software" data-slug="website-builder-software">Website Builder Software<span class="cat-chip__count" aria-hidden="true">12</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Content%20Management%20Software#free-trial">Get leads in Content Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-cms-tools" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-cms-tools" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">8 companies tracked</span>
           <h3 class="cat-detail__name">CMS Tools</h3>
           <p class="cat-detail__desc">General tools for creating, organizing, and publishing digital content such as web pages and articles.</p>
           <a class="btn btn--primary" href="index.html?target=CMS%20Tools#free-trial">Get 300 Free Leads in CMS Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-cloud-content-collaboration-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-cloud-content-collaboration-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Cloud Content Collaboration Software</h3>
           <p class="cat-detail__desc">Lets teams store, share, and co-edit files and documents together from a central cloud location.</p>
           <a class="btn btn--primary" href="index.html?target=Cloud%20Content%20Collaboration%20Software#free-trial">Get 300 Free Leads in Cloud Content Collaboration Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-commenting-systems" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-commenting-systems" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">10 companies tracked</span>
           <h3 class="cat-detail__name">Commenting Systems</h3>
           <p class="cat-detail__desc">Adds threaded comment and discussion functionality to websites, articles, or documents.</p>
           <a class="btn btn--primary" href="index.html?target=Commenting%20Systems#free-trial">Get 300 Free Leads in Commenting Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-component-content-management-systems" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-component-content-management-systems" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">13 companies tracked</span>
           <h3 class="cat-detail__name">Component Content Management Systems</h3>
           <p class="cat-detail__desc">Manages content at the level of reusable components rather than whole pages, often used for technical documentation that gets assembled and reused across outputs.</p>
           <a class="btn btn--primary" href="index.html?target=Component%20Content%20Management%20Systems#free-trial">Get 300 Free Leads in Component Content Management Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-content-moderation-tools" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-content-moderation-tools" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">Content Moderation Tools</h3>
           <p class="cat-detail__desc">Reviews and filters user-generated content for policy violations, spam, or inappropriate material, often using automated rules or AI.</p>
           <a class="btn btn--primary" href="index.html?target=Content%20Moderation%20Tools#free-trial">Get 300 Free Leads in Content Moderation Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-document-management-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-document-management-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">17 companies tracked</span>
           <h3 class="cat-detail__name">Document Management Software</h3>
           <p class="cat-detail__desc">Stores, organizes, and controls versions and access for business documents and files.</p>
           <a class="btn btn--primary" href="index.html?target=Document%20Management%20Software#free-trial">Get 300 Free Leads in Document Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-headless-cms-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-headless-cms-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Headless CMS Software</h3>
           <p class="cat-detail__desc">A content management system that stores and delivers content through an API, decoupled from any specific front-end design.</p>
           <a class="btn btn--primary" href="index.html?target=Headless%20CMS%20Software#free-trial">Get 300 Free Leads in Headless CMS Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-live-blog-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-live-blog-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">19 companies tracked</span>
           <h3 class="cat-detail__name">Live Blog Software</h3>
           <p class="cat-detail__desc">Publishes real-time, continuously updating text coverage of an event, commonly used for news and sports.</p>
           <a class="btn btn--primary" href="index.html?target=Live%20Blog%20Software#free-trial">Get 300 Free Leads in Live Blog Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-markup-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-markup-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">Markup Software</h3>
           <p class="cat-detail__desc">Tools for annotating, formatting, or marking up text and documents, often used in editorial or technical workflows.</p>
           <a class="btn btn--primary" href="index.html?target=Markup%20Software#free-trial">Get 300 Free Leads in Markup Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-other-content-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-other-content-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Other Content Software</h3>
           <p class="cat-detail__desc">Content-related tools that don&#x27;t fit neatly into a more specific content management category.</p>
           <a class="btn btn--primary" href="index.html?target=Other%20Content%20Software#free-trial">Get 300 Free Leads in Other Content Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-video-cms-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-video-cms-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">Video CMS Software</h3>
           <p class="cat-detail__desc">Stores, organizes, and publishes video content, often with features for hosting, embedding, and analytics.</p>
           <a class="btn btn--primary" href="index.html?target=Video%20CMS%20Software#free-trial">Get 300 Free Leads in Video CMS Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-web-content-management-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-web-content-management-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1 companies tracked</span>
           <h3 class="cat-detail__name">Web Content Management Software</h3>
           <p class="cat-detail__desc">Manages the creation, editing, and publishing of pages on a website.</p>
           <a class="btn btn--primary" href="index.html?target=Web%20Content%20Management%20Software#free-trial">Get 300 Free Leads in Web Content Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-website-builder-software" data-parent="content-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-website-builder-software" data-parent="content-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Website Builder Software</h3>
           <p class="cat-detail__desc">Lets users design and launch websites using templates and drag-and-drop tools, without writing code.</p>
@@ -768,25 +840,29 @@
           <button type="button" class="cat-chip" data-name="terrorism and political violence insurance" data-slug="terrorism-and-political-violence-insurance">Terrorism and Political Violence Insurance<span class="cat-chip__count" aria-hidden="true">8</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Corporate%20Insurance%20And%20Risk%20Management#free-trial">Get leads in Corporate Insurance And Risk Management <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-accident-and-health-contingency-insurance" data-parent="corporate-insurance-and-risk-management" hidden>
+        <div class="cat-detail" id="cat-detail-accident-and-health-contingency-insurance" data-parent="corporate-insurance-and-risk-management" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">182 companies tracked</span>
           <h3 class="cat-detail__name">Accident and Health Contingency Insurance</h3>
           <p class="cat-detail__desc">Coverage that protects against financial loss from accidents or health-related events tied to specific business activities or events.</p>
           <a class="btn btn--primary" href="index.html?target=Accident%20and%20Health%20Contingency%20Insurance#free-trial">Get 300 Free Leads in Accident and Health Contingency Insurance</a>
         </div>
-        <div class="cat-detail" id="cat-detail-aviation-insurance" data-parent="corporate-insurance-and-risk-management" hidden>
+        <div class="cat-detail" id="cat-detail-aviation-insurance" data-parent="corporate-insurance-and-risk-management" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">100 companies tracked</span>
           <h3 class="cat-detail__name">Aviation Insurance</h3>
           <p class="cat-detail__desc">Insurance coverage for aircraft, airlines, and aviation-related liability and property risk.</p>
           <a class="btn btn--primary" href="index.html?target=Aviation%20Insurance#free-trial">Get 300 Free Leads in Aviation Insurance</a>
         </div>
-        <div class="cat-detail" id="cat-detail-employee-dishonesty-crime-coverage" data-parent="corporate-insurance-and-risk-management" hidden>
+        <div class="cat-detail" id="cat-detail-employee-dishonesty-crime-coverage" data-parent="corporate-insurance-and-risk-management" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">Employee Dishonesty/crime coverage</h3>
           <p class="cat-detail__desc">Insurance that protects a business against financial loss from employee theft, fraud, or other dishonest acts.</p>
           <a class="btn btn--primary" href="index.html?target=Employee%20Dishonesty/crime%20coverage#free-trial">Get 300 Free Leads in Employee Dishonesty/crime coverage</a>
         </div>
-        <div class="cat-detail" id="cat-detail-terrorism-and-political-violence-insurance" data-parent="corporate-insurance-and-risk-management" hidden>
+        <div class="cat-detail" id="cat-detail-terrorism-and-political-violence-insurance" data-parent="corporate-insurance-and-risk-management" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">8 companies tracked</span>
           <h3 class="cat-detail__name">Terrorism and Political Violence Insurance</h3>
           <p class="cat-detail__desc">Coverage for property damage or business interruption caused by terrorism or politically motivated violence.</p>
@@ -806,67 +882,78 @@
           <button type="button" class="cat-chip" data-name="social customer service software" data-slug="social-customer-service-software">Social Customer Service Software<span class="cat-chip__count" aria-hidden="true">3</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Customer%20Service%20Software#free-trial">Get leads in Customer Service Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-customer-communications-tools" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-customer-communications-tools" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">Customer Communications Tools</h3>
           <p class="cat-detail__desc">Manages outbound and inbound messages to customers across channels like email and SMS, keeping communication organized and trackable.</p>
           <a class="btn btn--primary" href="index.html?target=Customer%20Communications%20Tools#free-trial">Get 300 Free Leads in Customer Communications Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-customer-education-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-customer-education-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">8 companies tracked</span>
           <h3 class="cat-detail__name">Customer Education Software</h3>
           <p class="cat-detail__desc">Delivers training content, courses, or documentation to help customers learn how to use a product.</p>
           <a class="btn btn--primary" href="index.html?target=Customer%20Education%20Software#free-trial">Get 300 Free Leads in Customer Education Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-customer-self-service-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-customer-self-service-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">23 companies tracked</span>
           <h3 class="cat-detail__name">Customer Self-Service Software</h3>
           <p class="cat-detail__desc">Lets customers find answers and resolve issues on their own through knowledge bases, FAQs, or automated portals, without contacting an agent.</p>
           <a class="btn btn--primary" href="index.html?target=Customer%20Self-Service%20Software#free-trial">Get 300 Free Leads in Customer Self-Service Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-customer-service-automation-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-customer-service-automation-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">294 companies tracked</span>
           <h3 class="cat-detail__name">Customer Service Automation Software</h3>
           <p class="cat-detail__desc">Uses rules or AI to automatically route, triage, or respond to incoming customer support requests.</p>
           <a class="btn btn--primary" href="index.html?target=Customer%20Service%20Automation%20Software#free-trial">Get 300 Free Leads in Customer Service Automation Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-customer-success-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-customer-success-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">8 companies tracked</span>
           <h3 class="cat-detail__name">Customer Success Software</h3>
           <p class="cat-detail__desc">Helps customer success teams track account health, usage, and renewal risk to proactively manage post-sale relationships.</p>
           <a class="btn btn--primary" href="index.html?target=Customer%20Success%20Software#free-trial">Get 300 Free Leads in Customer Success Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-help-desk-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-help-desk-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">21 companies tracked</span>
           <h3 class="cat-detail__name">Help Desk Software</h3>
           <p class="cat-detail__desc">Organizes and tracks customer support tickets from submission through resolution.</p>
           <a class="btn btn--primary" href="index.html?target=Help%20Desk%20Software#free-trial">Get 300 Free Leads in Help Desk Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-live-chat-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-live-chat-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">10 companies tracked</span>
           <h3 class="cat-detail__name">Live Chat Software</h3>
           <p class="cat-detail__desc">Provides a real-time chat widget on a website or app so visitors can message a support or sales team directly.</p>
           <a class="btn btn--primary" href="index.html?target=Live%20Chat%20Software#free-trial">Get 300 Free Leads in Live Chat Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-multilingual-customer-support-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-multilingual-customer-support-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Multilingual Customer Support Software</h3>
           <p class="cat-detail__desc">Support tools built to handle customer interactions across multiple languages, often with translation built in.</p>
           <a class="btn btn--primary" href="index.html?target=Multilingual%20Customer%20Support%20Software#free-trial">Get 300 Free Leads in Multilingual Customer Support Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-other-customer-service-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-other-customer-service-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Other Customer Service Software</h3>
           <p class="cat-detail__desc">Support tools that don&#x27;t fit neatly into a more specific customer service category.</p>
           <a class="btn btn--primary" href="index.html?target=Other%20Customer%20Service%20Software#free-trial">Get 300 Free Leads in Other Customer Service Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-proactive-customer-retention-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-proactive-customer-retention-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Proactive Customer Retention Software</h3>
           <p class="cat-detail__desc">Flags at-risk customers based on usage or behavior signals so teams can intervene before they churn.</p>
           <a class="btn btn--primary" href="index.html?target=Proactive%20Customer%20Retention%20Software#free-trial">Get 300 Free Leads in Proactive Customer Retention Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-social-customer-service-software" data-parent="customer-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-social-customer-service-software" data-parent="customer-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Social Customer Service Software</h3>
           <p class="cat-detail__desc">Monitors and responds to customer support requests and mentions made through social media channels.</p>
@@ -883,49 +970,57 @@
           <button type="button" class="cat-chip" data-name="security info and event management" data-slug="security-info-and-event-management">Security Info and Event Management<span class="cat-chip__count" aria-hidden="true">25</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=CyberSecurity#free-trial">Get leads in CyberSecurity <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-infused-cybersecurity" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-ai-infused-cybersecurity" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">474 companies tracked</span>
           <h3 class="cat-detail__name">AI-Infused Cybersecurity</h3>
           <p class="cat-detail__desc">Security software that uses AI or machine learning to detect threats, anomalies, or attack patterns faster than manual review.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Infused%20Cybersecurity#free-trial">Get 300 Free Leads in AI-Infused Cybersecurity</a>
         </div>
-        <div class="cat-detail" id="cat-detail-breach-and-attack-simulation-bas-software" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-breach-and-attack-simulation-bas-software" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">23 companies tracked</span>
           <h3 class="cat-detail__name">Breach and Attack Simulation (BAS) Software</h3>
           <p class="cat-detail__desc">Continuously simulates real-world attack techniques against a network to test how well existing defenses hold up.</p>
           <a class="btn btn--primary" href="index.html?target=Breach%20and%20Attack%20Simulation%20%28BAS%29%20Software#free-trial">Get 300 Free Leads in Breach and Attack Simulation (BAS) Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-digital-risk-protection-drp-platforms" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-digital-risk-protection-drp-platforms" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2 companies tracked</span>
           <h3 class="cat-detail__name">Digital Risk Protection (DRP) Platforms</h3>
           <p class="cat-detail__desc">Monitors the internet, dark web, and social media for threats to a brand, such as leaked data, impersonation, or phishing domains.</p>
           <a class="btn btn--primary" href="index.html?target=Digital%20Risk%20Protection%20%28DRP%29%20Platforms#free-trial">Get 300 Free Leads in Digital Risk Protection (DRP) Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-incident-response-software" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-incident-response-software" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Incident Response Software</h3>
           <p class="cat-detail__desc">Coordinates the detection, investigation, and remediation workflow when a security incident occurs.</p>
           <a class="btn btn--primary" href="index.html?target=Incident%20Response%20Software#free-trial">Get 300 Free Leads in Incident Response Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-iot-security-solutions" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-iot-security-solutions" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">155 companies tracked</span>
           <h3 class="cat-detail__name">IoT Security Solutions</h3>
           <p class="cat-detail__desc">Protects internet-connected devices and sensors from unauthorized access or attacks.</p>
           <a class="btn btn--primary" href="index.html?target=IoT%20Security%20Solutions#free-trial">Get 300 Free Leads in IoT Security Solutions</a>
         </div>
-        <div class="cat-detail" id="cat-detail-ot-secure-remote-access-software" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-ot-secure-remote-access-software" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">OT Secure Remote Access Software</h3>
           <p class="cat-detail__desc">Provides controlled, secure remote access to operational technology systems like industrial control equipment.</p>
           <a class="btn btn--primary" href="index.html?target=OT%20Secure%20Remote%20Access%20Software#free-trial">Get 300 Free Leads in OT Secure Remote Access Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-security-compliance-software" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-security-compliance-software" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">224 companies tracked</span>
           <h3 class="cat-detail__name">Security Compliance Software</h3>
           <p class="cat-detail__desc">Helps organizations track and document adherence to security standards and regulatory requirements.</p>
           <a class="btn btn--primary" href="index.html?target=Security%20Compliance%20Software#free-trial">Get 300 Free Leads in Security Compliance Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-security-info-and-event-management" data-parent="cybersecurity" hidden>
+        <div class="cat-detail" id="cat-detail-security-info-and-event-management" data-parent="cybersecurity" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">25 companies tracked</span>
           <h3 class="cat-detail__name">Security Info and Event Management</h3>
           <p class="cat-detail__desc">Collects and correlates security log data across systems to detect and alert on suspicious activity, commonly known as SIEM.</p>
@@ -935,7 +1030,8 @@
           <button type="button" class="cat-chip" data-name="3d design and modeling software" data-slug="3d-design-and-modeling-software">3D Design and Modeling Software<span class="cat-chip__count" aria-hidden="true">273</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Design%20Software#free-trial">Get leads in Design Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-3d-design-and-modeling-software" data-parent="design-software" hidden>
+        <div class="cat-detail" id="cat-detail-3d-design-and-modeling-software" data-parent="design-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">273 companies tracked</span>
           <h3 class="cat-detail__name">3D Design and Modeling Software</h3>
           <p class="cat-detail__desc">Used to create three-dimensional digital models for purposes like product design, animation, or architectural visualization.</p>
@@ -950,37 +1046,43 @@
           <button type="button" class="cat-chip" data-name="e-commerce tools" data-slug="e-commerce-tools">E-Commerce Tools<span class="cat-chip__count" aria-hidden="true">19</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=E-Commerce%20Software#free-trial">Get leads in E-Commerce Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-b2b-e-commerce-platform-software" data-parent="e-commerce-software" hidden>
+        <div class="cat-detail" id="cat-detail-b2b-e-commerce-platform-software" data-parent="e-commerce-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">82 companies tracked</span>
           <h3 class="cat-detail__name">B2B E-Commerce Platform Software</h3>
           <p class="cat-detail__desc">Powers online storefronts built for business-to-business transactions, often supporting bulk pricing, quotes, and account-based ordering.</p>
           <a class="btn btn--primary" href="index.html?target=B2B%20E-Commerce%20Platform%20Software#free-trial">Get 300 Free Leads in B2B E-Commerce Platform Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-e-commerce-analytics-software" data-parent="e-commerce-software" hidden>
+        <div class="cat-detail" id="cat-detail-e-commerce-analytics-software" data-parent="e-commerce-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">5 companies tracked</span>
           <h3 class="cat-detail__name">E-Commerce Analytics Software</h3>
           <p class="cat-detail__desc">Tracks and reports on online store performance metrics like traffic, conversion rate, and sales trends.</p>
           <a class="btn btn--primary" href="index.html?target=E-Commerce%20Analytics%20Software#free-trial">Get 300 Free Leads in E-Commerce Analytics Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-e-commerce-fraud-protection-software" data-parent="e-commerce-software" hidden>
+        <div class="cat-detail" id="cat-detail-e-commerce-fraud-protection-software" data-parent="e-commerce-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">20 companies tracked</span>
           <h3 class="cat-detail__name">E-Commerce Fraud Protection Software</h3>
           <p class="cat-detail__desc">Screens online transactions to detect and block fraudulent orders and payments.</p>
           <a class="btn btn--primary" href="index.html?target=E-Commerce%20Fraud%20Protection%20Software#free-trial">Get 300 Free Leads in E-Commerce Fraud Protection Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-e-commerce-personalization-software" data-parent="e-commerce-software" hidden>
+        <div class="cat-detail" id="cat-detail-e-commerce-personalization-software" data-parent="e-commerce-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2 companies tracked</span>
           <h3 class="cat-detail__name">E-Commerce Personalization Software</h3>
           <p class="cat-detail__desc">Tailors product recommendations, content, or offers to individual shoppers based on their behavior.</p>
           <a class="btn btn--primary" href="index.html?target=E-Commerce%20Personalization%20Software#free-trial">Get 300 Free Leads in E-Commerce Personalization Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-e-commerce-search-software" data-parent="e-commerce-software" hidden>
+        <div class="cat-detail" id="cat-detail-e-commerce-search-software" data-parent="e-commerce-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">E-Commerce Search Software</h3>
           <p class="cat-detail__desc">Powers the on-site search experience for an online store, helping shoppers find products quickly.</p>
           <a class="btn btn--primary" href="index.html?target=E-Commerce%20Search%20Software#free-trial">Get 300 Free Leads in E-Commerce Search Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-e-commerce-tools" data-parent="e-commerce-software" hidden>
+        <div class="cat-detail" id="cat-detail-e-commerce-tools" data-parent="e-commerce-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">19 companies tracked</span>
           <h3 class="cat-detail__name">E-Commerce Tools</h3>
           <p class="cat-detail__desc">General tools supporting online store operations that don&#x27;t fit neatly into a more specific e-commerce category.</p>
@@ -990,7 +1092,8 @@
           <button type="button" class="cat-chip" data-name="netsuite services" data-slug="netsuite-services">NetSuite Services<span class="cat-chip__count" aria-hidden="true">13</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Ecosystem%20Service%20Providers#free-trial">Get leads in Ecosystem Service Providers <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-netsuite-services" data-parent="ecosystem-service-providers" hidden>
+        <div class="cat-detail" id="cat-detail-netsuite-services" data-parent="ecosystem-service-providers" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">13 companies tracked</span>
           <h3 class="cat-detail__name">NetSuite Services</h3>
           <p class="cat-detail__desc">Consulting, implementation, and customization services for businesses running Oracle NetSuite ERP software.</p>
@@ -1010,67 +1113,78 @@
           <button type="button" class="cat-chip" data-name="government erp software" data-slug="government-erp-software">Government ERP Software<span class="cat-chip__count" aria-hidden="true">6</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Enterprise%20Resource%20Planning%20Software#free-trial">Get leads in Enterprise Resource Planning Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-erp" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-erp" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">10 companies tracked</span>
           <h3 class="cat-detail__name">AI ERP</h3>
           <p class="cat-detail__desc">ERP software with built-in AI capabilities for tasks like demand forecasting, anomaly detection, or automated data entry.</p>
           <a class="btn btn--primary" href="index.html?target=AI%20ERP#free-trial">Get 300 Free Leads in AI ERP</a>
         </div>
-        <div class="cat-detail" id="cat-detail-aerospace-erp-software" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-aerospace-erp-software" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">45 companies tracked</span>
           <h3 class="cat-detail__name">Aerospace ERP Software</h3>
           <p class="cat-detail__desc">ERP software tailored to the compliance, parts tracking, and manufacturing requirements of aerospace companies.</p>
           <a class="btn btn--primary" href="index.html?target=Aerospace%20ERP%20Software#free-trial">Get 300 Free Leads in Aerospace ERP Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-agriculture-erp-software" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-agriculture-erp-software" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">5 companies tracked</span>
           <h3 class="cat-detail__name">Agriculture ERP Software</h3>
           <p class="cat-detail__desc">ERP software built around the operational needs of farming and agribusiness, such as crop planning and yield tracking.</p>
           <a class="btn btn--primary" href="index.html?target=Agriculture%20ERP%20Software#free-trial">Get 300 Free Leads in Agriculture ERP Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-distribution-erp-software" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-distribution-erp-software" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">71 companies tracked</span>
           <h3 class="cat-detail__name">Distribution ERP Software</h3>
           <p class="cat-detail__desc">ERP software focused on inventory, order fulfillment, and logistics for wholesale distribution businesses.</p>
           <a class="btn btn--primary" href="index.html?target=Distribution%20ERP%20Software#free-trial">Get 300 Free Leads in Distribution ERP Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-erp-for-banking-industry" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-erp-for-banking-industry" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">9 companies tracked</span>
           <h3 class="cat-detail__name">ERP For Banking Industry</h3>
           <p class="cat-detail__desc">ERP software adapted to the accounting, compliance, and operational needs of banks and financial institutions.</p>
           <a class="btn btn--primary" href="index.html?target=ERP%20For%20Banking%20Industry#free-trial">Get 300 Free Leads in ERP For Banking Industry</a>
         </div>
-        <div class="cat-detail" id="cat-detail-erp-software-for-supply-chain-management" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-erp-software-for-supply-chain-management" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1 companies tracked</span>
           <h3 class="cat-detail__name">ERP Software For Supply Chain Management</h3>
           <p class="cat-detail__desc">ERP software with a focus on supply chain functions like procurement, inventory, and logistics planning.</p>
           <a class="btn btn--primary" href="index.html?target=ERP%20Software%20For%20Supply%20Chain%20Management#free-trial">Get 300 Free Leads in ERP Software For Supply Chain Management</a>
         </div>
-        <div class="cat-detail" id="cat-detail-erp-systems" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-erp-systems" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2 companies tracked</span>
           <h3 class="cat-detail__name">ERP Systems</h3>
           <p class="cat-detail__desc">Integrated software that manages core business processes such as finance, inventory, and operations in one system.</p>
           <a class="btn btn--primary" href="index.html?target=ERP%20Systems#free-trial">Get 300 Free Leads in ERP Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-enterprise-architecture-software" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-enterprise-architecture-software" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">45 companies tracked</span>
           <h3 class="cat-detail__name">Enterprise Architecture Software</h3>
           <p class="cat-detail__desc">Documents and models an organization&#x27;s IT systems, processes, and data flows to support planning and governance.</p>
           <a class="btn btn--primary" href="index.html?target=Enterprise%20Architecture%20Software#free-trial">Get 300 Free Leads in Enterprise Architecture Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-enterprise-erp-software" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-enterprise-erp-software" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">30 companies tracked</span>
           <h3 class="cat-detail__name">Enterprise ERP Software</h3>
           <p class="cat-detail__desc">ERP software built for the scale and complexity of large enterprise organizations.</p>
           <a class="btn btn--primary" href="index.html?target=Enterprise%20ERP%20Software#free-trial">Get 300 Free Leads in Enterprise ERP Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-field-service-erp" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-field-service-erp" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">Field Service ERP</h3>
           <p class="cat-detail__desc">ERP software with modules built around scheduling, dispatch, and billing for field service operations.</p>
           <a class="btn btn--primary" href="index.html?target=Field%20Service%20ERP#free-trial">Get 300 Free Leads in Field Service ERP</a>
         </div>
-        <div class="cat-detail" id="cat-detail-government-erp-software" data-parent="enterprise-resource-planning-software" hidden>
+        <div class="cat-detail" id="cat-detail-government-erp-software" data-parent="enterprise-resource-planning-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Government ERP Software</h3>
           <p class="cat-detail__desc">ERP software adapted to the budgeting, procurement, and compliance requirements of government agencies.</p>
@@ -1083,25 +1197,29 @@
           <button type="button" class="cat-chip" data-name="event registration and ticketing software" data-slug="event-registration-and-ticketing-software">Event Registration and Ticketing Software<span class="cat-chip__count" aria-hidden="true">91</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Event%20Management%20Software#free-trial">Get leads in Event Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-event-management-platforms" data-parent="event-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-event-management-platforms" data-parent="event-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">108 companies tracked</span>
           <h3 class="cat-detail__name">Event Management Platforms</h3>
           <p class="cat-detail__desc">All-in-one software for planning, promoting, and running events, from registration through post-event reporting.</p>
           <a class="btn btn--primary" href="index.html?target=Event%20Management%20Platforms#free-trial">Get 300 Free Leads in Event Management Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-event-networking-and-matchmaking" data-parent="event-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-event-networking-and-matchmaking" data-parent="event-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Event Networking and Matchmaking</h3>
           <p class="cat-detail__desc">Helps event attendees discover and connect with each other based on shared interests or goals, often through in-app scheduling.</p>
           <a class="btn btn--primary" href="index.html?target=Event%20Networking%20and%20Matchmaking#free-trial">Get 300 Free Leads in Event Networking and Matchmaking</a>
         </div>
-        <div class="cat-detail" id="cat-detail-event-planning-software" data-parent="event-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-event-planning-software" data-parent="event-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">98 companies tracked</span>
           <h3 class="cat-detail__name">Event Planning Software</h3>
           <p class="cat-detail__desc">Supports the logistics of organizing an event, such as budgeting, vendor coordination, and task timelines.</p>
           <a class="btn btn--primary" href="index.html?target=Event%20Planning%20Software#free-trial">Get 300 Free Leads in Event Planning Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-event-registration-and-ticketing-software" data-parent="event-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-event-registration-and-ticketing-software" data-parent="event-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">91 companies tracked</span>
           <h3 class="cat-detail__name">Event Registration and Ticketing Software</h3>
           <p class="cat-detail__desc">Handles attendee sign-up, ticket sales, and check-in for events.</p>
@@ -1113,19 +1231,22 @@
           <button type="button" class="cat-chip" data-name="school facilities management software" data-slug="school-facilities-management-software">School Facilities Management Software<span class="cat-chip__count" aria-hidden="true">8</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Facility%20Management%20Software#free-trial">Get leads in Facility Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-asset-management-software-facilities" data-parent="facility-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-asset-management-software-facilities" data-parent="facility-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Asset Management Software (Facilities)</h3>
           <p class="cat-detail__desc">Tracks the condition, location, and maintenance schedules of equipment and assets within a building or facility.</p>
           <a class="btn btn--primary" href="index.html?target=Asset%20Management%20Software%20%28Facilities%29#free-trial">Get 300 Free Leads in Asset Management Software (Facilities)</a>
         </div>
-        <div class="cat-detail" id="cat-detail-ehs-management-software" data-parent="facility-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-ehs-management-software" data-parent="facility-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">17 companies tracked</span>
           <h3 class="cat-detail__name">EHS Management Software</h3>
           <p class="cat-detail__desc">Manages environmental, health, and safety compliance tasks such as incident reporting and safety audits.</p>
           <a class="btn btn--primary" href="index.html?target=EHS%20Management%20Software#free-trial">Get 300 Free Leads in EHS Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-school-facilities-management-software" data-parent="facility-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-school-facilities-management-software" data-parent="facility-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">8 companies tracked</span>
           <h3 class="cat-detail__name">School Facilities Management Software</h3>
           <p class="cat-detail__desc">Manages maintenance requests, space usage, and facility operations specifically for school campuses.</p>
@@ -1136,13 +1257,15 @@
           <button type="button" class="cat-chip" data-name="pool service software" data-slug="pool-service-software">Pool Service Software<span class="cat-chip__count" aria-hidden="true">18</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Field%20Service%20Software#free-trial">Get leads in Field Service Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-field-service-mobile-apps" data-parent="field-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-field-service-mobile-apps" data-parent="field-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">168 companies tracked</span>
           <h3 class="cat-detail__name">Field Service Mobile Apps</h3>
           <p class="cat-detail__desc">Mobile apps that give field technicians access to job details, schedules, and customer information while on-site.</p>
           <a class="btn btn--primary" href="index.html?target=Field%20Service%20Mobile%20Apps#free-trial">Get 300 Free Leads in Field Service Mobile Apps</a>
         </div>
-        <div class="cat-detail" id="cat-detail-pool-service-software" data-parent="field-service-software" hidden>
+        <div class="cat-detail" id="cat-detail-pool-service-software" data-parent="field-service-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">18 companies tracked</span>
           <h3 class="cat-detail__name">Pool Service Software</h3>
           <p class="cat-detail__desc">Manages route scheduling, chemical readings, and billing for pool cleaning and maintenance businesses.</p>
@@ -1155,25 +1278,29 @@
           <button type="button" class="cat-chip" data-name="moving software" data-slug="moving-software">Moving Software<span class="cat-chip__count" aria-hidden="true">22</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Fleet%20Management%20Software#free-trial">Get leads in Fleet Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-fleet-maintenance-software" data-parent="fleet-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-fleet-maintenance-software" data-parent="fleet-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">9 companies tracked</span>
           <h3 class="cat-detail__name">Fleet Maintenance Software</h3>
           <p class="cat-detail__desc">Tracks vehicle maintenance schedules, repair history, and inspection records across a fleet.</p>
           <a class="btn btn--primary" href="index.html?target=Fleet%20Maintenance%20Software#free-trial">Get 300 Free Leads in Fleet Maintenance Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-fleet-tracking-software" data-parent="fleet-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-fleet-tracking-software" data-parent="fleet-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">Fleet Tracking Software</h3>
           <p class="cat-detail__desc">Uses GPS to monitor vehicle location, routes, and driver behavior in real time.</p>
           <a class="btn btn--primary" href="index.html?target=Fleet%20Tracking%20Software#free-trial">Get 300 Free Leads in Fleet Tracking Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-fuel-management-software" data-parent="fleet-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-fuel-management-software" data-parent="fleet-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">44 companies tracked</span>
           <h3 class="cat-detail__name">Fuel Management Software</h3>
           <p class="cat-detail__desc">Tracks fuel purchases and consumption across a fleet to control costs and detect discrepancies.</p>
           <a class="btn btn--primary" href="index.html?target=Fuel%20Management%20Software#free-trial">Get 300 Free Leads in Fuel Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-moving-software" data-parent="fleet-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-moving-software" data-parent="fleet-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">22 companies tracked</span>
           <h3 class="cat-detail__name">Moving Software</h3>
           <p class="cat-detail__desc">Manages job scheduling, crew assignments, and estimates for moving and relocation companies.</p>
@@ -1187,31 +1314,36 @@
           <button type="button" class="cat-chip" data-name="third party &amp; supplier risk management software" data-slug="third-party-and-supplier-risk-management-software">Third Party &amp; Supplier Risk Management Software<span class="cat-chip__count" aria-hidden="true">25</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Governance%2C%20Risk%20%26%20Compliance%20Software#free-trial">Get leads in Governance, Risk &amp; Compliance Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-audit-management-software" data-parent="governance-risk-and-compliance-software" hidden>
+        <div class="cat-detail" id="cat-detail-audit-management-software" data-parent="governance-risk-and-compliance-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">65 companies tracked</span>
           <h3 class="cat-detail__name">Audit Management Software</h3>
           <p class="cat-detail__desc">Plans, schedules, and documents internal audits, including findings and remediation tracking.</p>
           <a class="btn btn--primary" href="index.html?target=Audit%20Management%20Software#free-trial">Get 300 Free Leads in Audit Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-enterprise-risk-management-software" data-parent="governance-risk-and-compliance-software" hidden>
+        <div class="cat-detail" id="cat-detail-enterprise-risk-management-software" data-parent="governance-risk-and-compliance-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">36 companies tracked</span>
           <h3 class="cat-detail__name">Enterprise Risk Management Software</h3>
           <p class="cat-detail__desc">Identifies, assesses, and tracks risks across an organization in a centralized system.</p>
           <a class="btn btn--primary" href="index.html?target=Enterprise%20Risk%20Management%20Software#free-trial">Get 300 Free Leads in Enterprise Risk Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-environmental-social-and-governance-esg-reporting-software" data-parent="governance-risk-and-compliance-software" hidden>
+        <div class="cat-detail" id="cat-detail-environmental-social-and-governance-esg-reporting-software" data-parent="governance-risk-and-compliance-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">31 companies tracked</span>
           <h3 class="cat-detail__name">Environmental, Social, and Governance (ESG) Reporting Software</h3>
           <p class="cat-detail__desc">Collects and reports on a company&#x27;s environmental, social, and governance performance metrics.</p>
           <a class="btn btn--primary" href="index.html?target=Environmental%2C%20Social%2C%20and%20Governance%20%28ESG%29%20Reporting%20Software#free-trial">Get 300 Free Leads in Environmental, Social, and Governance (ESG) Reporting Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-risk-intelligence-software" data-parent="governance-risk-and-compliance-software" hidden>
+        <div class="cat-detail" id="cat-detail-risk-intelligence-software" data-parent="governance-risk-and-compliance-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">Risk Intelligence Software</h3>
           <p class="cat-detail__desc">Aggregates external data and signals to help organizations monitor emerging risks.</p>
           <a class="btn btn--primary" href="index.html?target=Risk%20Intelligence%20Software#free-trial">Get 300 Free Leads in Risk Intelligence Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-third-party-and-supplier-risk-management-software" data-parent="governance-risk-and-compliance-software" hidden>
+        <div class="cat-detail" id="cat-detail-third-party-and-supplier-risk-management-software" data-parent="governance-risk-and-compliance-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">25 companies tracked</span>
           <h3 class="cat-detail__name">Third Party &amp; Supplier Risk Management Software</h3>
           <p class="cat-detail__desc">Assesses and monitors the risk posed by vendors and third-party partners a business relies on.</p>
@@ -1223,19 +1355,22 @@
           <button type="button" class="cat-chip" data-name="hotel revenue management systems" data-slug="hotel-revenue-management-systems">Hotel Revenue Management Systems<span class="cat-chip__count" aria-hidden="true">11</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Hotel%20Management%20Software#free-trial">Get leads in Hotel Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-hotel-housekeeping-software" data-parent="hotel-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-hotel-housekeeping-software" data-parent="hotel-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">19 companies tracked</span>
           <h3 class="cat-detail__name">Hotel Housekeeping Software</h3>
           <p class="cat-detail__desc">Coordinates room cleaning schedules and status updates between housekeeping staff and front-desk systems.</p>
           <a class="btn btn--primary" href="index.html?target=Hotel%20Housekeeping%20Software#free-trial">Get 300 Free Leads in Hotel Housekeeping Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-hotel-reputation-management-software" data-parent="hotel-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-hotel-reputation-management-software" data-parent="hotel-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">51 companies tracked</span>
           <h3 class="cat-detail__name">Hotel Reputation Management Software</h3>
           <p class="cat-detail__desc">Monitors and responds to online guest reviews across booking and review sites.</p>
           <a class="btn btn--primary" href="index.html?target=Hotel%20Reputation%20Management%20Software#free-trial">Get 300 Free Leads in Hotel Reputation Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-hotel-revenue-management-systems" data-parent="hotel-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-hotel-revenue-management-systems" data-parent="hotel-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">Hotel Revenue Management Systems</h3>
           <p class="cat-detail__desc">Analyzes demand and market data to set optimal room pricing and maximize occupancy revenue.</p>
@@ -1254,61 +1389,71 @@
           <button type="button" class="cat-chip" data-name="unified endpoint management software" data-slug="unified-endpoint-management-software">Unified Endpoint Management Software<span class="cat-chip__count" aria-hidden="true">5</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=IT%20Management%20Software#free-trial">Get leads in IT Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-cloud-cost-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-cloud-cost-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">206 companies tracked</span>
           <h3 class="cat-detail__name">Cloud Cost Management Software</h3>
           <p class="cat-detail__desc">Tracks and optimizes spending on cloud infrastructure across providers.</p>
           <a class="btn btn--primary" href="index.html?target=Cloud%20Cost%20Management%20Software#free-trial">Get 300 Free Leads in Cloud Cost Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-data-governance-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-data-governance-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">113 companies tracked</span>
           <h3 class="cat-detail__name">Data Governance Software</h3>
           <p class="cat-detail__desc">Manages policies and controls around who can access, use, and modify organizational data.</p>
           <a class="btn btn--primary" href="index.html?target=Data%20Governance%20Software#free-trial">Get 300 Free Leads in Data Governance Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-it-asset-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-it-asset-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">162 companies tracked</span>
           <h3 class="cat-detail__name">IT Asset Management Software</h3>
           <p class="cat-detail__desc">Tracks hardware and software assets across an organization, including ownership, licenses, and lifecycle status.</p>
           <a class="btn btn--primary" href="index.html?target=IT%20Asset%20Management%20Software#free-trial">Get 300 Free Leads in IT Asset Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-it-financial-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-it-financial-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">36 companies tracked</span>
           <h3 class="cat-detail__name">IT Financial Management Software</h3>
           <p class="cat-detail__desc">Tracks and allocates IT spending across departments and projects for budgeting and cost visibility.</p>
           <a class="btn btn--primary" href="index.html?target=IT%20Financial%20Management%20Software#free-trial">Get 300 Free Leads in IT Financial Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-it-inventory-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-it-inventory-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">45 companies tracked</span>
           <h3 class="cat-detail__name">IT Inventory Management Software</h3>
           <p class="cat-detail__desc">Maintains a record of IT equipment and supplies, including stock levels and assignment history.</p>
           <a class="btn btn--primary" href="index.html?target=IT%20Inventory%20Management%20Software#free-trial">Get 300 Free Leads in IT Inventory Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-it-operations-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-it-operations-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">116 companies tracked</span>
           <h3 class="cat-detail__name">IT Operations Management Software</h3>
           <p class="cat-detail__desc">Monitors the health and performance of IT infrastructure and applications to catch and resolve issues.</p>
           <a class="btn btn--primary" href="index.html?target=IT%20Operations%20Management%20Software#free-trial">Get 300 Free Leads in IT Operations Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-incident-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-incident-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">228 companies tracked</span>
           <h3 class="cat-detail__name">Incident Management Software</h3>
           <p class="cat-detail__desc">Tracks IT incidents from detection through resolution, coordinating response across teams.</p>
           <a class="btn btn--primary" href="index.html?target=Incident%20Management%20Software#free-trial">Get 300 Free Leads in Incident Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-privileged-access-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-privileged-access-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">81 companies tracked</span>
           <h3 class="cat-detail__name">Privileged Access Management Software</h3>
           <p class="cat-detail__desc">Controls and monitors access to sensitive systems and accounts by users with elevated permissions.</p>
           <a class="btn btn--primary" href="index.html?target=Privileged%20Access%20Management%20Software#free-trial">Get 300 Free Leads in Privileged Access Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-remote-desktop-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-remote-desktop-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">25 companies tracked</span>
           <h3 class="cat-detail__name">Remote Desktop Software</h3>
           <p class="cat-detail__desc">Lets a user access and control a computer from another device over the internet.</p>
           <a class="btn btn--primary" href="index.html?target=Remote%20Desktop%20Software#free-trial">Get 300 Free Leads in Remote Desktop Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-unified-endpoint-management-software" data-parent="it-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-unified-endpoint-management-software" data-parent="it-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">5 companies tracked</span>
           <h3 class="cat-detail__name">Unified Endpoint Management Software</h3>
           <p class="cat-detail__desc">Manages and secures laptops, phones, and other devices from a single console.</p>
@@ -1320,19 +1465,22 @@
           <button type="button" class="cat-chip" data-name="manufacturing execution systems" data-slug="manufacturing-execution-systems">Manufacturing Execution Systems<span class="cat-chip__count" aria-hidden="true">6</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Manufacturing%20Software#free-trial">Get leads in Manufacturing Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-enhanced-manufacturing-execution" data-parent="manufacturing-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-enhanced-manufacturing-execution" data-parent="manufacturing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">18 companies tracked</span>
           <h3 class="cat-detail__name">AI-Enhanced Manufacturing Execution</h3>
           <p class="cat-detail__desc">Manufacturing execution software that uses AI for tasks like defect detection, scheduling optimization, or predictive maintenance.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Enhanced%20Manufacturing%20Execution#free-trial">Get 300 Free Leads in AI-Enhanced Manufacturing Execution</a>
         </div>
-        <div class="cat-detail" id="cat-detail-chemical-manufacturing-software" data-parent="manufacturing-software" hidden>
+        <div class="cat-detail" id="cat-detail-chemical-manufacturing-software" data-parent="manufacturing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">29 companies tracked</span>
           <h3 class="cat-detail__name">Chemical Manufacturing Software</h3>
           <p class="cat-detail__desc">Manages formulation, batch tracking, and regulatory compliance specific to chemical production.</p>
           <a class="btn btn--primary" href="index.html?target=Chemical%20Manufacturing%20Software#free-trial">Get 300 Free Leads in Chemical Manufacturing Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-manufacturing-execution-systems" data-parent="manufacturing-software" hidden>
+        <div class="cat-detail" id="cat-detail-manufacturing-execution-systems" data-parent="manufacturing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Manufacturing Execution Systems</h3>
           <p class="cat-detail__desc">Tracks and controls production processes on the factory floor in real time, from raw materials to finished goods.</p>
@@ -1350,55 +1498,64 @@
           <button type="button" class="cat-chip" data-name="social media analytics tools" data-slug="social-media-analytics-tools">Social Media Analytics Tools<span class="cat-chip__count" aria-hidden="true">4</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Marketing%20Software#free-trial">Get leads in Marketing Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-augmented-marketing-automation" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-augmented-marketing-automation" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1,476 companies tracked</span>
           <h3 class="cat-detail__name">AI-Augmented Marketing Automation</h3>
           <p class="cat-detail__desc">Marketing automation software with built-in AI for tasks like content generation, audience segmentation, or send-time optimization.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Augmented%20Marketing%20Automation#free-trial">Get 300 Free Leads in AI-Augmented Marketing Automation</a>
         </div>
-        <div class="cat-detail" id="cat-detail-brand-management-software" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-brand-management-software" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">21 companies tracked</span>
           <h3 class="cat-detail__name">Brand Management Software</h3>
           <p class="cat-detail__desc">Centralizes brand guidelines, logos, and approved assets so teams stay consistent across campaigns and channels.</p>
           <a class="btn btn--primary" href="index.html?target=Brand%20Management%20Software#free-trial">Get 300 Free Leads in Brand Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-content-marketing-platforms" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-content-marketing-platforms" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">14 companies tracked</span>
           <h3 class="cat-detail__name">Content Marketing Platforms</h3>
           <p class="cat-detail__desc">Plans, creates, and tracks the performance of content like blog posts and articles used to attract and engage an audience.</p>
           <a class="btn btn--primary" href="index.html?target=Content%20Marketing%20Platforms#free-trial">Get 300 Free Leads in Content Marketing Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-email-marketing-software" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-email-marketing-software" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">392 companies tracked</span>
           <h3 class="cat-detail__name">Email Marketing Software</h3>
           <p class="cat-detail__desc">Builds, sends, and tracks email campaigns to subscriber lists, including automation and performance analytics.</p>
           <a class="btn btn--primary" href="index.html?target=Email%20Marketing%20Software#free-trial">Get 300 Free Leads in Email Marketing Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-mrm-software" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-mrm-software" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">MRM Software</h3>
           <p class="cat-detail__desc">Marketing resource management software that coordinates marketing budgets, workflows, and asset approvals across a team.</p>
           <a class="btn btn--primary" href="index.html?target=MRM%20Software#free-trial">Get 300 Free Leads in MRM Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-marketing-automation-software" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-marketing-automation-software" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">747 companies tracked</span>
           <h3 class="cat-detail__name">Marketing Automation Software</h3>
           <p class="cat-detail__desc">Automates repetitive marketing tasks like email sequences, lead scoring, and campaign triggers based on user behavior.</p>
           <a class="btn btn--primary" href="index.html?target=Marketing%20Automation%20Software#free-trial">Get 300 Free Leads in Marketing Automation Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-seo-platforms" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-seo-platforms" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">12 companies tracked</span>
           <h3 class="cat-detail__name">SEO Platforms</h3>
           <p class="cat-detail__desc">Tracks keyword rankings, backlinks, and site health to help improve a website&#x27;s visibility in search results.</p>
           <a class="btn btn--primary" href="index.html?target=SEO%20Platforms#free-trial">Get 300 Free Leads in SEO Platforms</a>
         </div>
-        <div class="cat-detail" id="cat-detail-small-business-marketing-software" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-small-business-marketing-software" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">15 companies tracked</span>
           <h3 class="cat-detail__name">Small Business Marketing Software</h3>
           <p class="cat-detail__desc">Simplified marketing tools bundled for small businesses that need core capabilities without enterprise complexity.</p>
           <a class="btn btn--primary" href="index.html?target=Small%20Business%20Marketing%20Software#free-trial">Get 300 Free Leads in Small Business Marketing Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-social-media-analytics-tools" data-parent="marketing-software" hidden>
+        <div class="cat-detail" id="cat-detail-social-media-analytics-tools" data-parent="marketing-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">4 companies tracked</span>
           <h3 class="cat-detail__name">Social Media Analytics Tools</h3>
           <p class="cat-detail__desc">Measures engagement, reach, and performance of social media posts and campaigns.</p>
@@ -1408,7 +1565,8 @@
           <button type="button" class="cat-chip" data-name="association management software" data-slug="association-management-software">Association Management Software<span class="cat-chip__count" aria-hidden="true">31</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Nonprofit%20Software#free-trial">Get leads in Nonprofit Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-association-management-software" data-parent="nonprofit-software" hidden>
+        <div class="cat-detail" id="cat-detail-association-management-software" data-parent="nonprofit-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">31 companies tracked</span>
           <h3 class="cat-detail__name">Association Management Software</h3>
           <p class="cat-detail__desc">Manages membership records, dues, and events for professional associations and membership organizations.</p>
@@ -1424,43 +1582,50 @@
           <button type="button" class="cat-chip" data-name="task management software" data-slug="task-management-software">Task Management Software<span class="cat-chip__count" aria-hidden="true">3</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Project%20Management%20Software#free-trial">Get leads in Project Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-elevated-project-management-tools" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-elevated-project-management-tools" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">AI-Elevated Project Management Tools</h3>
           <p class="cat-detail__desc">Project management software that uses AI for tasks like automatic scheduling, risk flagging, or status summarization.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Elevated%20Project%20Management%20Tools#free-trial">Get 300 Free Leads in AI-Elevated Project Management Tools</a>
         </div>
-        <div class="cat-detail" id="cat-detail-accounting-project-management-software" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-accounting-project-management-software" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">1,020 companies tracked</span>
           <h3 class="cat-detail__name">Accounting Project Management Software</h3>
           <p class="cat-detail__desc">Combines project tracking with time and billing features tailored to accounting and professional services firms.</p>
           <a class="btn btn--primary" href="index.html?target=Accounting%20Project%20Management%20Software#free-trial">Get 300 Free Leads in Accounting Project Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-advertising-project-management-software" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-advertising-project-management-software" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Advertising Project Management Software</h3>
           <p class="cat-detail__desc">Manages campaign timelines, creative approvals, and client deliverables for advertising and agency teams.</p>
           <a class="btn btn--primary" href="index.html?target=Advertising%20Project%20Management%20Software#free-trial">Get 300 Free Leads in Advertising Project Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-agile-project-management-software" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-agile-project-management-software" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">5 companies tracked</span>
           <h3 class="cat-detail__name">Agile Project Management Software</h3>
           <p class="cat-detail__desc">Supports Scrum, Kanban, and other agile workflows with features like sprints, backlogs, and burndown charts.</p>
           <a class="btn btn--primary" href="index.html?target=Agile%20Project%20Management%20Software#free-trial">Get 300 Free Leads in Agile Project Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-product-management-software" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-product-management-software" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">60 companies tracked</span>
           <h3 class="cat-detail__name">Product Management Software</h3>
           <p class="cat-detail__desc">Helps product teams plan roadmaps, prioritize features, and gather feedback tied to a product&#x27;s development.</p>
           <a class="btn btn--primary" href="index.html?target=Product%20Management%20Software#free-trial">Get 300 Free Leads in Product Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-project-management-software-for-architects" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-project-management-software-for-architects" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">2 companies tracked</span>
           <h3 class="cat-detail__name">Project Management Software for Architects</h3>
           <p class="cat-detail__desc">Manages project timelines, deliverables, and client communication tailored to architecture firm workflows.</p>
           <a class="btn btn--primary" href="index.html?target=Project%20Management%20Software%20for%20Architects#free-trial">Get 300 Free Leads in Project Management Software for Architects</a>
         </div>
-        <div class="cat-detail" id="cat-detail-task-management-software" data-parent="project-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-task-management-software" data-parent="project-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Task Management Software</h3>
           <p class="cat-detail__desc">Tracks individual tasks, assignments, and due dates, typically at a simpler level than full project management.</p>
@@ -1475,37 +1640,43 @@
           <button type="button" class="cat-chip" data-name="rental property management software" data-slug="rental-property-management-software">Rental Property Management Software<span class="cat-chip__count" aria-hidden="true">30</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Property%20Management%20Software#free-trial">Get leads in Property Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-enabled-property-management-systems" data-parent="property-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-enabled-property-management-systems" data-parent="property-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">795 companies tracked</span>
           <h3 class="cat-detail__name">AI-Enabled Property Management Systems</h3>
           <p class="cat-detail__desc">Property management software with built-in AI for tasks like rent pricing, maintenance triage, or tenant screening.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Enabled%20Property%20Management%20Systems#free-trial">Get 300 Free Leads in AI-Enabled Property Management Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-affordable-housing-software" data-parent="property-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-affordable-housing-software" data-parent="property-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">21 companies tracked</span>
           <h3 class="cat-detail__name">Affordable Housing Software</h3>
           <p class="cat-detail__desc">Manages compliance, eligibility tracking, and reporting requirements specific to subsidized or affordable housing programs.</p>
           <a class="btn btn--primary" href="index.html?target=Affordable%20Housing%20Software#free-trial">Get 300 Free Leads in Affordable Housing Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-apartment-management-software" data-parent="property-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-apartment-management-software" data-parent="property-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">Apartment Management Software</h3>
           <p class="cat-detail__desc">Handles leasing, rent collection, and maintenance requests for apartment communities.</p>
           <a class="btn btn--primary" href="index.html?target=Apartment%20Management%20Software#free-trial">Get 300 Free Leads in Apartment Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-hoa-software" data-parent="property-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-hoa-software" data-parent="property-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">19 companies tracked</span>
           <h3 class="cat-detail__name">HOA Software</h3>
           <p class="cat-detail__desc">Manages dues collection, resident communication, and record-keeping for homeowners associations.</p>
           <a class="btn btn--primary" href="index.html?target=HOA%20Software#free-trial">Get 300 Free Leads in HOA Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-online-property-management-software" data-parent="property-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-online-property-management-software" data-parent="property-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">13 companies tracked</span>
           <h3 class="cat-detail__name">Online Property Management Software</h3>
           <p class="cat-detail__desc">Cloud-based property management tools accessed through a browser rather than installed locally.</p>
           <a class="btn btn--primary" href="index.html?target=Online%20Property%20Management%20Software#free-trial">Get 300 Free Leads in Online Property Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-rental-property-management-software" data-parent="property-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-rental-property-management-software" data-parent="property-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">30 companies tracked</span>
           <h3 class="cat-detail__name">Rental Property Management Software</h3>
           <p class="cat-detail__desc">Manages leases, rent payments, and tenant communication for landlords and property managers.</p>
@@ -1524,61 +1695,71 @@
           <button type="button" class="cat-chip" data-name="ipad pos systems" data-slug="ipad-pos-systems">iPad POS Systems<span class="cat-chip__count" aria-hidden="true">63</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Retail%20POS%20Systems#free-trial">Get leads in Retail POS Systems <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-supported-pos-solutions" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-ai-supported-pos-solutions" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">242 companies tracked</span>
           <h3 class="cat-detail__name">AI-Supported POS Solutions</h3>
           <p class="cat-detail__desc">Point-of-sale systems with built-in AI for tasks like demand forecasting, fraud detection, or personalized promotions.</p>
           <a class="btn btn--primary" href="index.html?target=AI-Supported%20POS%20Solutions#free-trial">Get 300 Free Leads in AI-Supported POS Solutions</a>
         </div>
-        <div class="cat-detail" id="cat-detail-clothing-store-inventory-software" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-clothing-store-inventory-software" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">19 companies tracked</span>
           <h3 class="cat-detail__name">Clothing Store Inventory Software</h3>
           <p class="cat-detail__desc">Tracks stock levels, sizes, and variants specifically for apparel retailers.</p>
           <a class="btn btn--primary" href="index.html?target=Clothing%20Store%20Inventory%20Software#free-trial">Get 300 Free Leads in Clothing Store Inventory Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-convenience-store-pos-systems" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-convenience-store-pos-systems" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">49 companies tracked</span>
           <h3 class="cat-detail__name">Convenience Store POS Systems</h3>
           <p class="cat-detail__desc">Point-of-sale software built for the fast checkout and inventory needs of convenience stores.</p>
           <a class="btn btn--primary" href="index.html?target=Convenience%20Store%20POS%20Systems#free-trial">Get 300 Free Leads in Convenience Store POS Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-florist-pos-systems" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-florist-pos-systems" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">84 companies tracked</span>
           <h3 class="cat-detail__name">Florist POS Systems</h3>
           <p class="cat-detail__desc">Point-of-sale software tailored to floral shops, including delivery scheduling and custom order details.</p>
           <a class="btn btn--primary" href="index.html?target=Florist%20POS%20Systems#free-trial">Get 300 Free Leads in Florist POS Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-online-ordering-systems" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-online-ordering-systems" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">15 companies tracked</span>
           <h3 class="cat-detail__name">Online Ordering Systems</h3>
           <p class="cat-detail__desc">Lets customers place orders through a website or app for pickup or delivery.</p>
           <a class="btn btn--primary" href="index.html?target=Online%20Ordering%20Systems#free-trial">Get 300 Free Leads in Online Ordering Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-restaurant-management-software" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-restaurant-management-software" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">15 companies tracked</span>
           <h3 class="cat-detail__name">Restaurant Management Software</h3>
           <p class="cat-detail__desc">Handles restaurant operations such as staff scheduling, inventory, and table management beyond just checkout.</p>
           <a class="btn btn--primary" href="index.html?target=Restaurant%20Management%20Software#free-trial">Get 300 Free Leads in Restaurant Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-restaurant-pos-systems" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-restaurant-pos-systems" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">6 companies tracked</span>
           <h3 class="cat-detail__name">Restaurant POS Systems</h3>
           <p class="cat-detail__desc">Point-of-sale software built for restaurants, handling order entry, table management, and payment at the counter or tableside.</p>
           <a class="btn btn--primary" href="index.html?target=Restaurant%20POS%20Systems#free-trial">Get 300 Free Leads in Restaurant POS Systems</a>
         </div>
-        <div class="cat-detail" id="cat-detail-retail-accounting-software" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-retail-accounting-software" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">108 companies tracked</span>
           <h3 class="cat-detail__name">Retail Accounting Software</h3>
           <p class="cat-detail__desc">Accounting software tailored to retail businesses, including inventory-linked cost tracking and sales reporting.</p>
           <a class="btn btn--primary" href="index.html?target=Retail%20Accounting%20Software#free-trial">Get 300 Free Leads in Retail Accounting Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-retail-management-software" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-retail-management-software" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">26 companies tracked</span>
           <h3 class="cat-detail__name">Retail Management Software</h3>
           <p class="cat-detail__desc">Coordinates inventory, staff, and sales operations across one or more retail store locations.</p>
           <a class="btn btn--primary" href="index.html?target=Retail%20Management%20Software#free-trial">Get 300 Free Leads in Retail Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-ipad-pos-systems" data-parent="retail-pos-systems" hidden>
+        <div class="cat-detail" id="cat-detail-ipad-pos-systems" data-parent="retail-pos-systems" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">63 companies tracked</span>
           <h3 class="cat-detail__name">iPad POS Systems</h3>
           <p class="cat-detail__desc">Point-of-sale software designed to run on an iPad, commonly used by small retailers and food service businesses.</p>
@@ -1594,43 +1775,50 @@
           <button type="button" class="cat-chip" data-name="sales intelligence software" data-slug="sales-intelligence-software">Sales Intelligence Software<span class="cat-chip__count" aria-hidden="true">3</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Sales%20Tools%20Software#free-trial">Get leads in Sales Tools Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-ai-sales-assistant-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-ai-sales-assistant-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">20 companies tracked</span>
           <h3 class="cat-detail__name">AI Sales Assistant Software</h3>
           <p class="cat-detail__desc">Uses AI to help sales reps with tasks like drafting outreach messages, summarizing calls, or suggesting next steps.</p>
           <a class="btn btn--primary" href="index.html?target=AI%20Sales%20Assistant%20Software#free-trial">Get 300 Free Leads in AI Sales Assistant Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-e-signature-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-e-signature-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">18 companies tracked</span>
           <h3 class="cat-detail__name">E- Signature Software</h3>
           <p class="cat-detail__desc">Lets documents be signed electronically, replacing printed and physically signed paperwork.</p>
           <a class="btn btn--primary" href="index.html?target=E-%20Signature%20Software#free-trial">Get 300 Free Leads in E- Signature Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-field-sales-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-field-sales-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">9 companies tracked</span>
           <h3 class="cat-detail__name">Field Sales Software</h3>
           <p class="cat-detail__desc">Gives outside sales reps mobile access to accounts, routes, and order details while visiting customers in person.</p>
           <a class="btn btn--primary" href="index.html?target=Field%20Sales%20Software#free-trial">Get 300 Free Leads in Field Sales Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-revenue-operations-and-intelligence-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-revenue-operations-and-intelligence-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">24 companies tracked</span>
           <h3 class="cat-detail__name">Revenue Operations &amp; Intelligence Software</h3>
           <p class="cat-detail__desc">Combines sales, marketing, and customer data to give revenue teams a unified view of pipeline health and forecasting.</p>
           <a class="btn btn--primary" href="index.html?target=Revenue%20Operations%20%26%20Intelligence%20Software#free-trial">Get 300 Free Leads in Revenue Operations &amp; Intelligence Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-sales-compensation-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-sales-compensation-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">7 companies tracked</span>
           <h3 class="cat-detail__name">Sales Compensation Software</h3>
           <p class="cat-detail__desc">Calculates and tracks commission payouts based on sales performance and compensation plans.</p>
           <a class="btn btn--primary" href="index.html?target=Sales%20Compensation%20Software#free-trial">Get 300 Free Leads in Sales Compensation Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-sales-gamification-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-sales-gamification-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">Sales Gamification Software</h3>
           <p class="cat-detail__desc">Adds leaderboards, badges, or contests to sales activity to motivate reps and reinforce target behaviors.</p>
           <a class="btn btn--primary" href="index.html?target=Sales%20Gamification%20Software#free-trial">Get 300 Free Leads in Sales Gamification Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-sales-intelligence-software" data-parent="sales-tools-software" hidden>
+        <div class="cat-detail" id="cat-detail-sales-intelligence-software" data-parent="sales-tools-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">3 companies tracked</span>
           <h3 class="cat-detail__name">Sales Intelligence Software</h3>
           <p class="cat-detail__desc">Provides sales teams with data and insights about prospects and accounts, such as contact details, firmographics, or buying signals.</p>
@@ -1643,25 +1831,29 @@
           <button type="button" class="cat-chip" data-name="game development" data-slug="game-development">Game Development<span class="cat-chip__count" aria-hidden="true">25</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Software%20Development#free-trial">Get leads in Software Development <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-android-app-development" data-parent="software-development" hidden>
+        <div class="cat-detail" id="cat-detail-android-app-development" data-parent="software-development" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">103 companies tracked</span>
           <h3 class="cat-detail__name">Android App Development</h3>
           <p class="cat-detail__desc">Tools and platforms used to build, test, and deploy applications for the Android operating system.</p>
           <a class="btn btn--primary" href="index.html?target=Android%20App%20Development#free-trial">Get 300 Free Leads in Android App Development</a>
         </div>
-        <div class="cat-detail" id="cat-detail-crm-development" data-parent="software-development" hidden>
+        <div class="cat-detail" id="cat-detail-crm-development" data-parent="software-development" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">144 companies tracked</span>
           <h3 class="cat-detail__name">CRM Development</h3>
           <p class="cat-detail__desc">Development platforms and tools used to build or customize CRM systems for specific business needs.</p>
           <a class="btn btn--primary" href="index.html?target=CRM%20Development#free-trial">Get 300 Free Leads in CRM Development</a>
         </div>
-        <div class="cat-detail" id="cat-detail-cross-platform-app-development" data-parent="software-development" hidden>
+        <div class="cat-detail" id="cat-detail-cross-platform-app-development" data-parent="software-development" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">487 companies tracked</span>
           <h3 class="cat-detail__name">Cross-Platform App Development</h3>
           <p class="cat-detail__desc">Frameworks that let developers build a single app codebase that runs on multiple platforms, such as iOS and Android.</p>
           <a class="btn btn--primary" href="index.html?target=Cross-Platform%20App%20Development#free-trial">Get 300 Free Leads in Cross-Platform App Development</a>
         </div>
-        <div class="cat-detail" id="cat-detail-game-development" data-parent="software-development" hidden>
+        <div class="cat-detail" id="cat-detail-game-development" data-parent="software-development" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">25 companies tracked</span>
           <h3 class="cat-detail__name">Game Development</h3>
           <p class="cat-detail__desc">Engines and tools used to design, build, and publish video games.</p>
@@ -1677,43 +1869,50 @@
           <button type="button" class="cat-chip" data-name="warehouse management software" data-slug="warehouse-management-software">Warehouse Management Software<span class="cat-chip__count" aria-hidden="true">23</span></button>
           <a class="cat-subgrid-cta" href="index.html?target=Supply%20Chain%20Management%20Software#free-trial">Get leads in Supply Chain Management Software <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="cat-detail" id="cat-detail-distribution-software" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-distribution-software" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">14 companies tracked</span>
           <h3 class="cat-detail__name">Distribution Software</h3>
           <p class="cat-detail__desc">Manages order fulfillment, inventory allocation, and delivery scheduling for wholesale and distribution businesses.</p>
           <a class="btn btn--primary" href="index.html?target=Distribution%20Software#free-trial">Get 300 Free Leads in Distribution Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-freight-software" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-freight-software" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">23 companies tracked</span>
           <h3 class="cat-detail__name">Freight Software</h3>
           <p class="cat-detail__desc">Manages shipment booking, carrier selection, and tracking for freight and logistics operations.</p>
           <a class="btn btn--primary" href="index.html?target=Freight%20Software#free-trial">Get 300 Free Leads in Freight Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-healthcare-supply-chain-software" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-healthcare-supply-chain-software" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">Healthcare Supply Chain Software</h3>
           <p class="cat-detail__desc">Manages procurement, inventory, and distribution of medical supplies and equipment for healthcare organizations.</p>
           <a class="btn btn--primary" href="index.html?target=Healthcare%20Supply%20Chain%20Software#free-trial">Get 300 Free Leads in Healthcare Supply Chain Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-inventory-management-software" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-inventory-management-software" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">43 companies tracked</span>
           <h3 class="cat-detail__name">Inventory Management Software</h3>
           <p class="cat-detail__desc">Tracks stock levels, reordering, and warehouse locations for goods across a supply chain.</p>
           <a class="btn btn--primary" href="index.html?target=Inventory%20Management%20Software#free-trial">Get 300 Free Leads in Inventory Management Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-supply-chain-planning-software" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-supply-chain-planning-software" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">9 companies tracked</span>
           <h3 class="cat-detail__name">Supply Chain Planning Software</h3>
           <p class="cat-detail__desc">Forecasts demand and plans production, procurement, and distribution across a supply chain.</p>
           <a class="btn btn--primary" href="index.html?target=Supply%20Chain%20Planning%20Software#free-trial">Get 300 Free Leads in Supply Chain Planning Software</a>
         </div>
-        <div class="cat-detail" id="cat-detail-supply-chain-suites" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-supply-chain-suites" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">11 companies tracked</span>
           <h3 class="cat-detail__name">Supply Chain Suites</h3>
           <p class="cat-detail__desc">Bundled software covering multiple supply chain functions, such as planning, procurement, and logistics, in one platform.</p>
           <a class="btn btn--primary" href="index.html?target=Supply%20Chain%20Suites#free-trial">Get 300 Free Leads in Supply Chain Suites</a>
         </div>
-        <div class="cat-detail" id="cat-detail-warehouse-management-software" data-parent="supply-chain-management-software" hidden>
+        <div class="cat-detail" id="cat-detail-warehouse-management-software" data-parent="supply-chain-management-software" role="dialog" aria-modal="true" tabindex="-1" hidden>
+          <button type="button" class="cat-detail__close" aria-label="Close">&times;</button>
           <span class="cat-detail__meta">23 companies tracked</span>
           <h3 class="cat-detail__name">Warehouse Management Software</h3>
           <p class="cat-detail__desc">Manages the movement and storage of goods within a warehouse, including picking, packing, and shipping.</p>
@@ -1781,9 +1980,11 @@
   var totalCats = cards.length;
   var totalSubs = subgrids.reduce(function (n, g) { return n + g.querySelectorAll('.cat-chip').length; }, 0);
   var defaultCountText = totalCats + ' categories · ' + totalSubs + ' subcategories';
+  var backdrop = document.getElementById('cat-modal-backdrop');
   var openSlug = null;
   var openCategoryName = null;
-  var openDetailSlug = null;
+  var openDetail = null;
+  var detailTrigger = null;
 
   function subgridFor(slug) {
     return document.getElementById('cat-subgrid-' + slug);
@@ -1802,17 +2003,14 @@
     var target = subgridFor(slug);
     var card = cards.filter(function (c) { return c.dataset.slug === slug; })[0];
     if (!target || !card) return;
-    details.forEach(function (d) { d.hidden = true; });
     subgrids.forEach(function (g) { g.hidden = (g !== target); });
     target.querySelectorAll('.cat-chip').forEach(function (chip) { chip.hidden = false; });
     mainGrid.hidden = true;
     breadcrumb.hidden = false;
     openCategoryName = card.querySelector('.cat-card__name').textContent;
     breadcrumbName.textContent = openCategoryName;
-    backBtn.textContent = '← All categories';
     card.setAttribute('aria-expanded', 'true');
     openSlug = slug;
-    openDetailSlug = null;
     input.value = '';
     showEmpty(false);
     countEl.textContent = target.querySelectorAll('.cat-chip').length + ' subcategories in ' + openCategoryName;
@@ -1821,7 +2019,6 @@
 
   function closeCategory() {
     subgrids.forEach(function (g) { g.hidden = true; });
-    details.forEach(function (d) { d.hidden = true; });
     mainGrid.hidden = false;
     breadcrumb.hidden = true;
     cards.forEach(function (c) {
@@ -1830,33 +2027,47 @@
     });
     openSlug = null;
     openCategoryName = null;
-    openDetailSlug = null;
     input.value = '';
     showEmpty(false);
     countEl.textContent = defaultCountText;
   }
 
-  function openDetail(slug) {
+  // Subcategory detail opens as a centered modal on top of whatever page
+  // state is underneath (main grid or a category's subgrid) — it doesn't
+  // touch that state, it just overlays it, so closing it needs no "which
+  // level was I on" bookkeeping the way openCategory/closeCategory do.
+  function openDetailModal(slug, trigger) {
     var detail = detailFor(slug);
-    if (!detail || !openSlug) return;
-    details.forEach(function (d) { d.hidden = (d !== detail); });
-    var target = subgridFor(openSlug);
-    if (target) target.hidden = true;
-    breadcrumbName.textContent = detail.querySelector('.cat-detail__name').textContent;
-    backBtn.textContent = '← ' + openCategoryName;
-    openDetailSlug = slug;
-    detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!detail) return;
+    details.forEach(function (d) { if (d !== detail) d.hidden = true; });
+    detail.hidden = false;
+    backdrop.hidden = false;
+    detailTrigger = trigger || null;
+    openDetail = detail;
+    document.body.style.overflow = 'hidden';
+    // Force layout so the browser sees the pre-transition (scaled down,
+    // transparent) state before we flip the class that animates it in.
+    void detail.offsetWidth;
+    requestAnimationFrame(function () {
+      detail.classList.add('is-open');
+      backdrop.classList.add('is-open');
+    });
+    detail.focus();
   }
 
-  function closeDetail() {
-    var target = subgridFor(openSlug);
-    if (!target) return;
-    details.forEach(function (d) { d.hidden = true; });
-    target.hidden = false;
-    breadcrumbName.textContent = openCategoryName;
-    backBtn.textContent = '← All categories';
-    openDetailSlug = null;
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function closeDetailModal() {
+    if (!openDetail) return;
+    var detail = openDetail;
+    detail.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    document.body.style.overflow = '';
+    openDetail = null;
+    window.setTimeout(function () {
+      detail.hidden = true;
+      backdrop.hidden = true;
+    }, 220);
+    if (detailTrigger) detailTrigger.focus();
+    detailTrigger = null;
   }
 
   cards.forEach(function (card) {
@@ -1869,31 +2080,24 @@
   document.querySelectorAll('.cat-chip').forEach(function (chip) {
     if (chip.tagName !== 'BUTTON') return;
     chip.addEventListener('click', function () {
-      openDetail(chip.dataset.slug);
+      openDetailModal(chip.dataset.slug, chip);
     });
   });
 
-  if (backBtn) {
-    backBtn.addEventListener('click', function () {
-      if (openDetailSlug) {
-        closeDetail();
-      } else {
-        closeCategory();
-      }
-    });
-  }
+  document.querySelectorAll('.cat-detail__close').forEach(function (btn) {
+    btn.addEventListener('click', closeDetailModal);
+  });
+
+  backdrop.addEventListener('click', closeDetailModal);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && openDetail) closeDetailModal();
+  });
+
+  if (backBtn) backBtn.addEventListener('click', closeCategory);
 
   input.addEventListener('input', function () {
     var q = input.value.trim().toLowerCase();
-
-    if (openDetailSlug) {
-      details.forEach(function (d) { d.hidden = true; });
-      var target = subgridFor(openSlug);
-      if (target) target.hidden = false;
-      breadcrumbName.textContent = openCategoryName;
-      backBtn.textContent = '← All categories';
-      openDetailSlug = null;
-    }
 
     if (openSlug) {
       var subgrid = subgridFor(openSlug);
