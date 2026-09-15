@@ -560,3 +560,15 @@ Implemented, CSS/typography only, no content or structural changes:
 Browser tool reconnected briefly this session then disconnected again before a screenshot could be taken — verified structurally only (CSS brace balance, HTML tag-balance + JSON-LD validation on all 7 pages, confirmed zero leftover Sora/Work Sans references). Worth a visual spot-check once deployed.
 
 **Still open:** a possible future FAQ section; Google Search Console setup; domain purchase itself; reCAPTCHA if the honeypot alone doesn't fully stop spam; visual spot-check of the new typography once live.
+
+## 2026-09-15 — Accessibility pass on the two real form/search inputs
+
+Haris asked to make the site better generally, with no specific target. Browser tool was disconnected (couldn't do the visual spot-check still open from last session), so ran a structural audit instead: checked for missing `alt` text (none — site has no `<img>` tags, all icons are inline SVG), missing `<html lang>` (present on all 7 pages), icon-only buttons without accessible names (none), broken internal links (all resolve), missing assets (favicon/og-image both present and referenced correctly), and JSON-LD validity + HTML tag-balance + CSS brace-balance on all 7 pages (all clean).
+
+Found one real, repeated gap: the two actual form-style inputs on the site — the homepage free-trial form (`index.html`, the site's primary conversion element) and the Categories page search box (`industries.html`) — relied on `placeholder` text alone with no `<label>` or `aria-label`, so a screen reader user gets no reliable field name. Fixed both:
+- Free-trial form's 4 visible inputs (name/email/company/target) each got a matching `aria-label`; name/email/company also got `autocomplete="name"/"email"/"organization"` so browsers can autofill them — pure friction reduction on the highest-value form on the site, no visual change
+- Categories search input got `aria-label="Search categories"` + `role="searchbox"`; the live result-count span next to it got `aria-live="polite"` so screen reader users hear the count update as they type, matching the sighted experience
+
+Deliberately did not touch: the gradient-fade heading trailing into `--text-muted` (already an established, intentional design decision from the typography pass, not an obvious contrast failure) or the multi-hue `.chip--*` swatch colors in `styles.css` (a semantic multi-color tagging system, not leftover blue-reskin debris — checked before assuming a bug).
+
+**Still open:** same list as above (FAQ, GSC, domain, reCAPTCHA, visual spot-check) — none of these are actionable without Haris's input or a working browser connection.
