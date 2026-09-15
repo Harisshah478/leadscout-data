@@ -612,3 +612,9 @@ Before this, the drill-down subcategory chips and the 4 zero-subcategory "flat" 
 Verified live: clicked a chip in the CRM Software subgrid, confirmed the generated `href`, followed it, and confirmed `#trial-target`'s value was set to the exact subcategory name before the page even finished its own scroll-to-anchor. HTML tag-balance (div/section/button/span/a) and JSON-LD re-verified after the conversion (chip and flat-card element counts matched: 197 chips, 33 CTAs, 4 flat-card links).
 
 Opened as a fresh branch off latest `main` (`subcategory-cta`) rather than continuing on the already-merged `worktree-website-improve` branch, to keep future PRs one-topic-at-a-time per Haris's earlier note.
+
+## 2026-09-15 (later still) — Subcategory list: wrapping tag-row → vertical list
+
+Same PR (#31), still open. Haris asked to lay the subcategories out vertically instead of the flex-wrap tag-row they were in. Changed `.cat-subgrid` from `flex-wrap` to `flex-direction: column` (a single-column stack, capped at `max-width: 560px` so lines stay a readable length instead of stretching full-page-wide), and `.cat-chip` from `inline-block` to a `flex` row with `justify-content: space-between` so the name sits left and the company-count badge sits right, like a normal list row instead of a tag with trailing text. Dropped the `flex: 1 0 100%` hack from `.cat-subgrid-cta` since a column layout doesn't need it to force a new row anymore.
+
+Verified live in Content Management Software (13 subcategories, the largest category) — clean single-column list top to bottom, counts aligned to the right edge, and the "Get leads in Content Management Software" CTA still sits correctly below the last row with its separator.
