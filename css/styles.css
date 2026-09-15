@@ -825,6 +825,7 @@ a.cat-card:hover {
 }
 
 .trial-form input,
+.trial-form select,
 .trial-form textarea {
   width: 100%;
   background: var(--surface-2);
@@ -842,7 +843,23 @@ a.cat-card:hover {
   color: var(--text-muted);
 }
 
+.trial-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a8a86' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 42px;
+  cursor: pointer;
+}
+
+.trial-form select:invalid {
+  color: var(--text-muted);
+}
+
 .trial-form input:focus,
+.trial-form select:focus,
 .trial-form textarea:focus {
   outline: none;
   border-color: var(--accent);
