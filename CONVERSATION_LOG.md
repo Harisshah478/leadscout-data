@@ -692,3 +692,20 @@ Same PR (#37), still open. Haris asked to remove the number shown next to every 
 The count itself isn't gone from the site, just this list view — it's still shown in each subcategory's detail modal ("N companies tracked"), which Haris didn't ask to change.
 
 Verified: HTML tag-balance/JSON-LD after the removal (0 remaining `cat-chip__count` references), CSS brace balance, and visually in the browser — clean subcategory names with no trailing numbers, search bar contrast fix from the same PR still holding up correctly alongside it.
+
+## 2026-09-15 (later still) — Pre-domain-purchase SEO audit
+
+Haris wants the site "full ready" before he purchases a real domain, and asked for an SEO check as the concrete next step. Ran a full technical + on-page audit via `/seo-audit`'s checklist (delegated the read-everything sweep to a background agent to keep it out of the main context, then verified its two concrete findings myself before touching anything — didn't just trust the report). Also did a couple of checks myself outside the delegated scope: confirmed the live Vercel deploy (not just localhost) has zero console errors and matches the latest changes, and grepped `css/styles.css` for `min-width` (none exist, so nothing can force horizontal overflow on narrow viewports) since the remote browser session's window-resize tool wasn't reliably testable this session for a real mobile-viewport check.
+
+**No blocking issues found.** Full result:
+- Titles/descriptions/canonicals: unique and correctly sized on all 7 pages
+- JSON-LD: present and actually parses (not just eyeballed) on all 7 pages
+- `sitemap.xml`/`robots.txt`: all 7 real pages listed at the correct live domain; AI-training crawlers (GPTBot, CCBot) correctly blocked while everything else stays open — verified `robots.txt`'s literal content myself, matched the report exactly
+- Heading hierarchy, internal linking, and the 511 generated `index.html?target=...#free-trial` links on `industries.html` (including the `#free-trial`/`trial-target` anchors they depend on) all check out
+- Zero stale numbers left anywhere (the 300→100 and 197→474 sweeps from earlier both held)
+
+Fixed two real findings:
+- **`sitemap.xml` priority**: `industries.html` was at `0.6`, lower than `about.html`'s `0.7`, despite now being the site's largest page and its main long-tail-keyword surface (474 real subcategory terms). Raised to `0.8`.
+- **Unescaped `&` in the Google Fonts `<link>` href**: `...800&family=Geist+Mono...` should be `&amp;` per HTML spec — present identically on all 7 pages (copy-pasted when the Geist typeface was added). Browsers already handled it fine (confirmed both fonts still report as loaded via `document.fonts.check()` after the fix, zero visual change), but it's not valid markup. Fixed on all 7.
+
+**Flagged but deliberately not "fixed" without real data:** `industries.html` is now ~447KB/4,380 lines (474 subcategories' worth of statically-present card/subgrid/chip/detail-modal markup) versus every other page at 10–30KB. The audit couldn't respons­ibly assign a real performance cost to this without actual Vercel Speed Insights numbers for that specific page — hidden (`display:none`) content doesn't cost paint/layout regardless of DOM size, and gzip compresses the highly repetitive markup well, so the practical impact is genuinely uncertain rather than a known problem. Per this project's own rule against fabricating performance numbers, left this as a "watch it, don't guess" item for Haris rather than inventing a Lighthouse score to justify a speculative rewrite.
