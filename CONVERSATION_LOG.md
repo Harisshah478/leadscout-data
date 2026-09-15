@@ -678,3 +678,9 @@ Regenerated the entire category section of `industries.html` from scratch via a 
 Verified live: tag-balance/JSON-LD after the regen (37 cards, 474 chips, 474 detail panels, zero remaining `cat-card--flat`), then walked one of the formerly-flat categories (Human Resources Software, now genuinely showing 18 subcategories) all the way through — card click → subgrid → subcategory click → detail modal with correct company count, real description, and the updated "Get 100 Free Leads" CTA.
 
 **Still open:** the 159 GoodFirms categories that were deliberately held back (near-duplicates, too generic, or verticals like crypto/education/fintech the site doesn't cover) remain excluded, as reviewed; FAQ section; Google Search Console; domain purchase; reCAPTCHA.
+
+## 2026-09-15 (later still) — Category search box contrast fix
+
+Haris said the Categories page search bar wasn't properly visible. Checked the actual rendered colors rather than guessing: the box used `--surface` (14% lightness) on a `--bg` page background of 9% — only a 5-point lightness gap, and with no shadow, so on an otherwise empty stretch of page it barely registered as a distinct element (the category cards below it get away with the same subtle border because they're packed into a dense grid where many edges together read as a pattern; the isolated search box had no such help). Switched its background to `--surface-2` (19%, the same token the free-trial form's inputs already use) and added a small drop shadow + a faint inset highlight for depth, so it reads as its own raised element rather than blending into the page.
+
+Verified live — clearly more distinguishable against the dark background now, still restrained/on-theme, not a harsh box.
