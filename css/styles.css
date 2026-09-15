@@ -514,9 +514,10 @@ a:hover {
 }
 
 .category-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  align-items: start;
 }
 
 .category-grid[hidden] {
@@ -596,7 +597,6 @@ a:hover {
   flex-direction: column;
   gap: 4px;
   padding: 16px 18px;
-  min-width: 200px;
   text-align: left;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -637,6 +637,7 @@ button.cat-card:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  scroll-margin-top: 100px;
 }
 
 .cat-subgrid[hidden] {
