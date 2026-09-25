@@ -732,3 +732,17 @@ Changes: swapped the email everywhere it appeared (both pages' JSON-LD `email` f
 Since only `contact.html` used the non-`--simple` 4-column footer grid and the 3-card contact grid (confirmed via grep before touching the CSS — no other page shares either class variant), adjusted both directly rather than adding a new modifier: `.contact-grid` went from a fixed 3-column grid to a single constrained-width column (420px) for the one remaining card, and `.footer__grid`'s base rule dropped from 4 columns to 3 (Brand/Explore/Contact). Removed the now-dead mobile-breakpoint override for `.contact-grid` that force-collapsed to 1 column, since the base rule already is one column.
 
 Verified: HTML tag-balance + JSON-LD validity on both changed pages, CSS brace balance, a final grep across all 7 pages for zero remaining old-email/WhatsApp/LinkedIn-profile references, and visually in the browser — single well-proportioned email card (not awkwardly stretched), three evenly-spaced footer columns, no orphaned "Elsewhere" heading.
+
+## 2026-09-13 (later) — iOS Safari glass-nav fix + glass-pill nav state (PR #29)
+
+Not logged at the time; recorded here from git history (commits `2149e57`, `4a26ba6`). The frosted-glass nav and Categories jump-bar rendered as a flat mirror on iOS Safari, so a fix was added in `css/styles.css` (+2 lines). A follow-up gave the nav a glass-pill active/hover state (21 insertions / 19 deletions, CSS only). Both were merged via PR #29. No HTML or content changes.
+
+**Still open:** a possible future FAQ section; Google Search Console setup; domain purchase itself; reCAPTCHA if the honeypot alone doesn't fully stop spam; visual spot-check of the new typography and glass nav on a real iOS device.
+
+## 2026-09-25 — Session resumed; log-keeping request
+
+Haris came back to the project and asked that anything that happens in this folder be recorded in an MD file. `CONVERSATION_LOG.md` already serves as that running record, so no new file was created. This entry and the PR #29 entry above bring it up to date, and future meaningful changes will be appended here.
+
+Noted at session start: three untracked files sit in the repo root: `goodfirms.csv`, `master_software_companies 1.xlsx` and `recovery-codes.txt`. `recovery-codes.txt` looks sensitive and should stay out of commits (candidate for `.gitignore` or moving out of the repo). Nothing has been done with them yet.
+
+**Still open:** same list as above, plus deciding what to do with the untracked data files and `recovery-codes.txt`.
