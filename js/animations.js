@@ -1,6 +1,84 @@
 (function () {
   "use strict";
 
+  // Scroll progress bar (thin accent line at the top of the viewport).
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var barTicking = false;
+    var updateBar = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      bar.style.transform = "scaleX(" + p + ")";
+      barTicking = false;
+    };
+    window.addEventListener("scroll", function () {
+      if (!barTicking) {
+        barTicking = true;
+        window.requestAnimationFrame(updateBar);
+      }
+    }, { passive: true });
+    updateBar();
+  }
+
+  // Mobile menu: lock background scroll while open, close on link tap or Escape.
+  var navToggle = document.getElementById("nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("change", function () {
+      document.body.style.overflow = navToggle.checked ? "hidden" : "";
+    });
+    var closeNav = function () {
+      navToggle.checked = false;
+      document.body.style.overflow = "";
+    };
+    document.querySelectorAll(".nav__links a").forEach(function (a) {
+      a.addEventListener("click", closeNav);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navToggle.checked) closeNav();
+    });
+    window.matchMedia("(min-width: 901px)").addEventListener("change", closeNav);
+  }
+
+  // Back-to-top buttons in the footer.
+  document.querySelectorAll(".footer__top").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: calm ? "auto" : "smooth" });
+    });
+  });
+
+  // Scroll-linked motion: the footer's slide-up reveal.
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var footer = document.querySelector(".footer");
+    var footerInner = footer && footer.querySelector(".container");
+    var motionTicking = false;
+
+    var updateMotion = function () {
+      if (footerInner) {
+        var rect = footer.getBoundingClientRect();
+        var vh = window.innerHeight;
+        // 0 when the footer's top enters the viewport, 1 when its bottom reaches it.
+        var p = Math.min(Math.max((vh - rect.top) / Math.max(rect.height, 1), 0), 1);
+        footerInner.style.transform = "translate3d(0," + (-30 * (1 - p)) + "%,0)";
+      }
+      motionTicking = false;
+    };
+
+    if (footerInner) {
+      window.addEventListener("scroll", function () {
+        if (!motionTicking) {
+          motionTicking = true;
+          window.requestAnimationFrame(updateMotion);
+        }
+      }, { passive: true });
+      window.addEventListener("resize", updateMotion);
+      updateMotion();
+    }
+  }
+
   if (!("IntersectionObserver" in window)) return;
 
   var staggerGroups = document.querySelectorAll(

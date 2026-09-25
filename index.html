@@ -22,7 +22,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Geist+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;family=Fustat:wght@800&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <script type="application/ld+json">
 {
@@ -66,16 +66,64 @@
   <main>
 
     <section class="hero">
-      <div class="container hero__inner">
-        <span class="pill">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          Verified Lead Data
-        </span>
-        <h1>Build your pipeline<br><span class="accent-text">with better data.</span></h1>
-        <p class="lead">Get targeted business and contact data built around your exact audience, plus LinkedIn outreach and email marketing to put it to work. We source, verify, clean and organize the information you need from Google Maps, LinkedIn, Sales Navigator, Apollo, ZoomInfo and other relevant platforms.</p>
-        <div class="hero__actions">
-          <a href="#free-trial" class="btn btn--primary">Get 100 Free Contacts</a>
-          <a href="#process" class="btn btn--ghost">See How It Works</a>
+      <div class="hero__grid">
+        <div class="hero__inner">
+          <span class="pill">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Verified Lead Data
+          </span>
+          <h1>Build your pipeline<br><span class="accent-text">with better data.</span></h1>
+          <p class="lead">Get targeted business and contact data built around your exact audience, plus LinkedIn outreach and email marketing to put it to work. We source, verify, clean and organize the information you need from Google Maps, LinkedIn, Sales Navigator, Apollo, ZoomInfo and other relevant platforms.</p>
+          <div class="hero__actions">
+            <a href="#free-trial" class="btn btn--primary btn--bead">Get 100 Free Contacts <span class="btn__bead" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span></a>
+            <a href="#process" class="link-bead"><span class="link-bead__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>See How It Works</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__aura" aria-hidden="true"></div>
+          <svg class="hero__orbit" viewBox="0 0 620 620" fill="none" aria-hidden="true">
+            <defs><linearGradient id="orbit-grad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#60B1FF"/><stop offset="1" stop-color="#319AFF"/></linearGradient></defs>
+            <circle cx="310" cy="310" r="300" stroke="url(#orbit-grad)" stroke-width="1.5"/>
+            <circle cx="310" cy="310" r="230" stroke="url(#orbit-grad)" stroke-width="1.5" stroke-dasharray="6 10"/>
+            <circle cx="310" cy="310" r="160" stroke="url(#orbit-grad)" stroke-width="1.5"/>
+          </svg>
+
+          <div class="hero__stage">
+            <div class="sample-glass glass">
+              <div class="panel-label">Sample Records</div>
+              <div class="record-row">
+                <span class="record-row__name">J. Carter &mdash; Operations Mgr.</span>
+                <span class="record-row__meta">Austin, US</span>
+              </div>
+              <div class="record-row">
+                <span class="record-row__name">M. Alvi &mdash; Marketing Dir.</span>
+                <span class="record-row__meta">Manchester, UK</span>
+              </div>
+              <div class="record-row">
+                <span class="record-row__name">S. Novak &mdash; Founder</span>
+                <span class="record-row__meta">Toronto, CA</span>
+              </div>
+              <div class="record-row">
+                <span class="record-row__name">R. Iqbal &mdash; Procurement Lead</span>
+                <span class="record-row__meta">Dubai, AE</span>
+              </div>
+              <div class="sample-glass__foot">Illustrative example &middot; CSV, Excel, Sheets</div>
+            </div>
+
+            <div class="float-card float-card--a glass">
+              <span class="float-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+              <div><strong>27+</strong><span>data fields</span></div>
+            </div>
+            <div class="float-card float-card--b glass">
+              <span class="float-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg></span>
+              <div><strong>13+</strong><span>data sources</span></div>
+            </div>
+            <div class="float-card float-card--c glass">
+              <span class="float-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><strong>1 to 2 day</strong><span>turnaround</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -510,6 +558,13 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer__cta">
+        <h2 class="footer__cta-title">Ready for <span class="accent-text">better data?</span></h2>
+        <div class="footer__cta-actions">
+          <a href="index.html#free-trial" class="btn btn--primary">Get 100 Free Contacts</a>
+          <button type="button" class="footer__top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+        </div>
+      </div>
       <div class="footer__grid footer__grid--simple">
         <div class="footer__brand">
           <div class="brand">

@@ -732,3 +732,83 @@ Changes: swapped the email everywhere it appeared (both pages' JSON-LD `email` f
 Since only `contact.html` used the non-`--simple` 4-column footer grid and the 3-card contact grid (confirmed via grep before touching the CSS — no other page shares either class variant), adjusted both directly rather than adding a new modifier: `.contact-grid` went from a fixed 3-column grid to a single constrained-width column (420px) for the one remaining card, and `.footer__grid`'s base rule dropped from 4 columns to 3 (Brand/Explore/Contact). Removed the now-dead mobile-breakpoint override for `.contact-grid` that force-collapsed to 1 column, since the base rule already is one column.
 
 Verified: HTML tag-balance + JSON-LD validity on both changed pages, CSS brace balance, a final grep across all 7 pages for zero remaining old-email/WhatsApp/LinkedIn-profile references, and visually in the browser — single well-proportioned email card (not awkwardly stretched), three evenly-spaced footer columns, no orphaned "Elsewhere" heading.
+
+## 2026-09-13 (later) — iOS Safari glass-nav fix + glass-pill nav state (PR #29)
+
+Not logged at the time; recorded here from git history (commits `2149e57`, `4a26ba6`). The frosted-glass nav and Categories jump-bar rendered as a flat mirror on iOS Safari, so a fix was added in `css/styles.css` (+2 lines). A follow-up gave the nav a glass-pill active/hover state (21 insertions / 19 deletions, CSS only). Both were merged via PR #29. No HTML or content changes.
+
+**Still open:** a possible future FAQ section; Google Search Console setup; domain purchase itself; reCAPTCHA if the honeypot alone doesn't fully stop spam; visual spot-check of the new typography and glass nav on a real iOS device.
+
+## 2026-09-25 — Session resumed; log-keeping request
+
+Haris came back to the project and asked that anything that happens in this folder be recorded in an MD file. `CONVERSATION_LOG.md` already serves as that running record, so no new file was created. This entry and the PR #29 entry above bring it up to date, and future meaningful changes will be appended here.
+
+Noted at session start: three untracked files sit in the repo root: `goodfirms.csv`, `master_software_companies 1.xlsx` and `recovery-codes.txt`. `recovery-codes.txt` looks sensitive and should stay out of commits (candidate for `.gitignore` or moving out of the repo). Nothing has been done with them yet.
+
+**Still open:** same list as above, plus deciding what to do with the untracked data files and `recovery-codes.txt`.
+
+## 2026-09-25 (later) — "Make the website better": four-way audit + first batch of safe fixes
+
+Haris asked to make the site better and chose all four focus areas (conversion, SEO/AI discovery, design polish, speed). Ran three read-only audits (conversion; SEO/AI; design + speed). Structural review only, no Vercel numbers, so nothing here is a measured claim.
+
+Implemented (no invented facts, static-only):
+- **Pricing:** title and description now state the real $0.15 to $0.35 rate; Growth CTA now leads with the free trial; third tier range changed from "2,000+" to "Over 2,000" (it overlapped "500 to 2,000"); "Most Common" badge changed to "Recommended" (no order data supports a popularity claim).
+- **CTAs:** Services and About bottom CTAs now go to `index.html#free-trial` with the same "Get 100 Free Contacts" wording.
+- **Services title/description** rewritten around the actual offerings.
+- **CSS:** global `:focus-visible` ring; `.sample-line` now uses `--font-mono`; removed the nested `backdrop-filter` on `.nav__links a.is-active`.
+- **sitemap.xml:** real `lastmod` dates from git history.
+- **marketing skill file:** corrected stale "300 free contacts" to 100 and the field list.
+
+Findings from the audits that need Haris's input, deliberately NOT done:
+- Robots policy: `GPTBot`/`CCBot` are blocked; is that intentional (training vs. AI visibility)?
+- Real social profile URLs (for `sameAs`) and real customer questions (for an FAQ + FAQPage schema).
+- Formspree `_next` redirect + branded `thanks.html` (needs Formspree dashboard check); separate Formspree form for a Contact-page quote form.
+- Pricing facts the site never states: how a paid order starts, payment, refund/replacement policy, what "verified" means, and whether "Priority delivery" on Growth contradicts the 1 to 2 day turnaround for all tiers.
+- `industries.html` (~457 KB): 474 pre-rendered modals could become one shared modal; structural, needs go-ahead.
+- Other design items from the audit: primary button contrast (white on teal, estimated, unmeasured), mobile nav breakpoint 601 to 900px, mobile menu keyboard access, `.category-search`/form inputs still `outline: none`, cache headers in `vercel.json`, Geist weight trimming/self-hosting, tap-target sizes.
+- Note: the Categories jump-bar and the iOS glass-nav CSS from PR #29 are no longer on `main` (later PRs #39/#40 changed things); not a regression from this work.
+
+**Still open:** everything listed above, plus Search Console, domain purchase, visual spot-check on a real iOS device.
+
+## 2026-09-25 (later still) — AI crawler access, Industries page structure, motion layer
+
+- **robots.txt:** Haris said to remove the GPTBot/CCBot blocks for maximum visibility. Both are now allowed, along with OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Claude-SearchBot, Claude-User and Google-Extended, all in one shared group so `/design-mockup/` stays disallowed for every bot. No social profiles exist yet, so no `sameAs` was added.
+- **Industries page ("better browsing UX"):** Haris chose this over 37 separate category pages. Category cards now show subcategory count and total companies; each of the 474 subcategory chips shows its company count. All numbers come from `categories-data.json` (matched 37/37 categories and 474/474 subcategories, nothing unmatched). Added an "A to Z / Most companies" sort control that re-orders the category grid and every subcategory list, keeping each list's CTA link last. All 474 popups now have `aria-labelledby` pointing at their heading.
+- **Motion:** the site already had reveal-on-scroll, stagger, count-up stats, cursor glow, hero glow drift and the logo marquee. Added a scroll-progress bar, primary-button sheen and hover lift, lift on value/tier cards, and a fade-in when the Industries sort re-orders. All gated behind `prefers-reduced-motion`.
+- **TypeScript:** Haris asked about adding it; recommended against (needs a build step, conflicts with the static-only rule, no user-facing benefit at this size).
+- Verified: JS syntax (node --check on both scripts), counts on the page. Not viewed in a browser yet.
+
+**Still open:** visual check of the Industries sort and motion in a browser; single shared popup instead of 474 hidden ones; pricing facts (order process, refunds, "verified" definition); FAQ needs real customer questions; Formspree thank-you redirect; primary-button contrast; tablet nav breakpoint.
+
+## 2026-09-25 (evening) — Premium redesign: look and motion only
+
+Haris pasted a "Premium Web Experience" spec written for a different business (an agency called Oynta: React/Vite/TS/Tailwind/Three.js/Framer Motion, case-study carousel, team grid, Unsplash photos) and asked to redesign the site to it. Flagged the two conflicts (static-only rule vs. build-step stack; agency content vs. LeadScout's real business) and Haris chose **look and motion only, plain HTML/CSS/JS, real content**. No React, TypeScript, Tailwind, Three.js, Framer or Lenis added; no invented team, projects or photos.
+
+Implemented:
+- **Tokens/type:** background `#0d0d0d`, surface `#1a1a1a`, neutral borders; Inter (body) + Outfit (headings) replace Geist on all 7 pages (Geist Mono kept for small labels). Teal brand accent kept (spec's blue not adopted, to avoid a rebrand).
+- **Hero (index.html):** display-size headline (`clamp(40px, 7.2vw, 100px)`), animated white line growing under the headline, a WebGL fragment-shader background (`js/hero-shader.js`: fbm domain-warped diagonal streaks in the spec's colours, rendered at half resolution, DPR capped at 1.5, paused when off-screen or tab hidden, single still frame under reduced motion, removed cleanly if WebGL is unavailable), rotating circular "GET 100 FREE CONTACTS" badge linking to the form, and scroll parallax on the hero content.
+- **Mobile menu:** now a full-screen overlay from 900px down (this also fixes the earlier 601 to 900px nav overflow), body scroll locked while open, closes on link tap / Escape, links hidden from keyboard when closed, visible focus ring on the burger.
+- **Footer (all pages):** large "Ready for better data?" CTA with the free-trial button and a back-to-top button; footer content slides up from under the page (parallax reveal).
+- All new motion is gated behind `prefers-reduced-motion`.
+
+Verified: JS syntax on both scripts, CSS brace balance, Outfit/footer CTA present on all 7 pages, old Geist link gone. NOT verified visually: the Chrome extension was not connected, so the shader, hero layout, mobile menu and footer reveal have not been seen in a browser.
+
+Skipped from the spec on purpose: Lenis smooth scroll (needs a third-party script; native smooth scroll is on), project carousel, team marquee/grid, masonry About images (no real content for them), FAQ accordion (needs real questions).
+
+**Still open:** browser check of everything above (especially hero text legibility over the shader and the footer reveal); FAQ and pricing facts from Haris; Formspree thank-you redirect; single shared popup on Categories; primary-button contrast.
+
+## 2026-09-25 (night) — Second redesign: light "Assist." theme, real content
+
+Haris pasted a second spec ("Assist.", an AI-assistant landing page: white canvas, electric blue, liquid-glass nav, two-column hero with floating glass cards, robot video, "Trusted by 10,000+ users" with stock faces, React + Lucide). Flagged the conflicts (static-only rule; invented social proof and AI-assistant content) and Haris chose **light theme, real content**. This supersedes the dark redesign from earlier the same day.
+
+Implemented (plain HTML/CSS/JS):
+- **Tokens/type:** white canvas, light surfaces/borders, blue accent. Buttons and links use `#0074E0` (white text passes AA; the spec's `#0084FF` is kept only for glows and icons because white on it is ~3.6:1). Inter body, Outfit headings, Fustat ExtraBold for the brand. Pastel chips and light shadows from the older light theme work again; leftover teal (hue 185) glows moved to blue (hue 250); the "dark" sample-output panel became a blue-tint panel.
+- **Nav:** floating liquid-glass bar (glass on a pseudo-element so the fixed mobile menu is not trapped by `backdrop-filter`), spec-style text links, translucent CTA pill, nav tucked under so hero backgrounds run to the top edge. Mobile: full-screen overlay menu kept, CTA hidden under 520px.
+- **Hero (index.html):** two-column layout (5/7 grid from 1024px), blue "bead" primary button, ghost "See How It Works" link, aura and orbit rings, a glass sample-records panel (labelled "Illustrative example") and three floating glass cards with looping float animation, all showing real facts already on the site: 27+ data fields, 13+ data sources, 1 to 2 day turnaround. Cards drop below the panel on phones.
+- **Removed:** the WebGL shader hero, rotating badge, animated line and hero parallax from the dark redesign (`js/hero-shader.js` deleted). Footer CTA, footer parallax reveal, scroll progress bar and button/card motion stay.
+- **Categories cards:** company count now on its own line.
+- Deliberately NOT included: "Trusted by 10,000+ users", stock avatar photos, the robot video and its AI-task cards.
+
+Verified with headless Edge screenshots (home at 1440, 1100 and 500px wide, pricing and categories at 1440): layout, nav, hero cards, light contrast all read correctly after two rounds of fixes (cards no longer cover the record rows; hero gradient runs under the nav). Not verified: mobile menu open state, hover states, other inner pages (about/services/portfolio/contact) beyond the shared styles.
+
+**Still open:** visual pass on about/services/portfolio/contact; mobile menu open state; Haris's answers on pricing facts, FAQ questions and Formspree redirect; Search Console; domain; single shared popup on Categories.
