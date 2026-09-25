@@ -22,7 +22,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Geist+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <script type="application/ld+json">
 {
@@ -65,19 +65,27 @@
 
   <main>
 
-    <section class="hero">
+    <section class="hero hero--webgl">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
       <div class="container hero__inner">
         <span class="pill">
           <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
           Verified Lead Data
         </span>
-        <h1>Build your pipeline<br><span class="accent-text">with better data.</span></h1>
+        <h1>Build your pipeline<br><span class="accent-text">with better data.</span><span class="hero__line" aria-hidden="true"></span></h1>
         <p class="lead">Get targeted business and contact data built around your exact audience, plus LinkedIn outreach and email marketing to put it to work. We source, verify, clean and organize the information you need from Google Maps, LinkedIn, Sales Navigator, Apollo, ZoomInfo and other relevant platforms.</p>
         <div class="hero__actions">
           <a href="#free-trial" class="btn btn--primary">Get 100 Free Contacts</a>
           <a href="#process" class="btn btn--ghost">See How It Works</a>
         </div>
       </div>
+          <a href="#free-trial" class="hero-badge" aria-label="Get 100 free contacts">
+        <svg class="hero-badge__ring" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text><textPath href="#badge-circle" textLength="285" lengthAdjust="spacing">GET 100 FREE CONTACTS &#8226; </textPath></text>
+        </svg>
+        <svg class="hero-badge__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
     </section>
 
 
@@ -510,6 +518,13 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer__cta">
+        <h2 class="footer__cta-title">Ready for <span class="accent-text">better data?</span></h2>
+        <div class="footer__cta-actions">
+          <a href="index.html#free-trial" class="btn btn--primary">Get 100 Free Contacts</a>
+          <button type="button" class="footer__top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+        </div>
+      </div>
       <div class="footer__grid footer__grid--simple">
         <div class="footer__brand">
           <div class="brand">
@@ -534,6 +549,7 @@
   </footer>
 
 <script src="js/animations.js" defer></script>
+<script src="js/hero-shader.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 <script>

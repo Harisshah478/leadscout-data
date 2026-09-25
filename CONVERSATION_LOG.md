@@ -779,3 +779,20 @@ Findings from the audits that need Haris's input, deliberately NOT done:
 - Verified: JS syntax (node --check on both scripts), counts on the page. Not viewed in a browser yet.
 
 **Still open:** visual check of the Industries sort and motion in a browser; single shared popup instead of 474 hidden ones; pricing facts (order process, refunds, "verified" definition); FAQ needs real customer questions; Formspree thank-you redirect; primary-button contrast; tablet nav breakpoint.
+
+## 2026-09-25 (evening) — Premium redesign: look and motion only
+
+Haris pasted a "Premium Web Experience" spec written for a different business (an agency called Oynta: React/Vite/TS/Tailwind/Three.js/Framer Motion, case-study carousel, team grid, Unsplash photos) and asked to redesign the site to it. Flagged the two conflicts (static-only rule vs. build-step stack; agency content vs. LeadScout's real business) and Haris chose **look and motion only, plain HTML/CSS/JS, real content**. No React, TypeScript, Tailwind, Three.js, Framer or Lenis added; no invented team, projects or photos.
+
+Implemented:
+- **Tokens/type:** background `#0d0d0d`, surface `#1a1a1a`, neutral borders; Inter (body) + Outfit (headings) replace Geist on all 7 pages (Geist Mono kept for small labels). Teal brand accent kept (spec's blue not adopted, to avoid a rebrand).
+- **Hero (index.html):** display-size headline (`clamp(40px, 7.2vw, 100px)`), animated white line growing under the headline, a WebGL fragment-shader background (`js/hero-shader.js`: fbm domain-warped diagonal streaks in the spec's colours, rendered at half resolution, DPR capped at 1.5, paused when off-screen or tab hidden, single still frame under reduced motion, removed cleanly if WebGL is unavailable), rotating circular "GET 100 FREE CONTACTS" badge linking to the form, and scroll parallax on the hero content.
+- **Mobile menu:** now a full-screen overlay from 900px down (this also fixes the earlier 601 to 900px nav overflow), body scroll locked while open, closes on link tap / Escape, links hidden from keyboard when closed, visible focus ring on the burger.
+- **Footer (all pages):** large "Ready for better data?" CTA with the free-trial button and a back-to-top button; footer content slides up from under the page (parallax reveal).
+- All new motion is gated behind `prefers-reduced-motion`.
+
+Verified: JS syntax on both scripts, CSS brace balance, Outfit/footer CTA present on all 7 pages, old Geist link gone. NOT verified visually: the Chrome extension was not connected, so the shader, hero layout, mobile menu and footer reveal have not been seen in a browser.
+
+Skipped from the spec on purpose: Lenis smooth scroll (needs a third-party script; native smooth scroll is on), project carousel, team marquee/grid, masonry About images (no real content for them), FAQ accordion (needs real questions).
+
+**Still open:** browser check of everything above (especially hero text legibility over the shader and the footer reveal); FAQ and pricing facts from Haris; Formspree thank-you redirect; single shared popup on Categories; primary-button contrast.
