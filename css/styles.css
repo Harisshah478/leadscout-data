@@ -1756,6 +1756,12 @@ tr:last-child td {
   line-height: 1.6;
 }
 
+.cta p a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .cta .btn {
   margin-top: 6px;
 }
@@ -1786,6 +1792,8 @@ main {
 }
 
 .footer__cta-title {
+  margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(36px, 6.5vw, 88px);
   line-height: 1.05;
   font-weight: 700;

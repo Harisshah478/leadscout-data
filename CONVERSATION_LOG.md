@@ -812,3 +812,18 @@ Implemented (plain HTML/CSS/JS):
 Verified with headless Edge screenshots (home at 1440, 1100 and 500px wide, pricing and categories at 1440): layout, nav, hero cards, light contrast all read correctly after two rounds of fixes (cards no longer cover the record rows; hero gradient runs under the nav). Not verified: mobile menu open state, hover states, other inner pages (about/services/portfolio/contact) beyond the shared styles.
 
 **Still open:** visual pass on about/services/portfolio/contact; mobile menu open state; Haris's answers on pricing facts, FAQ questions and Formspree redirect; Search Console; domain; single shared popup on Categories.
+
+## 2026-09-25 (late) — SEO pass (seo-audit skill)
+
+Haris asked to start the SEO work again. Re-audited all 7 pages fresh with a script (titles, descriptions, canonicals, og/twitter, h1/h2 counts, JSON-LD parsed, sitemap, robots) and confirmed the live URL (leadscout-data.vercel.app) returns 200. Fundamentals were already healthy: unique titles/descriptions, self-referencing canonicals, og/twitter tags, one H1 per page, all JSON-LD valid, zero `<img>` tags.
+
+Fixed:
+- **Services title** was 75 chars (truncates in results); now "B2B Data, Outreach & Email Marketing | LeadScout Data" (57). Description expanded to a fuller sentence using only facts on the page.
+- **Footer CTA title** (added in the redesign) was an `<h2>` on every page, polluting the heading outline; now a styled `<p>`.
+- **Homepage structured data:** added `logo`, `image` and `contactPoint` (email already on the site) plus a `WebSite` block. No social profiles or ratings (none exist).
+- **Question headings + direct answers:** index "How does LeadScout Data work?" and services "What format is the data delivered in?", each followed by a short answer built only from facts already on the pages.
+- **Internal links:** all `index.html` links now point to the canonical `/` (nav, footer, CTAs and the 474 category "Get leads" links). Contextual links added in the Services and About closing CTAs (pricing, categories, services, sample data), styled white on the blue block.
+- **sitemap.xml** `lastmod` set to today for every page (all changed today).
+- **llms.txt** added at the root: plain-language map of the 7 pages using the existing meta descriptions.
+
+Still needs Haris: real social profile URLs (`sameAs`), real customer questions for an FAQ + FAQPage schema, pricing facts (order process, refunds, what "verified" means), Google Search Console setup (verify the property and submit the sitemap), and a custom domain decision (canonicals, og:url, JSON-LD and sitemap must all change together if added).

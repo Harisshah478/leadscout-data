@@ -33,7 +33,22 @@
   "url": "https://leadscout-data.vercel.app/",
   "email": "leadscoutdata@gmail.com",
   "areaServed": "Worldwide",
-  "priceRange": "$0.15-$0.35 per verified contact"
+  "priceRange": "$0.15-$0.35 per verified contact",
+  "logo": "https://leadscout-data.vercel.app/assets/favicon.svg",
+  "image": "https://leadscout-data.vercel.app/assets/og-image.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "leadscoutdata@gmail.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "LeadScout Data",
+  "url": "https://leadscout-data.vercel.app/"
 }
 </script>
 </head>
@@ -41,7 +56,7 @@
 
   <header class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         <svg class="icon icon--lg" viewBox="0 0 24 24"><path d="M6 5 V17 A4 4 0 0 0 10 21 H14"/><path d="M18 5 A3.5 3.5 0 0 1 18 12 L14.5 12 L19.5 19"/></svg>
         <span>LeadScout <span class="brand__sub">Data</span></span>
       </a>
@@ -51,7 +66,7 @@
         <svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </label>
       <nav class="nav__links">
-        <a href="index.html" class="is-active">Home</a>
+        <a href="/" class="is-active">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="pricing.html">Pricing</a>
@@ -257,7 +272,8 @@
       <div class="container">
         <div class="section__head">
           <span class="eyebrow">Process</span>
-          <h2>How it works</h2>
+          <h2>How does LeadScout Data work?</h2>
+          <p>You tell us who you want to reach, we source, cross-reference and verify the data, and you receive an outreach-ready dataset in CSV, Excel or Google Sheets.</p>
         </div>
 
         <div class="steps">
@@ -559,9 +575,9 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__cta">
-        <h2 class="footer__cta-title">Ready for <span class="accent-text">better data?</span></h2>
+        <p class="footer__cta-title">Ready for <span class="accent-text">better data?</span></p>
         <div class="footer__cta-actions">
-          <a href="index.html#free-trial" class="btn btn--primary">Get 100 Free Contacts</a>
+          <a href="/#free-trial" class="btn btn--primary">Get 100 Free Contacts</a>
           <button type="button" class="footer__top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
         </div>
       </div>

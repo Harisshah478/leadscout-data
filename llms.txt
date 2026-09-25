@@ -1,0 +1,13 @@
+# LeadScout Data
+
+> B2B data and lead generation service: targeted business and contact data, LinkedIn outreach and email marketing. Contact: leadscoutdata@gmail.com
+
+## Pages
+
+- [Home](https://leadscout-data.vercel.app/): Get 100 free verified contacts. LeadScout Data provides targeted business data, LinkedIn outreach and email marketing to help you reach the right prospects.
+- [Services](https://leadscout-data.vercel.app/services.html): LeadScout Data services: targeted B2B data and lead generation, LinkedIn outreach and email marketing, delivered as CSV, Excel or Google Sheets.
+- [Pricing](https://leadscout-data.vercel.app/pricing.html): Verified lead data from $0.15 to $0.35 per contact, priced by volume. Start with 100 free contacts or request a custom quote.
+- [Categories](https://leadscout-data.vercel.app/industries.html): Browse 37 software categories and 474 subcategories LeadScout Data can target verified leads by — search, or click through to your niche.
+- [Sample data](https://leadscout-data.vercel.app/portfolio.html): See examples of how LeadScout Data structures business and contact information for local businesses, B2B prospects and larger datasets.
+- [About](https://leadscout-data.vercel.app/about.html): Learn how LeadScout Data turns information from public sources and sales intelligence platforms into clean, structured and targeted prospect lists.
+- [Contact](https://leadscout-data.vercel.app/contact.html): Contact LeadScout Data for a free sample, custom quote or targeted business and contact dataset based on your industry and location.
