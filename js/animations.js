@@ -1,6 +1,28 @@
 (function () {
   "use strict";
 
+  // Scroll progress bar (thin accent line at the top of the viewport).
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var barTicking = false;
+    var updateBar = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      bar.style.transform = "scaleX(" + p + ")";
+      barTicking = false;
+    };
+    window.addEventListener("scroll", function () {
+      if (!barTicking) {
+        barTicking = true;
+        window.requestAnimationFrame(updateBar);
+      }
+    }, { passive: true });
+    updateBar();
+  }
+
   if (!("IntersectionObserver" in window)) return;
 
   var staggerGroups = document.querySelectorAll(

@@ -769,3 +769,13 @@ Findings from the audits that need Haris's input, deliberately NOT done:
 - Note: the Categories jump-bar and the iOS glass-nav CSS from PR #29 are no longer on `main` (later PRs #39/#40 changed things); not a regression from this work.
 
 **Still open:** everything listed above, plus Search Console, domain purchase, visual spot-check on a real iOS device.
+
+## 2026-09-25 (later still) — AI crawler access, Industries page structure, motion layer
+
+- **robots.txt:** Haris said to remove the GPTBot/CCBot blocks for maximum visibility. Both are now allowed, along with OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Claude-SearchBot, Claude-User and Google-Extended, all in one shared group so `/design-mockup/` stays disallowed for every bot. No social profiles exist yet, so no `sameAs` was added.
+- **Industries page ("better browsing UX"):** Haris chose this over 37 separate category pages. Category cards now show subcategory count and total companies; each of the 474 subcategory chips shows its company count. All numbers come from `categories-data.json` (matched 37/37 categories and 474/474 subcategories, nothing unmatched). Added an "A to Z / Most companies" sort control that re-orders the category grid and every subcategory list, keeping each list's CTA link last. All 474 popups now have `aria-labelledby` pointing at their heading.
+- **Motion:** the site already had reveal-on-scroll, stagger, count-up stats, cursor glow, hero glow drift and the logo marquee. Added a scroll-progress bar, primary-button sheen and hover lift, lift on value/tier cards, and a fade-in when the Industries sort re-orders. All gated behind `prefers-reduced-motion`.
+- **TypeScript:** Haris asked about adding it; recommended against (needs a build step, conflicts with the static-only rule, no user-facing benefit at this size).
+- Verified: JS syntax (node --check on both scripts), counts on the page. Not viewed in a browser yet.
+
+**Still open:** visual check of the Industries sort and motion in a browser; single shared popup instead of 474 hidden ones; pricing facts (order process, refunds, "verified" definition); FAQ needs real customer questions; Formspree thank-you redirect; primary-button contrast; tablet nav breakpoint.
