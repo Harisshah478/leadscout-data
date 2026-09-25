@@ -10,7 +10,7 @@ Covers growth/marketing concerns distinct from the other skills: `/seo-audit`+`/
 
 ## The site's real funnel — know this before suggesting changes
 
-- **Primary conversion action**: the free-trial form on the homepage (`index.html#free-trial`) — a Formspree-backed form (name, email, company, target) offering 300 free verified contacts. Every page's nav CTA and most in-page CTAs point here.
+- **Primary conversion action**: the free-trial form on the homepage (`index.html#free-trial`) — a Formspree-backed form (name, email, country, target, optional company) offering 100 free verified contacts. Every page's nav CTA and most in-page CTAs point here.
 - **Secondary conversion path**: the general Contact page (`contact.html`) — email/WhatsApp/LinkedIn direct contact, used for custom quotes and anything the free trial doesn't cover.
 - **Site pricing**: $0.15–$0.35 per verified contact, tiered by volume (Starter/Growth/Scale) — real, live numbers to reference, never invent different ones.
 - **Analytics available**: Vercel Web Analytics + Speed Insights are enabled on the live site. This is the one real, non-fabricated data source for actual visitor behavior — if Haris can share numbers from the Vercel dashboard (top pages, conversion events, bounce), use them; otherwise reason structurally from the page content itself and say so.
@@ -25,7 +25,7 @@ Covers growth/marketing concerns distinct from the other skills: `/seo-audit`+`/
 
 - **CTA clarity and consistency** — does every page have one clear, unambiguous primary action? Check for competing CTAs on the same page pulling in different directions.
 - **Above-the-fold value proposition** — can a first-time visitor tell what LeadScout Data does and why it matters within the hero, without scrolling?
-- **Friction in the free-trial form** — field count, required vs. optional fields, whether the ask matches the offer's perceived value (300 free contacts is a big incentive; the form should feel proportionately easy).
+- **Friction in the free-trial form** — field count, required vs. optional fields, whether the ask matches the offer's perceived value (100 free contacts is a big incentive; the form should feel proportionately easy).
 - **Trust signals** — the stat row (27+ fields, 13+ sources, 1-2 day turnaround) is the site's current trust-building content; note where it's present/absent across pages rather than inventing new claims to fill perceived gaps.
 - **Funnel consistency** — do all "free sample"/"get contacts" promises across pages lead to the same instant-form funnel (a past bug: some once pointed to Contact instead)? Do all pricing mentions match the real $0.15–$0.35 range?
 - **Page-specific conversion fit** — Services/Pricing/Industries pages should each nudge toward the funnel relevant to that page's intent (e.g. Pricing → free trial or direct quote; Categories → confirm the category exists, then convert).

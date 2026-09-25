@@ -746,3 +746,26 @@ Haris came back to the project and asked that anything that happens in this fold
 Noted at session start: three untracked files sit in the repo root: `goodfirms.csv`, `master_software_companies 1.xlsx` and `recovery-codes.txt`. `recovery-codes.txt` looks sensitive and should stay out of commits (candidate for `.gitignore` or moving out of the repo). Nothing has been done with them yet.
 
 **Still open:** same list as above, plus deciding what to do with the untracked data files and `recovery-codes.txt`.
+
+## 2026-09-25 (later) — "Make the website better": four-way audit + first batch of safe fixes
+
+Haris asked to make the site better and chose all four focus areas (conversion, SEO/AI discovery, design polish, speed). Ran three read-only audits (conversion; SEO/AI; design + speed). Structural review only, no Vercel numbers, so nothing here is a measured claim.
+
+Implemented (no invented facts, static-only):
+- **Pricing:** title and description now state the real $0.15 to $0.35 rate; Growth CTA now leads with the free trial; third tier range changed from "2,000+" to "Over 2,000" (it overlapped "500 to 2,000"); "Most Common" badge changed to "Recommended" (no order data supports a popularity claim).
+- **CTAs:** Services and About bottom CTAs now go to `index.html#free-trial` with the same "Get 100 Free Contacts" wording.
+- **Services title/description** rewritten around the actual offerings.
+- **CSS:** global `:focus-visible` ring; `.sample-line` now uses `--font-mono`; removed the nested `backdrop-filter` on `.nav__links a.is-active`.
+- **sitemap.xml:** real `lastmod` dates from git history.
+- **marketing skill file:** corrected stale "300 free contacts" to 100 and the field list.
+
+Findings from the audits that need Haris's input, deliberately NOT done:
+- Robots policy: `GPTBot`/`CCBot` are blocked; is that intentional (training vs. AI visibility)?
+- Real social profile URLs (for `sameAs`) and real customer questions (for an FAQ + FAQPage schema).
+- Formspree `_next` redirect + branded `thanks.html` (needs Formspree dashboard check); separate Formspree form for a Contact-page quote form.
+- Pricing facts the site never states: how a paid order starts, payment, refund/replacement policy, what "verified" means, and whether "Priority delivery" on Growth contradicts the 1 to 2 day turnaround for all tiers.
+- `industries.html` (~457 KB): 474 pre-rendered modals could become one shared modal; structural, needs go-ahead.
+- Other design items from the audit: primary button contrast (white on teal, estimated, unmeasured), mobile nav breakpoint 601 to 900px, mobile menu keyboard access, `.category-search`/form inputs still `outline: none`, cache headers in `vercel.json`, Geist weight trimming/self-hosting, tap-target sizes.
+- Note: the Categories jump-bar and the iOS glass-nav CSS from PR #29 are no longer on `main` (later PRs #39/#40 changed things); not a regression from this work.
+
+**Still open:** everything listed above, plus Search Console, domain purchase, visual spot-check on a real iOS device.
