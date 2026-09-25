@@ -1298,6 +1298,31 @@ a.cat-card:hover {
   text-align: center;
 }
 
+.trial-form__status {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.trial-form__status--success {
+  color: var(--accent);
+  background: var(--accent-tint);
+  border-color: var(--accent-dark);
+}
+
+.trial-form__status--error {
+  color: oklch(80% 0.12 25);
+  background: oklch(20% 0.06 25);
+  border-color: oklch(45% 0.13 25);
+}
+
+.trial-form__status[hidden] {
+  display: none;
+}
+
 /* Dashboard card */
 
 .dashboard-card {
