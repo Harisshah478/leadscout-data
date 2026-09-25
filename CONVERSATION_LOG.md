@@ -796,3 +796,19 @@ Verified: JS syntax on both scripts, CSS brace balance, Outfit/footer CTA presen
 Skipped from the spec on purpose: Lenis smooth scroll (needs a third-party script; native smooth scroll is on), project carousel, team marquee/grid, masonry About images (no real content for them), FAQ accordion (needs real questions).
 
 **Still open:** browser check of everything above (especially hero text legibility over the shader and the footer reveal); FAQ and pricing facts from Haris; Formspree thank-you redirect; single shared popup on Categories; primary-button contrast.
+
+## 2026-09-25 (night) — Second redesign: light "Assist." theme, real content
+
+Haris pasted a second spec ("Assist.", an AI-assistant landing page: white canvas, electric blue, liquid-glass nav, two-column hero with floating glass cards, robot video, "Trusted by 10,000+ users" with stock faces, React + Lucide). Flagged the conflicts (static-only rule; invented social proof and AI-assistant content) and Haris chose **light theme, real content**. This supersedes the dark redesign from earlier the same day.
+
+Implemented (plain HTML/CSS/JS):
+- **Tokens/type:** white canvas, light surfaces/borders, blue accent. Buttons and links use `#0074E0` (white text passes AA; the spec's `#0084FF` is kept only for glows and icons because white on it is ~3.6:1). Inter body, Outfit headings, Fustat ExtraBold for the brand. Pastel chips and light shadows from the older light theme work again; leftover teal (hue 185) glows moved to blue (hue 250); the "dark" sample-output panel became a blue-tint panel.
+- **Nav:** floating liquid-glass bar (glass on a pseudo-element so the fixed mobile menu is not trapped by `backdrop-filter`), spec-style text links, translucent CTA pill, nav tucked under so hero backgrounds run to the top edge. Mobile: full-screen overlay menu kept, CTA hidden under 520px.
+- **Hero (index.html):** two-column layout (5/7 grid from 1024px), blue "bead" primary button, ghost "See How It Works" link, aura and orbit rings, a glass sample-records panel (labelled "Illustrative example") and three floating glass cards with looping float animation, all showing real facts already on the site: 27+ data fields, 13+ data sources, 1 to 2 day turnaround. Cards drop below the panel on phones.
+- **Removed:** the WebGL shader hero, rotating badge, animated line and hero parallax from the dark redesign (`js/hero-shader.js` deleted). Footer CTA, footer parallax reveal, scroll progress bar and button/card motion stay.
+- **Categories cards:** company count now on its own line.
+- Deliberately NOT included: "Trusted by 10,000+ users", stock avatar photos, the robot video and its AI-task cards.
+
+Verified with headless Edge screenshots (home at 1440, 1100 and 500px wide, pricing and categories at 1440): layout, nav, hero cards, light contrast all read correctly after two rounds of fixes (cards no longer cover the record rows; hero gradient runs under the nav). Not verified: mobile menu open state, hover states, other inner pages (about/services/portfolio/contact) beyond the shared styles.
+
+**Still open:** visual pass on about/services/portfolio/contact; mobile menu open state; Haris's answers on pricing facts, FAQ questions and Formspree redirect; Search Console; domain; single shared popup on Categories.

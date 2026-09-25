@@ -50,21 +50,13 @@
     });
   });
 
-  // Scroll-linked motion: hero parallax and the footer's slide-up reveal.
+  // Scroll-linked motion: the footer's slide-up reveal.
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var heroInner = document.querySelector(".hero__inner");
     var footer = document.querySelector(".footer");
     var footerInner = footer && footer.querySelector(".container");
     var motionTicking = false;
 
     var updateMotion = function () {
-      var y = window.scrollY;
-      if (heroInner && y < 1200) {
-        // Content moves up slower than the page: 0 to 400px over 1000px of scroll.
-        var shift = Math.min(y, 1000) * 0.4;
-        heroInner.style.transform = "translate3d(0," + shift + "px,0)";
-        heroInner.style.opacity = String(Math.max(0, 1 - y / 800));
-      }
       if (footerInner) {
         var rect = footer.getBoundingClientRect();
         var vh = window.innerHeight;
@@ -75,7 +67,7 @@
       motionTicking = false;
     };
 
-    if (heroInner || footerInner) {
+    if (footerInner) {
       window.addEventListener("scroll", function () {
         if (!motionTicking) {
           motionTicking = true;
