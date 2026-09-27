@@ -20,6 +20,25 @@
   --font-mono: 'Geist Mono', ui-monospace, monospace;
 }
 
+/* Dark theme — toggled by setting data-theme="dark" on <html> (see js/animations.js) */
+:root[data-theme="dark"] {
+  --bg: #0a0e14;
+  --surface: #12171f;
+  --surface-2: #1a212c;
+  --border: #262e3a;
+  --border-soft: #1e252f;
+  --text: #f5f7fa;
+  --text-body: #e4e7ec;
+  --text-secondary: #9aa4b2;
+  --text-muted: #6b7684;
+  --accent: #3b9eff;
+  --accent-dark: #2483e0;
+  --accent-bright: #5eb2ff;
+  --accent-tint: #16283f;
+  --ink: #2b3442;
+  --ink-hover: #3a4556;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -271,6 +290,64 @@ a:hover {
 
 .nav__burger .icon-close {
   display: none;
+}
+
+/* Theme toggle */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle__icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.theme-toggle__icon--moon {
+  display: none;
+}
+
+.theme-toggle__label--dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--moon {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle__label--light {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle__label--dark {
+  display: inline;
 }
 
 /* Hero */
@@ -1432,7 +1509,7 @@ a.cat-card:hover {
 
 .dashboard-panel--dark {
   background: var(--accent-tint);
-  border: 1px solid oklch(88% 0.04 250);
+  border: 1px solid var(--border);
 }
 
 .dashboard-panel--dark .panel-label {
@@ -2399,6 +2476,87 @@ main {
   background: rgba(0, 0, 0, 0.06);
 }
 
+/* Dark theme overrides — the nav's liquid-glass bar and the hero's glass
+   cards are built from hardcoded white-tinted translucency, since that's
+   what a frosted light-glass effect needs. Dark mode gets the same
+   treatment inverted to a frosted dark glass instead of trying to make one
+   set of rgba() values work on both backgrounds. */
+
+:root[data-theme="dark"] .nav__inner::before {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 30px -8px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.06);
+}
+
+@media (min-width: 901px) {
+  :root[data-theme="dark"] .nav__links a,
+  :root[data-theme="dark"] .theme-toggle {
+    color: rgba(255, 255, 255, 0.68);
+  }
+}
+
+:root[data-theme="dark"] .nav__links a:hover,
+:root[data-theme="dark"] .theme-toggle:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="dark"] .nav__links a.is-active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .nav .btn--primary {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+:root[data-theme="dark"] .nav .btn--primary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5);
+}
+
+:root[data-theme="dark"] .glass {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 2.5px 4px rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .sample-glass {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 24px 60px -20px rgba(0, 0, 0, 0.55), inset 0 2.5px 4px rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .sample-glass__foot {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="dark"] .float-card--a {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 12px 32px -4px rgba(0, 132, 255, 0.25), inset 0 2.5px 4px rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .float-card--b {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 12px 32px -4px rgba(16, 185, 129, 0.25), inset 0 2.5px 4px rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .float-card--c {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 12px 32px -4px rgba(147, 51, 234, 0.25), inset 0 2.5px 4px rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .link-bead__icon {
+  background: rgba(59, 158, 255, 0.14);
+  border-color: rgba(59, 158, 255, 0.28);
+}
+
+:root[data-theme="dark"] .link-bead:hover .link-bead__icon {
+  background: rgba(59, 158, 255, 0.22);
+}
+
+:root[data-theme="dark"] .page-hero {
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(59, 158, 255, 0.18), transparent 55%),
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1.5px);
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -2490,7 +2648,8 @@ main {
     transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear 220ms;
   }
 
-  .nav__links a {
+  .nav__links a,
+  .theme-toggle {
     width: 100%;
     padding: 12px 0;
     border-radius: 0;
@@ -2500,6 +2659,11 @@ main {
     letter-spacing: -0.02em;
     color: var(--text);
     border-bottom: 1px solid var(--border-soft);
+  }
+
+  .theme-toggle .theme-toggle__icon {
+    width: 22px;
+    height: 22px;
   }
 
   .nav__toggle:checked ~ .nav__links {
