@@ -1,6 +1,34 @@
 (function () {
   "use strict";
 
+  // Theme toggle (light/dark). The initial data-theme attribute is already
+  // set by the inline script in <head> (before first paint); this just
+  // wires up the button. Kept ahead of the IntersectionObserver guard below
+  // so the toggle still works in browsers that lack it.
+  var themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    var htmlEl = document.documentElement;
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+
+    var syncToggleA11y = function () {
+      var isDark = htmlEl.getAttribute("data-theme") === "dark";
+      themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+    };
+
+    syncToggleA11y();
+
+    themeToggle.addEventListener("click", function () {
+      var next = htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      htmlEl.setAttribute("data-theme", next);
+      if (themeMeta) themeMeta.setAttribute("content", next === "dark" ? "#0a0e14" : "#ffffff");
+      try {
+        localStorage.setItem("lsd-theme", next);
+      } catch (e) {}
+      syncToggleA11y();
+    });
+  }
+
   // Scroll progress bar (thin accent line at the top of the viewport).
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     var bar = document.createElement("div");
