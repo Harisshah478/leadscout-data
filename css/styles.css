@@ -2560,6 +2560,47 @@ main {
 
 /* Responsive */
 
+/* Narrow desktop windows: keep the nav on one line */
+.brand,
+.theme-toggle,
+.nav__links a,
+.nav .btn--primary {
+  white-space: nowrap;
+}
+
+.nav__links {
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .nav__inner {
+    gap: 12px;
+    padding: 8px 14px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .nav__links {
+    gap: 0;
+  }
+
+  .nav__links a,
+  .theme-toggle {
+    padding: 8px 9px;
+    font-size: 13.5px;
+  }
+
+  .theme-toggle span {
+    display: none;
+  }
+
+  .nav .btn--primary {
+    padding: 9px 14px;
+  }
+}
+
 @media (max-width: 900px) {
   .trial-card {
     grid-template-columns: 1fr;
