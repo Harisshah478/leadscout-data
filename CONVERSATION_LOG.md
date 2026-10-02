@@ -833,3 +833,9 @@ Verified: HTML tag-balance and JSON-LD parse validation on all 7 pages, CSS brac
 Haris reported a light following the cursor in dark mode; removed it for the dark theme only (`:root[data-theme="dark"] .cursor-glow { opacity: 0 }`; the light-mode glow is a screen blend and invisible on white). Also fixed the nav at 901 to 1200px wide: brand and links no longer wrap, the theme toggle goes icon-only in that range, padding tightened. Checked with headless Edge screenshots at 1000 and 1200px; dark mode not screenshotted.
 
 **Still open:** unchanged from 2026-09-27.
+
+## 2026-10-02 (later) - Flat Rs 1 per contact pricing + PKR/USD converter
+
+Haris asked for "1RS per contact" and a USD to PKR converter on the pricing page. Interpreted as a flat Rs 1 (PKR) per contact, replacing the three USD tiers ($0.35/$0.25/$0.15). **This is roughly 40 to 100 times cheaper than the old pricing; flagged to Haris to confirm it is intended.** Pricing page now has one flat-rate card and a converter card (`js/currency-converter.js`): editable PKR-per-USD rate (default 280, an estimate, NOT a live rate; saved in localStorage), PKR and USD fields that update each other, and a "Rs 1 = $X" line. Updated pricing.html meta/OG/Twitter/JSON-LD (Offer, PKR, price 1), index.html `priceRange`, and the marketing skill's pricing line. `content-audit.md` still shows the old tiers (frozen snapshot).
+
+**Still open:** confirm Rs 1 is the intended price and not a typo; update the default rate to the current market rate; everything from 2026-09-27.
