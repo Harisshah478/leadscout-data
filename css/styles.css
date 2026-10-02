@@ -2348,7 +2348,8 @@ main {
   opacity: 1;
 }
 
-.cursor-glow.is-suppressed {
+.cursor-glow.is-suppressed,
+:root[data-theme="dark"] .cursor-glow {
   opacity: 0;
 }
 
