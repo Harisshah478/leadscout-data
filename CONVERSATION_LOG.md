@@ -827,3 +827,9 @@ Implemented, plain HTML/CSS/JS, light theme unchanged as the default:
 Verified: HTML tag-balance and JSON-LD parse validation on all 7 pages, CSS brace balance. Could not do a live visual check (Chrome extension not connected in this session) — worth a visual spot-check once deployed, especially the nav glass and hero cards in dark mode.
 
 **Still open:** everything already open from the 2026-09-25 sessions (visual pass on about/services/portfolio/contact, mobile menu open state, pricing/FAQ facts from Haris, Formspree redirect, Search Console, domain, single shared Categories popup) — none of that was touched here. Also: this session's local checkout was badly stale (35 commits behind); worth `git fetch origin main` at the start of future sessions on this machine before assuming `main` is current.
+
+## 2026-10-02 - Dark-mode cursor glow removed, narrow-window nav fix
+
+Haris reported a light following the cursor in dark mode; removed it for the dark theme only (`:root[data-theme="dark"] .cursor-glow { opacity: 0 }`; the light-mode glow is a screen blend and invisible on white). Also fixed the nav at 901 to 1200px wide: brand and links no longer wrap, the theme toggle goes icon-only in that range, padding tightened. Checked with headless Edge screenshots at 1000 and 1200px; dark mode not screenshotted.
+
+**Still open:** unchanged from 2026-09-27.
