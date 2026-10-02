@@ -1777,10 +1777,31 @@ tr:last-child td {
   border-color: var(--accent);
 }
 
-.converter__result {
-  font-weight: 600;
+.converter__totals {
+  display: grid;
+  gap: 12px;
+}
+
+.converter__total {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  background: var(--accent-tint);
+  border-radius: 12px;
+}
+
+.converter__total-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.converter__total-value {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
-  font-size: 14.5px;
 }
 
 .converter__note {

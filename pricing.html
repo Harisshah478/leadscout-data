@@ -112,7 +112,7 @@
       <div class="container">
         <div class="section__head">
           <h2>How much does verified lead data cost?</h2>
-          <p>Verified lead data costs a flat Rs 1 per contact, whatever the volume. Every order includes the full 27-field dataset and verified email deliverability. Use the converter below to see the price in US dollars.</p>
+          <p>Verified lead data costs a flat Rs 1 per contact, whatever the volume. Every order includes the full 27-field dataset and verified email deliverability. Use the calculator below to see your total in PKR and US dollars.</p>
         </div>
       </div>
     </section>
@@ -144,24 +144,25 @@
           </div>
 
           <div class="tier-card converter" id="converter">
-            <div class="tier-card__name">Currency converter</div>
-            <div class="tier-card__range">Pakistani rupees (PKR) and US dollars (USD)</div>
+            <div class="tier-card__name">Price calculator</div>
+            <div class="tier-card__range">Enter your number of contacts</div>
             <div class="converter__fields">
               <label class="converter__field">
-                <span>Exchange rate (PKR per 1 USD)</span>
-                <input type="number" id="conv-rate" min="0" step="0.01" value="280" inputmode="decimal">
-              </label>
-              <label class="converter__field">
-                <span>PKR</span>
-                <input type="number" id="conv-pkr" min="0" step="any" value="1000" inputmode="decimal">
-              </label>
-              <label class="converter__field">
-                <span>USD</span>
-                <input type="number" id="conv-usd" min="0" step="any" inputmode="decimal">
+                <span>Number of contacts</span>
+                <input type="number" id="conv-contacts" min="0" step="1" value="1000" inputmode="numeric">
               </label>
             </div>
-            <p class="converter__result" id="conv-result" aria-live="polite"></p>
-            <p class="converter__note">The rate is an editable estimate, not a live market rate. Enter today's rate for an accurate figure. Prices are quoted in PKR.</p>
+            <div class="converter__totals" aria-live="polite">
+              <div class="converter__total">
+                <span class="converter__total-label">Total in PKR</span>
+                <span class="converter__total-value" id="conv-pkr">Rs 1,000</span>
+              </div>
+              <div class="converter__total">
+                <span class="converter__total-label">Total in USD</span>
+                <span class="converter__total-value" id="conv-usd">$3.57</span>
+              </div>
+            </div>
+            <p class="converter__note">Rs 1 per contact. The USD figure uses an estimated rate of Rs 280 per $1 and may differ slightly from the live market rate.</p>
           </div>
 
         </div>

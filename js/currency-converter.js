@@ -1,52 +1,27 @@
-/* PKR <-> USD converter for the pricing page. The rate is user-editable
-   (not fetched) and remembered in localStorage. */
+/* Pricing calculator: contacts -> total in PKR and USD.
+   Price is a flat Rs 1 per contact; USD uses a fixed estimated rate. */
 (function () {
-  var rateEl = document.getElementById("conv-rate");
+  var PKR_PER_CONTACT = 1;
+  var PKR_PER_USD = 280;
+
+  var input = document.getElementById("conv-contacts");
   var pkrEl = document.getElementById("conv-pkr");
   var usdEl = document.getElementById("conv-usd");
-  var out = document.getElementById("conv-result");
-  if (!rateEl || !pkrEl || !usdEl || !out) return;
+  if (!input || !pkrEl || !usdEl) return;
 
-  var KEY = "lsd-pkr-rate";
-  try {
-    var saved = parseFloat(localStorage.getItem(KEY));
-    if (saved > 0) rateEl.value = saved;
-  } catch (e) {}
-
-  function rate() {
-    var r = parseFloat(rateEl.value);
-    return r > 0 ? r : 0;
+  function update() {
+    var n = parseFloat(input.value);
+    if (!(n >= 0)) {
+      pkrEl.textContent = "Rs 0";
+      usdEl.textContent = "$0.00";
+      return;
+    }
+    var pkr = n * PKR_PER_CONTACT;
+    var usd = pkr / PKR_PER_USD;
+    pkrEl.textContent = "Rs " + pkr.toLocaleString("en-US", { maximumFractionDigits: 2 });
+    usdEl.textContent = "$" + usd.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
-  function fmt(n, max) {
-    return n.toLocaleString("en-US", { maximumFractionDigits: max });
-  }
-
-  function summary() {
-    var r = rate();
-    out.textContent = r
-      ? "Rs 1 per contact = $" + (1 / r).toLocaleString("en-US", { maximumSignificantDigits: 3 }) + " at Rs " + fmt(r, 2) + " per $1."
-      : "Enter an exchange rate to convert.";
-  }
-
-  function fromPkr() {
-    var r = rate(), v = parseFloat(pkrEl.value);
-    usdEl.value = r && v >= 0 ? +(v / r).toFixed(4) : "";
-  }
-
-  function fromUsd() {
-    var r = rate(), v = parseFloat(usdEl.value);
-    pkrEl.value = r && v >= 0 ? +(v * r).toFixed(2) : "";
-  }
-
-  rateEl.addEventListener("input", function () {
-    try { if (rate()) localStorage.setItem(KEY, String(rate())); } catch (e) {}
-    fromPkr();
-    summary();
-  });
-  pkrEl.addEventListener("input", fromPkr);
-  usdEl.addEventListener("input", fromUsd);
-
-  fromPkr();
-  summary();
+  input.addEventListener("input", update);
+  update();
 })();
