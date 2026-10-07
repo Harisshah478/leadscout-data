@@ -880,8 +880,9 @@ a:hover {
 }
 
 .logo-chip {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  --brand: #64748B;
+  background: color-mix(in srgb, var(--brand) 10%, var(--surface-2));
+  border: 1px solid color-mix(in srgb, var(--brand) 32%, var(--border));
   color: var(--text);
   padding: 13px 24px;
   border-radius: 10px;
@@ -889,6 +890,17 @@ a:hover {
   font-weight: 700;
   font-size: 14px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-chip__icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  object-fit: contain;
+  color: var(--brand);
 }
 
 /* Logo marquee (auto-scrolling loop) */
