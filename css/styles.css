@@ -915,13 +915,13 @@ a:hover {
 .logo-marquee__track {
   display: flex;
   width: max-content;
-  gap: 16px;
 }
 
 .logo-marquee .logo-strip {
   flex-wrap: nowrap;
   flex-shrink: 0;
   justify-content: flex-start;
+  padding-right: 16px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
